@@ -20,6 +20,7 @@ const BLOG_SLUGS = [
     "n8n-vs-pipedream-vs-parabola-2026",
     "ai-powered-no-code-automation-2026-intelligent-workflows",
     "design-tools-2026-canva-figma-penpot-balsamiq-creatie",
+    "best-no-code-landing-page-builders-2026",
 ] as const;
 
 const TOOL_SLUGS = [
