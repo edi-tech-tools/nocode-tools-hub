@@ -5,6 +5,11 @@ import { Search, Star, ArrowRight, BookOpen, Layers, Sparkles, Calendar, Trendin
 import Link from "next/link";
 import { ALL_TOOLS } from "@/data/tools";
 import { BLOG_POSTS } from "@/data/blog-posts";
+import { GradientMesh } from "@/components/motion/gradient-mesh";
+import { LiquidGlass } from "@/components/motion/liquid-glass";
+import { Reveal, StaggerReveal } from "@/components/motion/reveal";
+import { Magnetic } from "@/components/motion/magnetic";
+import { MotionProvider } from "@/lib/motion";
 
 const CATEGORIES = Array.from(new Set(ALL_TOOLS.map((t) => t.category)));
 
@@ -74,432 +79,490 @@ export default function HomePage() {
   }
 
   return (
-    <div className="relative">
-      {/* ========== HERO ========== */}
-      <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 px-6">
-        <div className="max-w-[1200px] mx-auto flex flex-col items-center text-center">
-          {/* Trust Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#2a1a4e] border border-[#3b2566] mb-8">
-            <span className="w-2 h-2 rounded-full bg-[#a78bfa] pulse-dot" />
-            <span className="text-sm font-medium text-[#a78bfa]">
-              {ALL_TOOLS.length} No-Code Tools Reviewed
-            </span>
-            <span className="mx-2 text-[#3b2566]">|</span>
-            <span className="text-sm font-medium text-[#F59E0B]">
-              {BLOG_POSTS.length} Expert Guides
-            </span>
-          </div>
-
-          {/* Headline */}
-          <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold text-[#e8e0f7] tracking-tight leading-[1.05] mb-6 max-w-3xl">
-            Build Without Code.{" "}
-            <span className="text-gradient" style={{ textShadow: "0 0 40px rgba(109,58,255,0.3)" }}>
-              Ship Faster
-            </span>
-          </h1>
-
-          {/* Subtitle */}
-          <p className="text-lg md:text-xl text-[#c4b5fd] max-w-2xl mb-10 leading-relaxed">
-            Compare 69+ no-code platforms with real G2 ratings and expert comparisons.
-            Find the perfect tool for your next project — no coding required.
-          </p>
-
-          {/* Search Bar */}
-          <div className="w-full max-w-[640px] flex items-center relative">
-            <div className="w-full flex items-center rounded-full border border-[#3b2566] bg-[#1a1233] transition-all duration-300">
-              <Search className="ml-5 w-5 h-5 text-[#a78bfa] flex-shrink-0" />
-              <input
-                type="search"
-                placeholder="Search no-code tools, platforms, or categories..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="flex-1 py-4 px-3 bg-transparent text-[#e8e0f7] placeholder:text-[#a78bfa] outline-none text-base"
-              />
-              <Link
-                href={filteredTools.length > 0 ? `/tools/${filteredTools[0].id}` : "/"}
-                className="mr-2 px-6 py-2.5 bg-[#6d3aff] hover:bg-[#6d3aff] text-white text-sm font-medium rounded-full transition-colors flex-shrink-0"
-              >
-                Search
-              </Link>
-            </div>
-          </div>
-
-          {/* Category Pills */}
-          <div className="mt-8 flex flex-wrap justify-center gap-2 max-w-2xl">
-            <button
-              onClick={() => setSelectedCategory(null)}
-              className={`px-3.5 py-1.5 rounded-full border text-sm transition-colors ${
-                !selectedCategory
-                  ? "bg-[#6d3aff] text-white border-[#6d3aff]"
-                  : "bg-[#1a1233] text-[#c4b5fd] border-[#3b2566] hover:text-[#e8e0f7] hover:border-[#4c2d82]"
-              }`}
-            >
-              All
-            </button>
-            {CATEGORIES.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setSelectedCategory(selectedCategory === cat ? null : cat)}
-                className={`px-3.5 py-1.5 rounded-full border text-sm transition-colors ${
-                  selectedCategory === cat
-                    ? "bg-[#6d3aff] text-white border-[#6d3aff]"
-                    : "bg-[#1a1233] text-[#c4b5fd] border-[#3b2566] hover:text-[#e8e0f7] hover:border-[#4c2d82]"
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
+    <MotionProvider>
+      <div className="relative min-h-screen">
+        {/* Background */}
+        <div className="fixed inset-0 z-0">
+          <GradientMesh
+            colors={["#00bcd4", "#a78bfa", "#f472b6"]}
+            intensity={0.08}
+          />
         </div>
-      </section>
 
-      {/* ========== CATEGORY STATS STRIP (like G2 category overview) ========== */}
-      <section className="relative pb-10 px-6">
-        <div className="max-w-[1200px] mx-auto">
-          <div className="flex items-center gap-2 mb-6">
-            <Layers className="w-5 h-5 text-[#6d3aff]" />
-            <h2 className="text-lg font-bold text-[#e8e0f7]">Browse by Category</h2>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-            {categoryStats.map(([cat, stats]) => (
-              <button
-                key={cat}
-                onClick={() => setSelectedCategory(selectedCategory === cat ? null : cat)}
-                className="bg-[#1a1233] border border-[#3b2566] rounded-xl p-4 hover:border-[#4c2d82] transition-all text-left group"
-              >
-                <p className="text-sm font-bold text-[#e8e0f7] group-hover:text-[#6d3aff] transition-colors">
-                  {cat}
-                </p>
-                <div className="flex items-center gap-3 mt-1.5 text-xs text-[#a78bfa]">
-                  <span>{stats.count} tools</span>
-                  <span className="flex items-center gap-1 text-[#F59E0B]">
-                    <Star className="w-3 h-3 fill-[#F59E0B]" /> {stats.avgRating}
+        <div className="relative z-10">
+          {/* ========== HERO ========== */}
+          <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 px-6">
+            <div className="max-w-[1200px] mx-auto flex flex-col items-center text-center">
+              <Reveal>
+                {/* Trust Badge */}
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 mb-8 card-liquid">
+                  <span className="w-2 h-2 rounded-full bg-[#00bcd4] pulse-dot" />
+                  <span className="text-sm font-medium text-white/80">
+                    {ALL_TOOLS.length} No-Code Tools Reviewed
+                  </span>
+                  <span className="mx-2 text-white/20">|</span>
+                  <span className="text-sm font-medium text-[#a78bfa]">
+                    {BLOG_POSTS.length} Expert Guides
                   </span>
                 </div>
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
+              </Reveal>
 
-      {/* ========== EDITOR'S PICKS (G2-style featured section) ========== */}
-      <section className="relative pb-16 px-6">
-        <div className="max-w-[1200px] mx-auto">
-          <div className="flex items-center justify-between mb-8">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#6d3aff]/20 to-[#a78bfa]/20 flex items-center justify-center">
-                <Sparkles className="w-5 h-5 text-[#a78bfa]" />
-              </div>
-              <div>
-                <h2 className="text-2xl font-bold text-[#e8e0f7]">Editor&apos;s Picks</h2>
-                <p className="text-sm text-[#c4b5fd]">Top-rated no-code tools our team recommends</p>
-              </div>
+              <Reveal delay={0.1}>
+                <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] font-extrabold text-white tracking-tight leading-[1.05] mb-6 max-w-3xl">
+                  Build Without Code.{" "}
+                  <span className="text-gradient" style={{ textShadow: "0 0 40px rgba(0,188,212,0.3)" }}>
+                    Ship Faster
+                  </span>
+                </h1>
+              </Reveal>
+
+              <Reveal delay={0.2}>
+                <p className="text-lg md:text-xl text-white/60 max-w-2xl mb-10 leading-relaxed">
+                  Compare {ALL_TOOLS.length}+ no-code platforms with real G2 ratings and expert comparisons.
+                  Find the perfect tool for your next project — no coding required.
+                </p>
+              </Reveal>
+
+              <Reveal delay={0.3}>
+                <div className="w-full max-w-[640px]">
+                  <LiquidGlass intensity="heavy" tint="#00bcd4" sheen={false} noise={false} className="w-full rounded-full">
+                    <div className="flex items-center relative px-1 py-1">
+                      <Search className="ml-5 w-5 h-5 text-white/40 flex-shrink-0" />
+                      <input
+                        type="search"
+                        placeholder="Search no-code tools, platforms, or categories..."
+                        value={searchQuery}
+                        onChange={(e) => setSearchQuery(e.target.value)}
+                        className="flex-1 py-3 px-3 bg-transparent text-white placeholder:text-white/30 outline-none text-base"
+                      />
+                      <Magnetic strength={12}>
+                        <Link
+                          href={filteredTools.length > 0 ? `/tools/${filteredTools[0].id}` : "/"}
+                          className="mr-1 px-6 py-2.5 bg-[#00bcd4] hover:bg-[#00bcd4]/90 text-black text-sm font-semibold rounded-full transition-colors flex-shrink-0"
+                        >
+                          Search
+                        </Link>
+                      </Magnetic>
+                    </div>
+                  </LiquidGlass>
+                </div>
+              </Reveal>
+
+              <Reveal delay={0.4}>
+                <div className="mt-8 flex flex-wrap justify-center gap-2 max-w-2xl">
+                  <button
+                    onClick={() => setSelectedCategory(null)}
+                    className={`px-3.5 py-1.5 rounded-full border text-sm transition-all ${
+                      !selectedCategory
+                        ? "bg-[#00bcd4] text-black border-[#00bcd4] font-semibold"
+                        : "bg-white/5 text-white/70 border-white/10 hover:text-white hover:border-white/20"
+                    }`}
+                  >
+                    All
+                  </button>
+                  {CATEGORIES.map((cat) => (
+                    <button
+                      key={cat}
+                      onClick={() => setSelectedCategory(selectedCategory === cat ? null : cat)}
+                      className={`px-3.5 py-1.5 rounded-full border text-sm transition-all ${
+                        selectedCategory === cat
+                          ? "bg-[#a78bfa] text-black border-[#a78bfa] font-semibold"
+                          : "bg-white/5 text-white/70 border-white/10 hover:text-white hover:border-white/20"
+                      }`}
+                    >
+                      {cat}
+                    </button>
+                  ))}
+                </div>
+              </Reveal>
             </div>
-            <Link
-              href="/"
-              className="hidden md:flex items-center gap-1 text-sm text-[#6d3aff] hover:text-[#a78bfa] transition-colors"
-            >
-              View All Tools <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
+          </section>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {editorPicks.map((tool, idx) => {
-              const Icon = tool.icon;
-              return (
-                <Link
-                  href={`/tools/${tool.id}`}
-                  key={tool.id}
-                  className="group bg-[#1a1233] border border-[#3b2566] rounded-xl p-6 card-hover"
-                >
-                  <div className="flex items-start gap-4 mb-4">
-                    <div className="relative">
-                      <div className="w-12 h-12 rounded-lg bg-[#2a1a4e] flex items-center justify-center group-hover:scale-110 transition-transform">
-                        <Icon className="w-6 h-6 text-[#6d3aff]" />
-                      </div>
-                      <div className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-[#F59E0B] flex items-center justify-center text-[10px] font-bold text-black">
-                        #{idx + 1}
-                      </div>
-                    </div>
-                    <div className="min-w-0 flex-1">
-                      <h3 className="font-bold text-[#e8e0f7] group-hover:text-[#6d3aff] transition-colors truncate">
-                        {tool.name}
-                      </h3>
-                      <span className="inline-block text-[10px] font-semibold uppercase tracking-wider text-[#6d3aff] bg-[#2a1a4e] px-2 py-0.5 rounded mt-1">
-                        {tool.category}
-                      </span>
-                    </div>
-                    <div className="flex items-center gap-1 bg-[#2a1a4e] px-2 py-1 rounded-md shrink-0">
-                      <Star className="w-3.5 h-3.5 text-[#F59E0B] fill-[#F59E0B]" />
-                      <span className="text-xs font-bold text-[#e8e0f7]">{tool.rating}</span>
-                    </div>
-                  </div>
-                  <p className="text-sm text-[#c4b5fd] leading-relaxed line-clamp-2">
-                    {tool.description}
-                  </p>
-                  <div className="flex items-center gap-3 mt-4 pt-4 border-t border-[#3b2566] text-xs text-[#a78bfa]">
-                    <span>★ Best for: {tool.useCase.split(".")[0]}</span>
-                  </div>
-                </Link>
-              );
-            })}
-          </div>
-
-          {/* Mobile View All button */}
-          <div className="mt-6 text-center md:hidden">
-            <Link
-              href="/"
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#1a1233] border border-[#3b2566] rounded-full text-sm text-[#6d3aff] hover:text-[#a78bfa] transition-colors"
-            >
-              View All Tools <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* ========== TOOLS GRID ========== */}
-      <section className="relative pb-20 px-6" id="all-tools">
-        <div className="max-w-[1200px] mx-auto">
-          {/* Section Header */}
-          <div className="flex items-center justify-between mb-10">
-            <div>
-              <h2 className="text-2xl md:text-[2rem] font-bold text-[#e8e0f7] tracking-tight">
-                {selectedCategory ? `${selectedCategory} Tools` : "All No-Code Tools"}
-              </h2>
-              <p className="text-[#c4b5fd] mt-1 text-base">
-                {filteredTools.length} tool{filteredTools.length !== 1 ? "s" : ""} found
-              </p>
-            </div>
-          </div>
-
-          {/* Grid */}
-          {filteredTools.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {filteredTools.map((tool) => {
-                const Icon = tool.icon;
-                return (
-                  <Link href={`/tools/${tool.id}`} key={tool.id} className="group">
-                    <article className="bg-[#1a1233] border border-[#3b2566] rounded-xl p-6 card-hover h-full flex flex-col">
-                      <div className="flex items-start justify-between mb-4">
-                        <div className="w-12 h-12 rounded-lg bg-[#2a1a4e] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                          <Icon className="w-6 h-6 text-[#6d3aff]" />
-                        </div>
-                        <div className="flex items-center gap-1 bg-[#2a1a4e] px-2 py-1 rounded-md border border-[#3b2566]">
-                          <Star className="w-4 h-4 text-[#F59E0B] fill-[#F59E0B]" />
-                          <span className="text-sm font-semibold text-[#e8e0f7]">{tool.rating}</span>
-                        </div>
-                      </div>
-                      <h3 className="text-lg font-bold text-[#e8e0f7] mb-1 group-hover:text-[#6d3aff] transition-colors">
-                        {tool.name}
-                      </h3>
-                      <span className="inline-block text-xs font-semibold uppercase tracking-wider text-[#6d3aff] bg-[#2a1a4e] px-2.5 py-1 rounded-md mb-3">
-                        {tool.category}
-                      </span>
-                      <p className="text-sm text-[#c4b5fd] mb-6 leading-relaxed flex-grow">
-                        {tool.description}
+          {/* ========== CATEGORY STATS STRIP ========== */}
+          <section className="relative pb-10 px-6">
+            <div className="max-w-[1200px] mx-auto">
+              <Reveal>
+                <div className="flex items-center gap-2 mb-6">
+                  <Layers className="w-5 h-5 text-[#00bcd4]" />
+                  <h2 className="text-lg font-bold text-white">Browse by Category</h2>
+                </div>
+              </Reveal>
+              <StaggerReveal stagger={0.06} delay={0.1}>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                  {categoryStats.map(([cat, stats]) => (
+                    <button
+                      key={cat}
+                      onClick={() => setSelectedCategory(selectedCategory === cat ? null : cat)}
+                      className="card-liquid rounded-xl p-4 text-left group cursor-pointer"
+                    >
+                      <p className="text-sm font-bold text-white group-hover:text-[#00bcd4] transition-colors">
+                        {cat}
                       </p>
-                      <div className="flex items-center justify-between pt-4 border-t border-[#3b2566]">
-                        <span className="text-sm text-[#6d3aff] font-semibold group-hover:text-[#a78bfa] transition-colors flex items-center">
-                          View Details <ArrowRight className="ml-1.5 w-4 h-4" />
+                      <div className="flex items-center gap-3 mt-1.5 text-xs text-white/50">
+                        <span>{stats.count} tools</span>
+                        <span className="flex items-center gap-1 text-[#00bcd4]">
+                          <Star className="w-3 h-3 fill-[#00bcd4]" /> {stats.avgRating}
                         </span>
                       </div>
-                    </article>
+                    </button>
+                  ))}
+                </div>
+              </StaggerReveal>
+            </div>
+          </section>
+
+          {/* ========== EDITOR'S PICKS ========== */}
+          <section className="relative pb-16 px-6">
+            <div className="max-w-[1200px] mx-auto">
+              <Reveal>
+                <div className="flex items-center justify-between mb-8">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-xl bg-[#00bcd4]/20 flex items-center justify-center">
+                      <Sparkles className="w-5 h-5 text-[#00bcd4]" />
+                    </div>
+                    <div>
+                      <h2 className="text-2xl font-bold text-white">Editor&apos;s Picks</h2>
+                      <p className="text-sm text-white/50">Top-rated no-code tools our team recommends</p>
+                    </div>
+                  </div>
+                  <Link
+                    href="/"
+                    className="hidden md:flex items-center gap-1 text-sm text-[#00bcd4] hover:text-[#a78bfa] transition-colors"
+                  >
+                    View All Tools <ArrowRight className="w-4 h-4" />
                   </Link>
-                );
-              })}
+                </div>
+              </Reveal>
+              <StaggerReveal stagger={0.08} delay={0.15}>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                  {editorPicks.map((tool, idx) => {
+                    const Icon = tool.icon;
+                    return (
+                      <Link href={`/tools/${tool.id}`} key={tool.id} className="block group">
+                        <LiquidGlass tint="#00bcd4" intensity="standard" glow className="rounded-xl p-6 h-full">
+                          <div className="flex items-start gap-4 mb-4">
+                            <div className="relative">
+                              <div className="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <Icon className="w-6 h-6 text-[#00bcd4]" />
+                              </div>
+                              <div className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-[#00bcd4] flex items-center justify-center text-[10px] font-bold text-black">
+                                #{idx + 1}
+                              </div>
+                            </div>
+                            <div className="min-w-0 flex-1">
+                              <h3 className="font-bold text-white group-hover:text-[#00bcd4] transition-colors truncate">
+                                {tool.name}
+                              </h3>
+                              <span className="inline-block text-[10px] font-semibold uppercase tracking-wider text-[#00bcd4] bg-white/10 px-2 py-0.5 rounded mt-1">
+                                {tool.category}
+                              </span>
+                            </div>
+                            <div className="flex items-center gap-1 bg-white/10 px-2 py-1 rounded-md shrink-0">
+                              <Star className="w-3.5 h-3.5 text-[#00bcd4] fill-[#00bcd4]" />
+                              <span className="text-xs font-bold text-white">{tool.rating}</span>
+                            </div>
+                          </div>
+                          <p className="text-sm text-white/60 leading-relaxed line-clamp-2">
+                            {tool.description}
+                          </p>
+                          <div className="flex items-center gap-3 mt-4 pt-4 border-t border-white/10 text-xs text-white/40">
+                            <span>★ Best for: {tool.useCase.split(".")[0]}</span>
+                          </div>
+                        </LiquidGlass>
+                      </Link>
+                    );
+                  })}
+                </div>
+              </StaggerReveal>
+              <Reveal delay={0.2}>
+                <div className="mt-6 text-center md:hidden">
+                  <Link
+                    href="/"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/5 border border-white/10 rounded-full text-sm text-[#00bcd4] hover:text-[#a78bfa] transition-colors"
+                  >
+                    View All Tools <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              </Reveal>
             </div>
-          ) : (
-            <div className="text-center py-20">
-              <p className="text-lg text-[#c4b5fd]">No tools found matching your search.</p>
-              <button
-                onClick={() => {
-                  setSearchQuery("");
-                  setSelectedCategory(null);
-                }}
-                className="mt-4 px-5 py-2 text-sm font-medium text-white bg-[#6d3aff] rounded-lg hover:bg-[#6d3aff] transition-colors"
-              >
-                Clear Filters
-              </button>
-            </div>
-          )}
-        </div>
-      </section>
+          </section>
 
-      {/* ========== LATEST FROM BLOG ========== */}
-      <section className="relative pb-20 px-6">
-        <div className="max-w-[1200px] mx-auto">
-          <div className="flex items-center justify-between mb-8">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-[#2a1a4e] flex items-center justify-center">
-                <BookOpen className="w-5 h-5 text-[#F59E0B]" />
-              </div>
-              <div>
-                <h2 className="text-2xl font-bold text-[#e8e0f7]">Latest Expert Guides</h2>
-                <p className="text-sm text-[#c4b5fd]">In-depth comparisons and buying advice</p>
-              </div>
-            </div>
-            <Link
-              href="/blog"
-              className="hidden md:flex items-center gap-1 text-sm text-[#6d3aff] hover:text-[#a78bfa] transition-colors"
-            >
-              View All Posts <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {latestPosts.map((post) => (
-              <Link
-                key={post.slug}
-                href={`/blog/${post.slug}`}
-                className="group"
-              >
-                <article className="bg-[#1a1233] border border-[#3b2566] rounded-xl p-6 card-hover h-full flex flex-col">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-xs font-semibold uppercase tracking-wider text-[#6d3aff] bg-[#2a1a4e] px-2.5 py-1 rounded-md">
-                      {post.category}
-                    </span>
-                    <span className="text-xs text-[#a78bfa]">{post.readTime} min read</span>
+          {/* ========== TOOLS GRID ========== */}
+          <section className="relative pb-20 px-6" id="all-tools">
+            <div className="max-w-[1200px] mx-auto">
+              <Reveal>
+                <div className="flex items-center justify-between mb-10">
+                  <div>
+                    <h2 className="text-2xl md:text-[2rem] font-bold text-white tracking-tight">
+                      {selectedCategory ? `${selectedCategory} Tools` : "All No-Code Tools"}
+                    </h2>
+                    <p className="text-white/50 mt-1 text-base">
+                      {filteredTools.length} tool{filteredTools.length !== 1 ? "s" : ""} found
+                    </p>
                   </div>
-                  <h3 className="font-bold text-[#e8e0f7] mb-3 group-hover:text-[#6d3aff] transition-colors leading-snug line-clamp-2">
-                    {post.title}
-                  </h3>
-                  <p className="text-sm text-[#c4b5fd] leading-relaxed flex-grow line-clamp-3">
-                    {post.excerpt}
-                  </p>
-                  <div className="flex items-center gap-2 mt-4 pt-4 border-t border-[#3b2566] text-xs text-[#a78bfa]">
-                    <Calendar className="w-3.5 h-3.5" />
-                    {new Date(post.date).toLocaleDateString("en-US", {
-                      month: "short",
-                      day: "numeric",
-                      year: "numeric",
+                </div>
+              </Reveal>
+
+              {filteredTools.length > 0 ? (
+                <StaggerReveal stagger={0.05} delay={0.1}>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    {filteredTools.map((tool) => {
+                      const Icon = tool.icon;
+                      return (
+                        <Link href={`/tools/${tool.id}`} key={tool.id} className="block group">
+                          <LiquidGlass tint="#a78bfa" intensity="standard" glow className="rounded-xl p-6 h-full">
+                            <div className="flex items-start justify-between mb-4">
+                              <div className="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                                <Icon className="w-6 h-6 text-[#00bcd4]" />
+                              </div>
+                              <div className="flex items-center gap-1 bg-white/10 px-2 py-1 rounded-md">
+                                <Star className="w-4 h-4 text-[#00bcd4] fill-[#00bcd4]" />
+                                <span className="text-sm font-semibold text-white">{tool.rating}</span>
+                              </div>
+                            </div>
+                            <h3 className="text-lg font-bold text-white mb-1 group-hover:text-[#00bcd4] transition-colors">
+                              {tool.name}
+                            </h3>
+                            <span className="inline-block text-xs font-semibold uppercase tracking-wider text-[#00bcd4] bg-white/10 px-2.5 py-1 rounded-md mb-3">
+                              {tool.category}
+                            </span>
+                            <p className="text-sm text-white/60 mb-6 leading-relaxed flex-grow">
+                              {tool.description}
+                            </p>
+                            <div className="flex items-center justify-between pt-4 border-t border-white/10">
+                              <span className="text-sm text-[#00bcd4] font-semibold group-hover:text-[#a78bfa] transition-colors flex items-center">
+                                View Details <ArrowRight className="ml-1.5 w-4 h-4" />
+                              </span>
+                            </div>
+                          </LiquidGlass>
+                        </Link>
+                      );
                     })}
-                    <span className="mx-1">·</span>
-                    {post.author}
                   </div>
-                </article>
-              </Link>
-            ))}
-          </div>
-
-          <div className="mt-6 text-center md:hidden">
-            <Link
-              href="/blog"
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#1a1233] border border-[#3b2566] rounded-full text-sm text-[#6d3aff] hover:text-[#a78bfa] transition-colors"
-            >
-              View All Posts <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* ========== TRENDING TOOLS ========== */}
-      <section className="relative pb-16 px-6">
-        <div className="max-w-[1200px] mx-auto">
-          <div className="flex items-center gap-3 mb-8">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#F59E0B]/20 to-[#EF4444]/20 flex items-center justify-center">
-              <TrendingUp className="w-5 h-5 text-[#F59E0B]" />
+                </StaggerReveal>
+              ) : (
+                <Reveal>
+                  <div className="text-center py-20">
+                    <p className="text-lg text-white/50">No tools found matching your search.</p>
+                    <button
+                      onClick={() => {
+                        setSearchQuery("");
+                        setSelectedCategory(null);
+                      }}
+                      className="mt-4 px-5 py-2 text-sm font-medium text-black bg-[#00bcd4] rounded-lg hover:bg-[#00bcd4]/90 transition-colors"
+                    >
+                      Clear Filters
+                    </button>
+                  </div>
+                </Reveal>
+              )}
             </div>
-            <div>
-              <h2 className="text-2xl font-bold text-[#e8e0f7]">Trending Tools</h2>
-              <p className="text-sm text-[#c4b5fd]">Highest-rated no-code platforms this month</p>
-            </div>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {trendingTools.map((tool) => {
-              const Icon = tool.icon;
-              return (
-                <Link
-                  href={`/tools/${tool.id}`}
-                  key={tool.id}
-                  className="group bg-[#1a1233] border border-[#3b2566] rounded-xl p-4 card-hover flex flex-col"
-                >
-                  <div className="flex items-center justify-between mb-3">
-                    <div className="w-10 h-10 rounded-lg bg-[#2a1a4e] flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <Icon className="w-5 h-5 text-[#6d3aff]" />
+          </section>
+
+          {/* ========== LATEST FROM BLOG ========== */}
+          <section className="relative pb-20 px-6">
+            <div className="max-w-[1200px] mx-auto">
+              <Reveal>
+                <div className="flex items-center justify-between mb-8">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center">
+                      <BookOpen className="w-5 h-5 text-[#a78bfa]" />
                     </div>
-                    <div className="flex items-center gap-1">
-                      <Star className="w-3.5 h-3.5 text-[#F59E0B] fill-[#F59E0B]" />
-                      <span className="text-xs font-bold text-[#e8e0f7]">{tool.rating}</span>
+                    <div>
+                      <h2 className="text-2xl font-bold text-white">Latest Expert Guides</h2>
+                      <p className="text-sm text-white/50">In-depth comparisons and buying advice</p>
                     </div>
                   </div>
-                  <h3 className="text-sm font-bold text-[#e8e0f7] group-hover:text-[#6d3aff] transition-colors truncate mb-1">
-                    {tool.name}
-                  </h3>
-                  <p className="text-xs text-[#a78bfa] truncate">{tool.category}</p>
-                </Link>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ========== POPULAR CATEGORIES ========== */}
-      <section className="relative pb-16 px-6">
-        <div className="max-w-[1200px] mx-auto">
-          <div className="flex items-center gap-3 mb-8">
-            <div className="w-10 h-10 rounded-xl bg-[#2a1a4e] flex items-center justify-center">
-              <Layers className="w-5 h-5 text-[#6d3aff]" />
+                  <Link
+                    href="/blog"
+                    className="hidden md:flex items-center gap-1 text-sm text-[#00bcd4] hover:text-[#a78bfa] transition-colors"
+                  >
+                    View All Posts <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              </Reveal>
+              <StaggerReveal stagger={0.08} delay={0.15}>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  {latestPosts.map((post) => (
+                    <Link key={post.slug} href={`/blog/${post.slug}`} className="block group">
+                      <LiquidGlass tint="#a78bfa" intensity="standard" glow className="rounded-xl p-6 h-full">
+                        <div className="flex items-center justify-between mb-4">
+                          <span className="text-xs font-semibold uppercase tracking-wider text-[#a78bfa] bg-white/10 px-2.5 py-1 rounded-md">
+                            {post.category}
+                          </span>
+                          <span className="text-xs text-white/50">{post.readTime} min read</span>
+                        </div>
+                        <h3 className="font-bold text-white mb-3 group-hover:text-[#00bcd4] transition-colors leading-snug line-clamp-2">
+                          {post.title}
+                        </h3>
+                        <p className="text-sm text-white/60 leading-relaxed flex-grow line-clamp-3">
+                          {post.excerpt}
+                        </p>
+                        <div className="flex items-center gap-2 mt-4 pt-4 border-t border-white/10 text-xs text-white/40">
+                          <Calendar className="w-3.5 h-3.5" />
+                          {new Date(post.date).toLocaleDateString("en-US", {
+                            month: "short",
+                            day: "numeric",
+                            year: "numeric",
+                          })}
+                          <span className="mx-1">·</span>
+                          {post.author}
+                        </div>
+                      </LiquidGlass>
+                    </Link>
+                  ))}
+                </div>
+              </StaggerReveal>
+              <Reveal delay={0.2}>
+                <div className="mt-6 text-center md:hidden">
+                  <Link
+                    href="/blog"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/5 border border-white/10 rounded-full text-sm text-[#00bcd4] hover:text-[#a78bfa] transition-colors"
+                  >
+                    View All Posts <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              </Reveal>
             </div>
-            <div>
-              <h2 className="text-2xl font-bold text-[#e8e0f7]">Popular Categories</h2>
-              <p className="text-sm text-[#c4b5fd]">Browse tools by category</p>
-            </div>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-3">
-            {topCategories.map(([cat, stats]) => {
-              const CatIcon = getCategoryIcon(cat);
-              return (
-                <Link
-                  key={cat}
-                  href={`/category/${cat.toLowerCase().replace(/\s+/g, "-")}`}
-                  className="group bg-[#1a1233] border border-[#3b2566] rounded-xl p-4 hover:border-[#4c2d82] transition-all text-center"
-                >
-                  <div className="w-10 h-10 rounded-lg bg-[#2a1a4e] flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
-                    <CatIcon className="w-5 h-5 text-[#6d3aff]" />
-                  </div>
-                  <p className="text-sm font-bold text-[#e8e0f7] group-hover:text-[#6d3aff] transition-colors">
-                    {cat}
-                  </p>
-                  <div className="flex items-center justify-center gap-2 mt-1 text-xs text-[#a78bfa]">
-                    <span>{stats.count} tools</span>
-                    <span className="flex items-center gap-0.5 text-[#F59E0B]">
-                      <Star className="w-3 h-3 fill-[#F59E0B]" /> {stats.avgRating}
-                    </span>
-                  </div>
-                </Link>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+          </section>
 
-      {/* ========== TRUST SIGNALS (stats strip) ========== */}
-      <section className="relative pb-20 px-6">
-        <div className="max-w-[1200px] mx-auto">
-          <div className="bg-gradient-to-r from-[#1a1233] to-[#2a1a4e] border border-[#3b2566] rounded-2xl p-8 md:p-10">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-              <div>
-                <p className="text-3xl md:text-4xl font-extrabold text-[#e8e0f7]">{ALL_TOOLS.length}</p>
-                <p className="text-sm text-[#c4b5fd] mt-1">Tools Reviewed</p>
-              </div>
-              <div>
-                <p className="text-3xl md:text-4xl font-extrabold text-[#e8e0f7]">{BLOG_POSTS.length}</p>
-                <p className="text-sm text-[#c4b5fd] mt-1">Expert Guides</p>
-              </div>
-              <div>
-                <p className="text-3xl md:text-4xl font-extrabold text-[#e8e0f7]">
-                  {CATEGORIES.length}
+          {/* ========== TRENDING TOOLS ========== */}
+          <section className="relative pb-16 px-6">
+            <div className="max-w-[1200px] mx-auto">
+              <Reveal>
+                <div className="flex items-center gap-3 mb-8">
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#00bcd4]/20 to-[#f472b6]/20 flex items-center justify-center">
+                    <TrendingUp className="w-5 h-5 text-[#f472b6]" />
+                  </div>
+                  <div>
+                    <h2 className="text-2xl font-bold text-white">Trending Tools</h2>
+                    <p className="text-sm text-white/50">Highest-rated no-code platforms this month</p>
+                  </div>
+                </div>
+              </Reveal>
+              <StaggerReveal stagger={0.05} delay={0.1}>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                  {trendingTools.map((tool) => {
+                    const Icon = tool.icon;
+                    return (
+                      <Link href={`/tools/${tool.id}`} key={tool.id} className="block group">
+                        <LiquidGlass tint="#f472b6" intensity="subtle" glow className="rounded-xl p-4">
+                          <div className="flex items-center justify-between mb-3">
+                            <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                              <Icon className="w-5 h-5 text-[#00bcd4]" />
+                            </div>
+                            <div className="flex items-center gap-1">
+                              <Star className="w-3.5 h-3.5 text-[#00bcd4] fill-[#00bcd4]" />
+                              <span className="text-xs font-bold text-white">{tool.rating}</span>
+                            </div>
+                          </div>
+                          <h3 className="text-sm font-bold text-white group-hover:text-[#00bcd4] transition-colors truncate mb-1">
+                            {tool.name}
+                          </h3>
+                          <p className="text-xs text-white/50 truncate">{tool.category}</p>
+                        </LiquidGlass>
+                      </Link>
+                    );
+                  })}
+                </div>
+              </StaggerReveal>
+            </div>
+          </section>
+
+          {/* ========== POPULAR CATEGORIES ========== */}
+          <section className="relative pb-16 px-6">
+            <div className="max-w-[1200px] mx-auto">
+              <Reveal>
+                <div className="flex items-center gap-3 mb-8">
+                  <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center">
+                    <Layers className="w-5 h-5 text-[#a78bfa]" />
+                  </div>
+                  <div>
+                    <h2 className="text-2xl font-bold text-white">Popular Categories</h2>
+                    <p className="text-sm text-white/50">Browse tools by category</p>
+                  </div>
+                </div>
+              </Reveal>
+              <StaggerReveal stagger={0.04} delay={0.1}>
+                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-3">
+                  {topCategories.map(([cat, stats]) => {
+                    const CatIcon = getCategoryIcon(cat);
+                    return (
+                      <Link
+                        key={cat}
+                        href={`/category/${cat.toLowerCase().replace(/\s+/g, "-")}`}
+                        className="block group"
+                      >
+                        <LiquidGlass tint="#a78bfa" intensity="subtle" className="rounded-xl p-4 text-center">
+                          <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                            <CatIcon className="w-5 h-5 text-[#00bcd4]" />
+                          </div>
+                          <p className="text-sm font-bold text-white group-hover:text-[#00bcd4] transition-colors">
+                            {cat}
+                          </p>
+                          <div className="flex items-center justify-center gap-2 mt-1 text-xs text-white/50">
+                            <span>{stats.count} tools</span>
+                            <span className="flex items-center gap-0.5 text-[#00bcd4]">
+                              <Star className="w-3 h-3 fill-[#00bcd4]" /> {stats.avgRating}
+                            </span>
+                          </div>
+                        </LiquidGlass>
+                      </Link>
+                    );
+                  })}
+                </div>
+              </StaggerReveal>
+            </div>
+          </section>
+
+          {/* ========== TRUST SIGNALS (stats strip) ========== */}
+          <section className="relative pb-20 px-6">
+            <div className="max-w-[1200px] mx-auto">
+              <Reveal>
+                <LiquidGlass tint="#00bcd4" intensity="heavy" glow className="rounded-2xl p-8 md:p-10">
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div>
+                      <p className="text-3xl md:text-4xl font-extrabold text-white">{ALL_TOOLS.length}</p>
+                      <p className="text-sm text-white/50 mt-1">Tools Reviewed</p>
+                    </div>
+                    <div>
+                      <p className="text-3xl md:text-4xl font-extrabold text-white">{BLOG_POSTS.length}</p>
+                      <p className="text-sm text-white/50 mt-1">Expert Guides</p>
+                    </div>
+                    <div>
+                      <p className="text-3xl md:text-4xl font-extrabold text-white">
+                        {CATEGORIES.length}
+                      </p>
+                      <p className="text-sm text-white/50 mt-1">Categories</p>
+                    </div>
+                    <div>
+                      <p className="text-3xl md:text-4xl font-extrabold text-white">99+</p>
+                      <p className="text-sm text-white/50 mt-1">Expert Reviews</p>
+                    </div>
+                  </div>
+                </LiquidGlass>
+              </Reveal>
+            </div>
+          </section>
+
+          {/* ========== FOOTER ========== */}
+          <footer className="relative pb-10 px-6">
+            <div className="max-w-[1200px] mx-auto">
+              <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p className="text-sm text-white/40">
+                  &copy; {new Date().getFullYear()} NoCode Tools. All rights reserved.
                 </p>
-                <p className="text-sm text-[#c4b5fd] mt-1">Categories</p>
-              </div>
-              <div>
-                <p className="text-3xl md:text-4xl font-extrabold text-[#e8e0f7]">99+</p>
-                <p className="text-sm text-[#c4b5fd] mt-1">Expert Reviews</p>
+                <div className="flex items-center gap-6">
+                  <Link href="/about" className="text-sm text-white/40 hover:text-white/80 transition-colors">About</Link>
+                  <Link href="/privacy" className="text-sm text-white/40 hover:text-white/80 transition-colors">Privacy</Link>
+                  <Link href="/terms" className="text-sm text-white/40 hover:text-white/80 transition-colors">Terms</Link>
+                  <Link href="/contact" className="text-sm text-white/40 hover:text-white/80 transition-colors">Contact</Link>
+                </div>
               </div>
             </div>
-          </div>
+          </footer>
         </div>
-      </section>
-    </div>
+      </div>
+    </MotionProvider>
   );
 }

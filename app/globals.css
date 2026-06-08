@@ -6,18 +6,17 @@
 
 @layer base {
   :root {
-    --bg-primary: #0f0a1e;
-    --bg-secondary: #1a1233;
-    --bg-tertiary: #2a1a4e;
-    --border-subtle: #3b2566;
-    --border-active: #6d3aff;
-    --text-primary: #e8e0f7;
-    --text-secondary: #c4b5fd;
-    --text-muted: #a78bfa;
-    --accent-blue: #6d3aff;
-    --accent-cyan: #a78bfa;
-    --accent-glow: rgba(109, 58, 255, 0.15);
-    --gold: #F59E0B;
+    --bg-primary: #09090b;
+    --bg-secondary: #18181b;
+    --bg-tertiary: #27272a;
+    --border-subtle: rgba(255, 255, 255, 0.08);
+    --border-active: rgba(255, 255, 255, 0.16);
+    --text-primary: #fafafa;
+    --text-secondary: #a1a1aa;
+    --text-muted: #71717a;
+    --accent-cyan: #00bcd4;
+    --accent-purple: #a78bfa;
+    --accent-pink: #f472b6;
     --radius: 0.75rem;
   }
 
@@ -35,61 +34,56 @@
 }
 
 @layer components {
-  .aurora-bg {
-    position: fixed;
-    inset: 0;
-    z-index: 0;
-    pointer-events: none;
+  .card-liquid {
+    position: relative;
     overflow: hidden;
+    border-radius: var(--radius);
+    background: rgba(255, 255, 255, 0.035);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    box-shadow:
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.12),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.06),
+      0 1px 3px rgba(0, 0, 0, 0.12),
+      0 8px 32px -8px rgba(0, 0, 0, 0.28);
+    transition: backdrop-filter 400ms cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 300ms ease;
   }
 
-  .aurora-bg::before {
+  .card-liquid::before {
     content: '';
     position: absolute;
-    width: 200%;
-    height: 200%;
-    top: -50%;
-    left: -50%;
-    background:
-      radial-gradient(ellipse at 30% 20%, rgba(109, 58, 255, 0.12) 0%, transparent 50%),
-      radial-gradient(ellipse at 70% 60%, rgba(139, 92, 246, 0.08) 0%, transparent 50%),
-      radial-gradient(ellipse at 50% 50%, rgba(45, 20, 100, 0.4) 0%, transparent 70%);
-    animation: aurora-drift 20s ease-in-out infinite alternate;
-  }
-
-  @keyframes aurora-drift {
-    0% { transform: translate(0, 0) rotate(0deg); }
-    33% { transform: translate(5%, -3%) rotate(2deg); }
-    66% { transform: translate(-3%, 5%) rotate(-1deg); }
-    100% { transform: translate(2%, -2%) rotate(1deg); }
-  }
-
-  .grid-pattern {
-    position: fixed;
     inset: 0;
-    z-index: 0;
     pointer-events: none;
-    background-image:
-      linear-gradient(rgba(59, 37, 102, 0.15) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(59, 37, 102, 0.15) 1px, transparent 1px);
-    background-size: 60px 60px;
-    mask-image: radial-gradient(ellipse at 50% 0%, black 0%, transparent 60%);
-    -webkit-mask-image: radial-gradient(ellipse at 50% 0%, black 0%, transparent 60%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.08), transparent);
+    border-radius: inherit;
+  }
+
+  .card-liquid:hover {
+    backdrop-filter: blur(20px) saturate(200%) brightness(1.08);
+    -webkit-backdrop-filter: blur(20px) saturate(200%) brightness(1.08);
   }
 
   .text-gradient {
-    background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+    background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-pink {
+    background: linear-gradient(135deg, var(--accent-purple), var(--accent-pink));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .shadow-glow-sm {
-    box-shadow: 0 0 20px rgba(109, 58, 255, 0.3);
+    box-shadow: 0 0 20px rgba(0, 188, 212, 0.3);
   }
 
   .shadow-glow-lg {
-    box-shadow: 0 0 60px rgba(109, 58, 255, 0.15);
+    box-shadow: 0 0 60px rgba(167, 139, 250, 0.15);
   }
 
   @keyframes pulse-dot {
@@ -99,16 +93,6 @@
 
   .pulse-dot {
     animation: pulse-dot 2s ease-in-out infinite;
-  }
-
-  .card-hover {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .card-hover:hover {
-    transform: translateY(-4px);
-    border-color: var(--border-active);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
   }
 
   ::-webkit-scrollbar { width: 8px; height: 8px; }

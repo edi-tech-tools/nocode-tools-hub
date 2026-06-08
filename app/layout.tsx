@@ -1,16 +1,13 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "./sections/Header";
-import Footer from "./sections/Footer";
-import CookieBanner from "./components/CookieBanner";
 
 export const metadata: Metadata = {
   title: {
-    default: "NoCode Tool Hub — Best No-Code Tools & Platform Reviews 2026",
-    template: "%s — NoCode Tool Hub",
+    default: "NoCode Tools — Best No-Code Tools & Platform Reviews 2026",
+    template: "%s — NoCode Tools",
   },
   description:
-    "Compare 69+ no-code tools with verified reviews, pricing breakdowns, and expert comparisons. Find the perfect no-code platform for your business. Webflow, Bubble, Airtable, Zapier and more.",
+    "Compare no-code tools with verified reviews, pricing breakdowns, and expert comparisons. Find the perfect no-code platform for your business.",
   keywords: [
     "no-code tools",
     "low-code platforms",
@@ -20,16 +17,13 @@ export const metadata: Metadata = {
     "no-code automation",
     "no-code database",
   ],
-  verification: {
-    google: "T5bb4mZivi0CfaYYRiKZLSNIWmhvAX6_RVgDEyonTGo",
-  },
   openGraph: {
     type: "website",
     locale: "en_US",
-    siteName: "NoCode Tool Hub",
-    title: "NoCode Tool Hub — Best No-Code Tools & Platform Reviews 2026",
+    siteName: "NoCode Tools",
+    title: "NoCode Tools — Best No-Code Tools & Platform Reviews 2026",
     description:
-      "Compare 69+ no-code tools with verified reviews, pricing, and expert comparisons.",
+      "Compare no-code tools with verified reviews, pricing, and expert comparisons.",
   },
 };
 
@@ -41,21 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-screen antialiased">
-        {/* Background Effects */}
-        <div className="aurora-bg" />
-        <div className="grid-pattern" />
-
-        {/* Header */}
-        <Header />
-
-        {/* Main Content */}
-        <main className="relative z-10">{children}</main>
-
-        {/* Footer */}
-        <Footer />
-
-        {/* Cookie Consent Banner */}
-        <CookieBanner />
+        {children}
       </body>
     </html>
   );
