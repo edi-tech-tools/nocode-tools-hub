@@ -170,7 +170,7 @@ export default function ContactPage() {
               <p className="text-sm text-[#8BA3BE] leading-relaxed">
                 123 Software Row, Suite 200
                 <br />
-                San Francisco, CA 94104
+                Austin, TX 78701
                 <br />
                 United States
               </p>

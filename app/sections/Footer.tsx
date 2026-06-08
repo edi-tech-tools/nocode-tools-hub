@@ -46,7 +46,7 @@ export default function Footer() {
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#6d3aff] to-[#a78bfa] flex items-center justify-center">
                 <Sparkles className="w-4 h-4 text-white" />
               </div>
-              <span className="text-lg font-bold text-[#e8e0f7]">NoCode Hub</span>
+              <span className="text-lg font-bold text-[#e8e0f7]">NoCode Tool Hub</span>
             </Link>
             <p className="text-sm text-[#c4b5fd] leading-relaxed mb-6">
               The most comprehensive directory of no-code tools. Discover, compare, and integrate the best platforms for building without code.

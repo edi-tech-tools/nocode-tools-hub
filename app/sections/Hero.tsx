@@ -1,7 +1,7 @@
 "use client";
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Search, BarChart3, ShieldCheck, MessageSquare, Users, CreditCard, Briefcase, Zap, Globe } from 'lucide-react';
+import { Search, Globe, Layers, Zap, Database, Layout, ShoppingCart, Palette, Cpu, Zap, Globe } from 'lucide-react';
 
 const CATEGORIES = [
   { label: 'CRM', icon: ShieldCheck },
