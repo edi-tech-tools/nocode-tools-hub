@@ -148,10 +148,10 @@ export default function AboutPage() {
               Contact Us
             </Link>
             <a
-              href="mailto:longfeixiang7650@gmail.com"
+              href="mailto:contact@nocode-tools.net"
               className="px-6 py-3 border border-[#1E3A5F] hover:border-[#2A5080] text-[#8BA3BE] hover:text-[#F0F4F8] font-medium rounded-lg transition-all"
             >
-              longfeixiang7650@gmail.com
+              contact@nocode-tools.net
             </a>
           </div>
         </div>

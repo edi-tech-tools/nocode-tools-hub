@@ -62,7 +62,6 @@ export default function HomePage() {
         <div className="absolute top-0 right-0 w-72 h-72 rounded-full opacity-[0.06] blur-[120px]"
           style={{ background: `radial-gradient(circle, ${ACCENT_COLOR}, ${SECONDARY_COLOR})` }} />
         <div className="relative max-w-6xl mx-auto">
-          {/* 场景标签 */}
           <div className="flex flex-wrap gap-2 mb-6">
             {categories.slice(0, 6).map((cat, i) => (
               <button key={cat.name}
@@ -89,7 +88,6 @@ export default function HomePage() {
               Discover the best no-code and low-code tools. Curated, tested, and reviewed by builders like you.
             </p>
           </div>
-          {/* 场景卡片 */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 mb-6">
             {categories.slice(0, 6).map((cat, i) => {
               const color = catColors[i % 6];
