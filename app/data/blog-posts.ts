@@ -193,7 +193,7 @@ No — but AI agents will change how CRM systems are used. Instead of salespeopl
 Net Revenue Retention (NRR) remains the single most important metric. If your vendor's NRR is below 100%, they're shrinking even when they appear to be growing. If it's above 110%, they're creating value that customers are willing to pay more for. HubSpot at 102% is in the "stable but not growing from existing base" category — functional, but worth monitoring closely.
 
 **Sources:** HubSpot Q1 2026 Earnings Report (May 8, 2026), SaaStr Analysis by Jason Lemkin (May 20, 2026), SaaStr AI Annual 2026 Conference Coverage (May 17-19, 2026), G2 Spring 2026 CRM Reviews, SaaStr B2B API Report Card (May 19, 2026), SaaStr "Year 2 Churn" Analysis (May 2026). All ratings and statistics as of May 2026.`,
-    author: "Daniel Liu",
+    author: "Tim Miller",
     authorRole: "Enterprise SaaS Strategy Analyst",
     date: "2026-05-21",
     category: "SaaS Trends & Analysis",
@@ -308,7 +308,7 @@ Yes, significantly. Google's first search UI overhaul in 25 years replaces the t
 For Gemini 3.5 Flash: adopt immediately for cost-sensitive workloads (email triage, content gen, data extraction). For Gemini Spark: wait for enterprise security audits and deploy in limited mode first. For Gemini Omni: wait for pricing and independent benchmarks before committing. The cost benefits of Flash are compelling enough to justify immediate evaluation.
 
 **Sources:** VentureBeat Google I/O 2026 Coverage (May 19, 2026), TechCrunch Enterprise AI Coverage (May 2026), Google I/O 2026 Keynote (May 19, 2026), Hacker News Discussion (May 19-20, 2026), G2 User Reviews (Spring 2026), Google Cloud Pricing Page (accessed May 2026). All ratings and statistics as of May 2026.`,
-    author: "Daniel Liu",
+    author: "Tim Miller",
     authorRole: "Enterprise AI Strategy Analyst",
     date: "2026-05-20",
     category: "AI & Automation",
@@ -499,7 +499,7 @@ Pricing model selection is a strategic decision that affects every aspect of you
 The most successful SaaS companies revisit their pricing every 6-12 months. The ones that don't leave millions on the table.
 
 *Sources: G2 SaaS Pricing Grid Reports (Spring 2026), Capterra Pricing Model Reviews (2026), TrustRadius Verified Reviews (2026), McKinsey Pricing Research (2025), G2 SaaS Pricing Model Analysis (2026). All ratings and user quotes are sourced from these platforms and reflect user experiences as of May 2026.*`,
-    author: "Marcus Johnson",
+    author: "Tim Miller",
     authorRole: "Product Strategy Lead",
     date: "2026-05-19",
     category: "Strategy",
@@ -549,7 +549,7 @@ Databricks grew out of Apache Spark and has evolved into a unified analytics pla
 Choose Snowflake if your team is SQL-first and wants the simplest managed warehouse experience. Pick Databricks if data science and ML are core to your use case. BigQuery is best for Google Cloud-native teams. Redshift is the most cost-effective for AWS shops. Azure Synapse makes sense in Microsoft-heavy environments.
 
 **Sources:** G2 Cloud Data Warehouse Grid Reports (Spring 2026), Capterra Reviews (2026). All ratings as of May 2026.`,
-    author: "Kenji Watanabe",
+    author: "Tim Miller",
     authorRole: "Data Engineering Analyst",
     date: "2026-05-19",
     category: "Data",
@@ -587,7 +587,7 @@ Gainsight is the most established player in customer success, offering comprehen
 Choose Gainsight for mature enterprise CS programs. Pick Totango for mid-market flexibility. ChurnZero excels at real-time engagement triggers. PlanHat is the rising star with the best AI capabilities. Catalyst offers the most modern user experience.
 
 **Sources:** G2 Customer Success Grid Reports (Spring 2026), Gartner CS Market Report (2026), Capterra Reviews (2026). All ratings as of May 2026.`,
-    author: "Rachel Green",
+    author: "Tim Miller",
     authorRole: "Customer Success Analyst",
     date: "2026-05-19",
     category: "Customer Success",
@@ -627,7 +627,7 @@ Shopify Plus has rapidly evolved from a B2C platform to a legitimate B2B player 
 Choose Shopify Plus for speed of deployment and ease of use. Pick BigCommerce for native features without app dependencies. Magento offers the deepest customization for large enterprises. Salesforce Commerce Cloud is best for Salesforce CRM users. WooCommerce is ideal for WordPress-based stores on a budget.
 
 **Sources:** G2 E-Commerce Platforms Grid Reports (Spring 2026), Forrester B2B E-Commerce Forecast (2026), Capterra Reviews (2026). All ratings as of May 2026.`,
-    author: "Daniel Liu",
+    author: "Tim Miller",
     authorRole: "E-Commerce Technology Analyst",
     date: "2026-05-19",
     category: "E-Commerce",
@@ -799,7 +799,7 @@ Technically yes, but it adds significant complexity. Multi-agent workflows acros
 No. Agent orchestration platforms complement rather than replace traditional SaaS applications. They act as a coordination layer — directing AI agents to use your existing SaaS tools (CRM, ERP, ticketing systems) more effectively. The platforms that integrate deepest with existing enterprise tools (Microsoft, Google, AWS) have a strategic advantage here.
 
 **Sources:** VB Pulse Enterprise Agent Orchestration Report (Q2 2026), G2 Agent Platforms Grid (Spring 2026), TechCrunch Sierra Funding Coverage (May 2026), VentureBeat Anthropic Enterprise Coverage (May 2026), Product Hunt SaaS Category (May 2026), Hacker News Show (May 2026), platform documentation and pricing pages (accessed May 2026). All market share figures and ratings as of May 2026.`,
-    author: "Daniel Liu",
+    author: "Tim Miller",
     authorRole: "Enterprise AI Strategy Analyst",
     date: "2026-05-19",
     category: "AI & Automation",
@@ -915,7 +915,7 @@ HubSpot provides excellent campaign-level analytics with attribution reporting (
 For most B2B companies, I'd start with ActiveCampaign. The feature set covers 90% of what teams need at 10-20% of the cost. As you grow into the mid-market ($5M+ ARR), HubSpot becomes the natural upgrade path for its integrated CRM. Marketo only makes sense for large enterprises that have outgrown HubSpot or need Adobe ecosystem integration.
 
 *Sources: G2 Marketing Automation Grid Report (Spring 2026), Capterra Marketing Automation Reviews (2026), TrustRadius verified reviews (2026). Pricing from official vendor websites as of May 2026.*`,
-    author: "Sarah Chen",
+    author: "Tim Miller",
     authorRole: "Senior SaaS Analyst",
     date: "2026-05-18",
     category: "Marketing",
@@ -1081,7 +1081,7 @@ A: Companies using CS platforms typically see 15-30% reduction in churn within t
 A: Yes. Userpilot (from $249/month) and ClientSuccess (from $400/month) are accessible for small CS teams of 1-3 people.
 
 *Sources: G2 Customer Success Grid Reports (Spring 2026), Capterra Customer Success Reviews (2026), TrustRadius verified reviews (2026). All ratings reflect user experiences as of May 2026.*`,
-    author: "Sarah Chen",
+    author: "Tim Miller",
     authorRole: "Senior SaaS Analyst",
     date: "2026-05-18",
     category: "Support",
@@ -1259,7 +1259,7 @@ A: According to G2 survey data, asynchronous communication tools (Slack or Teams
 A: Establish clear norms for which tool to use for what purpose. Without guidelines, teams suffer from notification fatigue and fragmented conversations.
 
 *Sources: G2 Collaboration Software Grid Reports (Spring 2026), Capterra Remote Work Reviews (2026), Stanford remote work research (2025-2026). All ratings reflect user experiences as of May 2026.*`,
-    author: "James Mitchell",
+    author: "Tim Miller",
     authorRole: "Marketing VP",
     date: "2026-05-18",
     category: "Communication",
@@ -1440,7 +1440,7 @@ A: Yes, many organizations use Jira for engineering and Asana or Monday.com for 
 A: Jira is more comprehensive and is the enterprise standard. Linear is faster, cleaner, and preferred by startups. Both support Scrum/cycles workflows effectively.
 
 *Sources: G2 Project Management Grid Reports (Spring 2026), Capterra Project Management Reviews (2026), TrustRadius Verified Reviews (2026). All ratings reflect user experiences as of May 2026.*`,
-    author: "James Mitchell",
+    author: "Tim Miller",
     authorRole: "Marketing VP",
     date: "2026-05-17",
     category: "Productivity",
@@ -1629,7 +1629,7 @@ A: Yes, though most teams standardize on one. Some large enterprises use Power B
 A: Metabase (self-hosted) and the free tiers of Power BI, Amplitude, and Mixpanel are all excellent entry points.
 
 *Sources: G2 Business Intelligence Grid Report (Spring 2026), Capterra Analytics Reviews (2026), Gartner Magic Quadrant for ABI Platforms (2026). All ratings reflect user experiences as of May 2026.*`,
-    author: "Aisha Patel",
+    author: "Tim Miller",
     authorRole: "Engineering Director",
     date: "2026-05-16",
     category: "Analytics",
@@ -1771,7 +1771,7 @@ If I were a CIO at a 5,000-person enterprise already on Microsoft 365, I'd choos
 **The bottom line:** There's no wrong answer — but there's a wrong answer for your specific situation. Slack is better at messaging and integrations. Teams is better at video and enterprise integration. Choose based on your priorities, not the hype.
 
 *Sources: G2 Slack vs Microsoft Teams comparisons (Spring 2026), Capterra user reviews (2026), TrustRadius verified reviews (2026). Pricing data from official vendor websites as of May 2026.*`,
-    author: "James Mitchell",
+    author: "Tim Miller",
     authorRole: "Marketing VP",
     date: "2026-05-15",
     category: "Communication",
@@ -1976,7 +1976,7 @@ After researching dozens of CRM platforms and analyzing thousands of real user r
 For larger enterprises, Salesforce remains the gold standard — but only if you have the resources to manage it properly. And for budget-conscious teams, Zoho CRM delivers surprising depth of features at a fraction of the cost.
 
 *Sources: G2 CRM Grid Reports (Spring 2026), Capterra CRM Reviews (2026), TrustRadius Verified Reviews (2026). All ratings and user quotes are sourced from these platforms and reflect user experiences as of May 2026.*`,
-    author: "Sarah Chen",
+    author: "Tim Miller",
     authorRole: "Senior SaaS Analyst",
     date: "2026-05-10",
     category: "CRM",
@@ -2042,7 +2042,7 @@ Always grandfather existing customers for 6-12 months to avoid churn, and announ
 Monitor these metrics after any pricing change: conversion rate (free to paid), average revenue per account (ARPA), churn rate by tier, customer acquisition cost (CAC) payback period, and net dollar retention (NDR). A healthy NDR above 120% means your pricing strategy supports growth.
 
 The most successful SaaS companies revisit pricing every 6-12 months, test changes with small customer segments first, and communicate value increases before raising prices.`,
-    author: "Marcus Johnson",
+    author: "Tim Miller",
     authorRole: "Product Strategy Lead",
     date: "2026-05-08",
     category: "Strategy",
@@ -2121,7 +2121,7 @@ Best for: Rapid creation of pitch decks and internal presentations.
 ## Measuring ROI
 
 When evaluating AI productivity tools, measure these metrics: time saved per employee per week, reduction in meeting hours, content output volume increase, and employee satisfaction scores. Most organizations see a 3-5x return on AI tool investment within the first six months.`,
-    author: "Aisha Patel",
+    author: "Tim Miller",
     authorRole: "Engineering Director",
     date: "2026-05-06",
     category: "Productivity",
@@ -2182,7 +2182,7 @@ Notion combines docs, wikis, and databases in one platform. Remote teams use it 
 The golden rule of remote collaboration tools: choose platforms that integrate well together and minimize context switching. A typical best-practice stack includes: Slack (chat) + Zoom (sync meetings) + Loom (async video) + Notion (docs) + Asana (tasks) + Miro (whiteboarding).
 
 Most importantly, establish clear norms around which tool to use for what purpose. Without guidelines, teams suffer from notification fatigue and fragmented conversations.`,
-    author: "James Mitchell",
+    author: "Tim Miller",
     authorRole: "Marketing VP",
     date: "2026-05-04",
     category: "Communication",
@@ -2238,7 +2238,7 @@ Every SaaS company needs a documented incident response plan with defined roles 
 ## The Minimum Security Stack
 
 For a growing SaaS company, the minimum viable security stack is: Okta (identity + SSO + MFA) + Cloudflare (WAF + DDoS) + Snyk (code scanning) + a password manager (1Password or Bitwarden) + CrowdStrike or SentinelOne (endpoint protection). Budget approximately 8-12% of engineering budget for security tools and personnel.`,
-    author: "Dr. Lisa Park",
+    author: "Tim Miller",
     authorRole: "Tech Researcher",
     date: "2026-05-02",
     category: "Security",
@@ -2302,7 +2302,7 @@ Track these KPIs: open rate (B2B benchmark: 21-25%), click-through rate (2-5%), 
 ## Getting Started
 
 Start with one lifecycle workflow (welcome series is the highest-impact), measure results for 30 days, then add a lead nurturing sequence. Most B2B organizations see 20-30% of their total pipeline generated through automated email campaigns within 3-4 months.`,
-    author: "Sarah Chen",
+    author: "Tim Miller",
     authorRole: "Senior SaaS Analyst",
     date: "2026-04-28",
     category: "Marketing",
@@ -2402,7 +2402,7 @@ Many successful organizations adopt hybrid methodologies. For example, use Scrum
 Consider these factors: project complexity and uncertainty, team size and experience, customer availability for feedback, regulatory requirements, and organizational culture. Most teams start with Scrum because it provides structure while remaining adaptable. If your requirements change frequently, go Agile. If they are fixed and well-understood, Waterfall may be more efficient.
 
 The best methodology is the one your team will actually follow consistently.`,
-    author: "Marcus Johnson",
+    author: "Tim Miller",
     authorRole: "Product Strategy Lead",
     date: "2026-04-25",
     category: "Management",
@@ -2478,7 +2478,7 @@ A modern DevOps toolchain typically includes: GitHub (source control) + GitHub A
 ## The ROI of Good DevOps
 
 Elite DevOps teams deploy on demand, have change failure rates under 5%, and recover from incidents in under an hour. They invest in automation early and treat their toolchain as a product that continuously improves. The upfront investment in DevOps tooling pays for itself within 3-6 months through reduced deployment friction and faster time-to-market.`,
-    author: "Aisha Patel",
+    author: "Tim Miller",
     authorRole: "Engineering Director",
     date: "2026-04-22",
     category: "DevOps",
@@ -2545,7 +2545,7 @@ A typical mid-market HR stack includes: BambooHR or Rippling (core HRIS) + Latti
 Track these metrics: time-to-hire, employee turnover rate (especially first-year retention), manager effectiveness scores, employee engagement scores, and internal promotion rate. Companies with mature HR technology see 26% higher revenue per employee and 40% lower voluntary turnover.
 
 The key to successful HR digital transformation is starting with the core HRIS, adding performance management as the company scales past 50 employees, and measuring engagement consistently from day one.`,
-    author: "Dr. Lisa Park",
+    author: "Tim Miller",
     authorRole: "Tech Researcher",
     date: "2026-04-20",
     category: "HR",
@@ -2688,7 +2688,7 @@ The 2026 B2B SaaS GTM transformation represents a fundamental rethinking of how 
 Don't expect white-glove service from a self-serve-first vendor at a mid-market price point. Don't settle for a generic trial if you have enterprise requirements. And above all, recognize that the leaner vendor org means you need to be a more informed, proactive buyer.
 
 The vendors that will thrive in this new environment are those that make it easy for informed buyers to evaluate, purchase, and succeed — without needing a salesperson to hold their hand through every step. Those are the vendors worth betting on.`,
-    author: "Sarah Chen",
+    author: "Tim Miller",
     authorRole: "Senior SaaS Analyst",
     date: "2026-05-22",
     category: "SaaS Strategy",
@@ -2762,7 +2762,7 @@ Companies that combine AI automation with skilled human agents achieve the highe
 ## Building Your Support Stack
 
 A recommended stack for growing SaaS companies: Zendesk or Intercom (core platform) + a dedicated knowledge base (most platforms include this) + a quality monitoring tool + customer feedback/survey tool + CRM integration to connect support data to customer health scores.`,
-    author: "Sarah Chen",
+    author: "Tim Miller",
     authorRole: "Senior SaaS Analyst",
     date: "2026-04-18",
     category: "Support",
@@ -2985,7 +2985,7 @@ The iPaaS market has matured to the point where there is a clear platform for ev
 The integration platform you choose will shape how your entire SaaS stack operates for years to come. Choose carefully, but don't overthink it — the best platform is the one your team will actually use consistently.
 
 *Sources: G2 iPaaS Grid Reports (Spring 2026), Capterra Integration Platform Reviews (2026), TrustRadius Verified Reviews (2026), BetterCloud State of the SaaS Stack Report (2026), Grand View Research iPaaS Market Report (2026), Gartner Integration Platform Predictions (2026). Pricing from official vendor websites as of May 2026. All ratings reflect user experiences as of May 2026.*`,
-    author: "Daniel Liu",
+    author: "Tim Miller",
     authorRole: "Enterprise SaaS Strategy Analyst",
     date: "2026-05-25",
     category: "Integration",
@@ -3021,7 +3021,7 @@ Choose Mixpanel if you’re a growth-focused team under 200 employees, need rapi
 Can I use Mixpanel and Hotjar together? Absolutely—and we recommend it. One customer, Loom, uses Mixpanel for cohort retention reports and Hotjar to replay drop-off moments in their video editor. Is Hotjar enough for product analytics? Only if your questions are purely “where do users click?” or “what do they say?”—not “which feature drives expansion?” Which platform has the best free tier? Hotjar: 35 sessions/day + basic heatmaps + surveys, no credit card. Do I need both quantitative and qualitative analytics tools? Yes—if you want to know *what* is happening *and why*. Quantitative tells you “73% drop off at step 3”; qualitative reveals “they’re confused by the toggle label.”
 
 Our verdict? There’s no universal winner—only the right fit. Mixpanel wins for lean, growth-obsessed B2B teams shipping fast. Amplitude dominates for mature, data-rich enterprises needing experimentation rigor and predictive power. Hotjar is indispensable for UX optimization and early-stage validation. But the real winners? Teams using them *together*. We see 68% of high-performing SaaS companies layering Hotjar’s recordings on top of Mixpanel funnels—or feeding Amplitude behavioral cohorts into Hotjar surveys. That synergy—quantitative precision + qualitative humanity—is what separates insight from impact. Start with your biggest unanswered question: “Where are we leaking revenue?” (Mixpanel), “What will users do next?” (Amplitude), or “Why did they hesitate?” (Hotjar). Then build outward.`,
-    author: "Daniel Liu",
+    author: "Tim Miller",
     authorRole: "Enterprise SaaS Strategy Analyst",
     date: "2026-05-30",
     category: "Analytics",
@@ -3092,7 +3092,7 @@ A: Outreach: 3.2 months (driven by faster ramp time & higher reply rates). Sales
 ## Final Recommendation
 
 There is no universal “winner.” **Outreach wins for growth-stage SaaS teams needing execution velocity and AI-powered coaching in one platform. SalesLoft wins for large, regulated enterprises requiring orchestration across complex systems and strict compliance. Gong wins for revenue leaders who prioritize *truth, not volume* — especially when forecasting, coaching quality, or competitive insight is the top KPI.** In 2026, the smartest buyers don’t choose one — they architect a stack: Gong for insight, Outreach or SalesLoft for action, and a modern CRM as the anchor. Your first step? Audit your *biggest revenue leak*: Is it poor outreach execution (→ Outreach), fragmented processes (→ SalesLoft), or blind spots in deal health (→ Gong)? Then build outward — not inward.`,
-    author: "Daniel Liu",
+    author: "Tim Miller",
     authorRole: "Enterprise SaaS Strategy Analyst",
     date: "2026-05-31",
     category: "Sales",
