@@ -26,12 +26,11 @@ export default function BlogPage() {
             Blog
           </span>
           <h1 className="text-3xl md:text-5xl font-extrabold text-[#F0F4F8] tracking-tight mb-3">
-            Insights &{" "}
-            <span className="text-gradient">Expert Analysis</span>
+            NoCode Tool{" "}
+            <span className="text-gradient">Guides</span>
           </h1>
           <p className="text-lg text-[#8BA3BE] max-w-2xl mx-auto">
-            In-depth comparisons, buying guides, and strategies to help you make
-            smarter enterprise software decisions.
+            In-depth guides and comparisons of no-code platforms, automation tools, and website builders. Expert reviews to help you build without code.
           </p>
         </div>
 
