@@ -21,6 +21,7 @@ const BLOG_SLUGS = [
     "ai-powered-no-code-automation-2026-intelligent-workflows",
     "design-tools-2026-canva-figma-penpot-balsamiq-creatie",
     "best-no-code-landing-page-builders-2026",
+    "nocode-lowcode-trends-2026-market-analysis",
 ] as const;
 
 const TOOL_SLUGS = [
