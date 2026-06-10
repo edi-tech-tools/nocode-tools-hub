@@ -9,18 +9,10 @@ const FAQ_SCHEMA = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "What is no-code SaaS?",
+      name: "What is low-code?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No-code SaaS (Software as a Service) refers to cloud-based software tools that allow users to build applications and automate workflows without writing code. Unlike traditional software that requires programming skills, no-code platforms use visual interfaces, drag-and-drop builders, and pre-built templates. Examples include Airtable (databases), Webflow (websites), Zapier (automation), and Bubble (web apps).",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How do you choose the right SaaS tool for your business?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Choosing the right SaaS tool involves defining your requirements, budgeting, evaluating features, reading verified user reviews from platforms like G2 and Capterra, considering integration capabilities, testing with free trials or demos, and assessing vendor support and scalability. Always prioritize tools that solve your specific pain points rather than getting distracted by feature bloat.",
+        text: "Low-code is a software development approach that requires minimal hand-coding. It provides visual development environments with drag-and-drop components, pre-built templates, and connectors. Unlike no-code (which requires zero programming knowledge), low-code platforms allow developers to extend functionality with custom scripts and code when needed. Examples include OutSystems, Mendix, and Retool.",
       },
     },
     {
@@ -28,127 +20,71 @@ const FAQ_SCHEMA = {
       name: "What's the difference between no-code and low-code?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No-code platforms require zero programming knowledge — users build entirely through visual interfaces. Low-code platforms reduce but don't eliminate the need for coding, allowing developers to extend functionality with custom scripts. No-code is best for business users and non-technical teams, while low-code suits IT departments and professional developers who need flexibility. Both accelerate development compared to traditional coding.",
+        text: "No-code platforms require zero programming knowledge — users build entirely through visual interfaces. Low-code platforms reduce but don't eliminate the need for coding, allowing developers to extend functionality with custom scripts. No-code is best for business users and non-technical teams, while low-code suits IT departments and professional developers who need flexibility.",
       },
     },
     {
       "@type": "Question",
-      name: "How much should a small business spend on SaaS?",
+      name: "How do you choose the right low-code platform?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "A common benchmark is that small businesses spend 3–10% of their annual revenue on SaaS subscriptions. For a company with $500K in revenue, that translates to roughly $15K–$50K per year. However, this varies by industry — tech startups often spend more, while traditional service businesses spend less. The key is to track SaaS usage regularly and eliminate underutilized subscriptions.",
+        text: "Choosing the right low-code platform involves defining your requirements, evaluating visual development capabilities, checking integration options, assessing scalability, reviewing pricing models, testing with free trials, and considering vendor support. At JuniperNode, we recommend starting with your specific use case — internal tools, customer-facing apps, or workflow automation — and matching platforms to that need.",
       },
     },
     {
       "@type": "Question",
-      name: "What are the most popular no-code categories?",
+      name: "What are the most popular low-code categories?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Popular no-code categories include Website Builders (Webflow, Carrd, Bubble), Internal Tools (Retool, Budibase, Noloco), Automation (Zapier, Make, n8n), Workflow & Project Management (Notion, Airtable, Monday.com), Database & Backend (Xano, Supabase, Appwrite), E-commerce (Shopify, Gumroad), and AI Tools. Many of these platforms connect via APIs to create powerful integrated systems without writing code.",
+        text: "Popular low-code categories include Internal Tools (Retool, Budibase, Appsmith), Web Application Development (OutSystems, Mendix, Appian), Workflow Automation (Ninox, Kintone), Mobile App Development (FlutterFlow, Draftbit), and Database & Backend (Supabase, Xano, NocoDB). Many of these platforms connect via APIs to create powerful integrated systems.",
       },
     },
     {
       "@type": "Question",
-      name: "What is SaaS churn and why does it matter?",
+      name: "How much should a business spend on low-code platforms?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "SaaS churn refers to the percentage of customers who cancel their subscriptions over a given period. It's a critical metric because acquiring new customers costs 5–7x more than retaining existing ones. High churn indicates product-market fit issues, poor customer experience, or competitive pressures. Top SaaS companies aim for monthly churn rates below 3–5%.",
+        text: "Low-code platform pricing varies widely. Individual developer plans range from $20-$150/month. Team plans can cost $500-$5,000/month. Enterprise deployments often run $20,000-$100,000+/year including support and governance features. At JuniperNode, we recommend starting with team-level plans and scaling up as your development velocity and governance needs grow.",
       },
     },
     {
       "@type": "Question",
-      name: "How do no-code and SaaS pricing models work?",
+      name: "What is vendor lock-in in low-code?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No-code and SaaS pricing models vary widely. Common models include per-user per-month pricing (the most common), tiered plans (Free/Pro/Enterprise), usage-based pricing (pay per workflow run or API call), flat-rate pricing, and freemium with paid upgrades. Many vendors also offer annual discounts of 15–25% compared to monthly billing. Enterprise plans often include custom pricing and dedicated support.",
+        text: "Vendor lock-in is a key concern with low-code platforms. Some platforms only host your applications on their infrastructure, making it difficult to migrate. Others, like Budibase and NocoDB, are open-source and self-hostable. Before committing to a platform, evaluate its export capabilities, API access, and whether you retain ownership of your application code and data.",
       },
     },
     {
       "@type": "Question",
-      name: "What is a no-code tool marketplace?",
+      name: "How do low-code platforms handle security?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "A no-code tool marketplace is a platform where businesses can discover, compare, and evaluate software tools. Examples include G2, Capterra, TrustRadius, and GetApp. These marketplaces aggregate user reviews, feature comparisons, and pricing information to help buyers make informed decisions. Some also facilitate direct purchases or free trials. NoCode Tool Hub provides independent, curated comparisons to simplify your decision process.",
+        text: "Enterprise low-code platforms implement encryption at rest and in transit, SOC 2 Type II audits, ISO 27001 certification, GDPR compliance, regular penetration testing, multi-factor authentication (MFA), and role-based access controls (RBAC). Always verify a platform's security posture against your organization's requirements before adoption.",
       },
     },
     {
       "@type": "Question",
-      name: "How important are integrations when choosing SaaS tools?",
+      name: "Can low-code replace traditional development?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Integrations are extremely important. A SaaS tool that doesn't integrate with your existing tech stack can create data silos and manual workarounds. Look for tools that offer native integrations with popular platforms (like Slack, Salesforce, Google Workspace, or Microsoft 365), support APIs and webhooks for custom connections, and have a marketplace of third-party integrations.",
+        text: "Low-code complements rather than replaces traditional development. It excels at accelerating common business applications — internal tools, CRUD apps, dashboards, and workflow automation. Complex, high-performance, or highly differentiated software still benefits from custom development. The most successful organizations use low-code strategically for the 80% of applications that follow standard patterns.",
       },
     },
     {
       "@type": "Question",
-      name: "What should I look for in a SaaS contract?",
+      name: "What skills does a low-code developer need?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Key items to review in a SaaS contract include the service level agreement (SLA) guaranteeing uptime (typically 99.9%+), data ownership and portability clauses, security compliance certifications (SOC 2, ISO 27001), termination and refund policies, auto-renewal terms, pricing escalation limits, and data processing agreements for GDPR compliance. Always have legal counsel review enterprise contracts.",
+        text: "Low-code developers benefit from understanding data modeling, logic design, API concepts, and user experience principles. While platforms abstract away syntax, knowing how databases, APIs, and authentication work is crucial for building production-quality applications. Many organizations find that the best low-code developers come from both business analyst and traditional developer backgrounds.",
       },
     },
     {
       "@type": "Question",
-      name: "How does SaaS onboarding work for teams?",
+      name: "What is the future of low-code?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "SaaS onboarding typically involves account setup, user provisioning, data migration or import, training sessions (live or recorded), and integration configuration. The best SaaS providers offer dedicated onboarding specialists for enterprise plans, knowledge bases with tutorials, interactive walkthroughs within the product, and templates or starter kits to accelerate time-to-value.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What is the difference between free trial and freemium?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "A free trial gives you full access to premium features for a limited time (typically 7–30 days), after which you must subscribe. Freemium offers a permanently free version with limited features, designed to upsell you to paid plans when you need more functionality. Free trials are better for evaluating full capabilities, while freemium is good for long-term testing at no cost.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How do no-code companies handle data security?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Reputable no-code and SaaS companies implement encryption at rest and in transit, SOC 2 Type II audits, ISO 27001 certification, GDPR compliance, regular penetration testing, multi-factor authentication (MFA), role-based access controls (RBAC), and data backup & disaster recovery procedures. Always verify a vendor's security posture before committing to their platform.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What is the average length of a SaaS sales cycle?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "The SaaS sales cycle varies by deal size and complexity. Self-serve products under $100/month may close in minutes. Mid-market deals ($1K–$10K/year) typically take 2–4 weeks. Enterprise deals ($50K+/year) can take 3–12 months, involving multiple stakeholders, demo sessions, security reviews, and legal negotiations.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Should we build or buy SaaS tools?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Unless your core business differentiation depends on custom software, buying is almost always better than building. Building a CRM, analytics platform, or help desk from scratch costs 10–100x more than subscribing to a proven SaaS solution, and ongoing maintenance is a significant burden. Buy off-the-shelf SaaS and invest your engineering resources in your core product.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What is SaaS sprawl and how to avoid it?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "SaaS sprawl is the uncontrolled proliferation of software subscriptions across an organization, leading to wasted spending, security risks, and integration headaches. The average company uses 130+ SaaS tools. To prevent sprawl, implement a SaaS management policy, conduct quarterly audits, use a SaaS management platform, designate approval workflows for new tool purchases, and consolidate overlapping tools.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How do no-code tool reviews and ratings work?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "No-code tool reviews are typically collected by third-party platforms like G2, Capterra, and TrustRadius. Users submit ratings (usually 1–5 stars) and written feedback. These platforms verify reviewers, moderate content for authenticity, and aggregate scores to produce overall ratings. Reviews cover criteria like ease of use, customer support, value for money, and feature set. Always read recent reviews and look for patterns rather than outliers.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What is the future of no-code and SaaS?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "The future of no-code and SaaS is being shaped by AI-powered features (copilots, automation, predictive analytics), vertical SaaS (industry-specific solutions), product-led growth (PLG) strategies, usage-based and consumption pricing models, and increased focus on interoperability through open APIs. The global no-code market alone is projected to exceed $45 billion by 2030, driven by digital transformation across all industries.",
+        text: "The low-code market is projected to exceed $65 billion by 2030. Key trends include AI-assisted development (co-pilots that generate logic from natural language), enterprise-grade governance and security features, increased interoperability through open APIs, vertical-specific solutions, and hybrid platforms that let teams switch between visual and code modes seamlessly.",
       },
     },
   ],
@@ -156,94 +92,54 @@ const FAQ_SCHEMA = {
 
 const FAQ_ITEMS = [
   {
-    question: "What is no-code SaaS?",
+    question: "What is low-code?",
     answer:
-      "No-code SaaS (Software as a Service) refers to cloud-based software tools that allow users to build applications and automate workflows without writing code. Unlike traditional software that requires programming skills, no-code platforms use visual interfaces, drag-and-drop builders, and pre-built templates. Examples include Airtable (databases), Webflow (websites), Zapier (automation), and Bubble (web apps).",
-  },
-  {
-    question: "How do you choose the right SaaS tool for your business?",
-    answer:
-      "Choosing the right SaaS tool involves defining your requirements, budgeting, evaluating features, reading verified user reviews from platforms like G2 and Capterra, considering integration capabilities, testing with free trials or demos, and assessing vendor support and scalability. Always prioritize tools that solve your specific pain points rather than getting distracted by feature bloat.",
+      "Low-code is a software development approach that requires minimal hand-coding. It provides visual development environments with drag-and-drop components, pre-built templates, and connectors. Unlike no-code (which requires zero programming knowledge), low-code platforms allow developers to extend functionality with custom scripts and code when needed. Examples include OutSystems, Mendix, and Retool.",
   },
   {
     question: "What's the difference between no-code and low-code?",
     answer:
-      "No-code platforms require zero programming knowledge — users build entirely through visual interfaces. Low-code platforms reduce but don't eliminate the need for coding, allowing developers to extend functionality with custom scripts. No-code is best for business users and non-technical teams, while low-code suits IT departments and professional developers who need flexibility. Both accelerate development compared to traditional coding.",
+      "No-code platforms require zero programming knowledge — users build entirely through visual interfaces. Low-code platforms reduce but don't eliminate the need for coding, allowing developers to extend functionality with custom scripts. No-code is best for business users and non-technical teams, while low-code suits IT departments and professional developers who need flexibility.",
   },
   {
-    question: "How much should a small business spend on SaaS?",
+    question: "How do you choose the right low-code platform?",
     answer:
-      "A common benchmark is that small businesses spend 3–10% of their annual revenue on SaaS subscriptions. For a company with $500K in revenue, that translates to roughly $15K–$50K per year. However, this varies by industry — tech startups often spend more, while traditional service businesses spend less. The key is to track SaaS usage regularly and eliminate underutilized subscriptions.",
+      "Choosing the right low-code platform involves defining your requirements, evaluating visual development capabilities, checking integration options, assessing scalability, reviewing pricing models, testing with free trials, and considering vendor support. At JuniperNode, we recommend starting with your specific use case — internal tools, customer-facing apps, or workflow automation — and matching platforms to that need.",
   },
   {
-    question: "What are the most popular no-code categories?",
+    question: "What are the most popular low-code categories?",
     answer:
-      "Popular no-code categories include Website Builders (Webflow, Carrd, Bubble), Internal Tools (Retool, Budibase, Noloco), Automation (Zapier, Make, n8n), Workflow & Project Management (Notion, Airtable, Monday.com), Database & Backend (Xano, Supabase, Appwrite), E-commerce (Shopify, Gumroad), and AI Tools. Many of these platforms connect via APIs to create powerful integrated systems without writing code.",
+      "Popular low-code categories include Internal Tools (Retool, Budibase, Appsmith), Web Application Development (OutSystems, Mendix, Appian), Workflow Automation (Ninox, Kintone), Mobile App Development (FlutterFlow, Draftbit), and Database & Backend (Supabase, Xano, NocoDB). Many of these platforms connect via APIs to create powerful integrated systems.",
   },
   {
-    question: "What is SaaS churn and why does it matter?",
+    question: "How much should a business spend on low-code platforms?",
     answer:
-      "SaaS churn refers to the percentage of customers who cancel their subscriptions over a given period. It's a critical metric because acquiring new customers costs 5–7x more than retaining existing ones. High churn indicates product-market fit issues, poor customer experience, or competitive pressures. Top SaaS companies aim for monthly churn rates below 3–5%.",
+      "Low-code platform pricing varies widely. Individual developer plans range from $20-$150/month. Team plans can cost $500-$5,000/month. Enterprise deployments often run $20,000-$100,000+/year including support and governance features. At JuniperNode, we recommend starting with team-level plans and scaling up as your development velocity and governance needs grow.",
   },
   {
-    question: "How do no-code and SaaS pricing models work?",
+    question: "What is vendor lock-in in low-code?",
     answer:
-      "No-code and SaaS pricing models vary widely. Common models include per-user per-month pricing (the most common), tiered plans (Free/Pro/Enterprise), usage-based pricing (pay per workflow run or API call), flat-rate pricing, and freemium with paid upgrades. Many vendors also offer annual discounts of 15–25% compared to monthly billing. Enterprise plans often include custom pricing and dedicated support.",
+      "Vendor lock-in is a key concern with low-code platforms. Some platforms only host your applications on their infrastructure, making it difficult to migrate. Others, like Budibase and NocoDB, are open-source and self-hostable. Before committing to a platform, evaluate its export capabilities, API access, and whether you retain ownership of your application code and data.",
   },
   {
-    question: "What is a no-code tool marketplace?",
+    question: "How do low-code platforms handle security?",
     answer:
-      "A no-code tool marketplace is a platform where businesses can discover, compare, and evaluate software tools. Examples include G2, Capterra, TrustRadius, and GetApp. These marketplaces aggregate user reviews, feature comparisons, and pricing information to help buyers make informed decisions. Some also facilitate direct purchases or free trials. NoCode Tool Hub provides independent, curated comparisons to simplify your decision process.",
+      "Enterprise low-code platforms implement encryption at rest and in transit, SOC 2 Type II audits, ISO 27001 certification, GDPR compliance, regular penetration testing, multi-factor authentication (MFA), and role-based access controls (RBAC). Always verify a platform's security posture against your organization's requirements before adoption.",
   },
   {
-    question: "How important are integrations when choosing SaaS tools?",
+    question: "Can low-code replace traditional development?",
     answer:
-      "Integrations are extremely important. A SaaS tool that doesn't integrate with your existing tech stack can create data silos and manual workarounds. Look for tools that offer native integrations with popular platforms (like Slack, Salesforce, Google Workspace, or Microsoft 365), support APIs and webhooks for custom connections, and have a marketplace of third-party integrations.",
+      "Low-code complements rather than replaces traditional development. It excels at accelerating common business applications — internal tools, CRUD apps, dashboards, and workflow automation. Complex, high-performance, or highly differentiated software still benefits from custom development. The most successful organizations use low-code strategically for the 80% of applications that follow standard patterns.",
   },
   {
-    question: "What should I look for in a SaaS contract?",
+    question: "What skills does a low-code developer need?",
     answer:
-      "Key items to review in a SaaS contract include the service level agreement (SLA) guaranteeing uptime (typically 99.9%+), data ownership and portability clauses, security compliance certifications (SOC 2, ISO 27001), termination and refund policies, auto-renewal terms, pricing escalation limits, and data processing agreements for GDPR compliance. Always have legal counsel review enterprise contracts.",
+      "Low-code developers benefit from understanding data modeling, logic design, API concepts, and user experience principles. While platforms abstract away syntax, knowing how databases, APIs, and authentication work is crucial for building production-quality applications. Many organizations find that the best low-code developers come from both business analyst and traditional developer backgrounds.",
   },
   {
-    question: "How does SaaS onboarding work for teams?",
+    question: "What is the future of low-code?",
     answer:
-      "SaaS onboarding typically involves account setup, user provisioning, data migration or import, training sessions (live or recorded), and integration configuration. The best SaaS providers offer dedicated onboarding specialists for enterprise plans, knowledge bases with tutorials, interactive walkthroughs within the product, and templates or starter kits to accelerate time-to-value.",
-  },
-  {
-    question: "What is the difference between free trial and freemium?",
-    answer:
-      "A free trial gives you full access to premium features for a limited time (typically 7–30 days), after which you must subscribe. Freemium offers a permanently free version with limited features, designed to upsell you to paid plans when you need more functionality. Free trials are better for evaluating full capabilities, while freemium is good for long-term testing at no cost.",
-  },
-  {
-    question: "How do no-code companies handle data security?",
-    answer:
-      "Reputable no-code and SaaS companies implement encryption at rest and in transit, SOC 2 Type II audits, ISO 27001 certification, GDPR compliance, regular penetration testing, multi-factor authentication (MFA), role-based access controls (RBAC), and data backup & disaster recovery procedures. Always verify a vendor's security posture before committing to their platform.",
-  },
-  {
-    question: "What is the average length of a SaaS sales cycle?",
-    answer:
-      "The SaaS sales cycle varies by deal size and complexity. Self-serve products under $100/month may close in minutes. Mid-market deals ($1K–$10K/year) typically take 2–4 weeks. Enterprise deals ($50K+/year) can take 3–12 months, involving multiple stakeholders, demo sessions, security reviews, and legal negotiations.",
-  },
-  {
-    question: "Should we build or buy SaaS tools?",
-    answer:
-      "Unless your core business differentiation depends on custom software, buying is almost always better than building. Building a CRM, analytics platform, or help desk from scratch costs 10–100x more than subscribing to a proven SaaS solution, and ongoing maintenance is a significant burden. Buy off-the-shelf SaaS and invest your engineering resources in your core product.",
-  },
-  {
-    question: "What is SaaS sprawl and how to avoid it?",
-    answer:
-      "SaaS sprawl is the uncontrolled proliferation of software subscriptions across an organization, leading to wasted spending, security risks, and integration headaches. The average company uses 130+ SaaS tools. To prevent sprawl, implement a SaaS management policy, conduct quarterly audits, use a SaaS management platform, designate approval workflows for new tool purchases, and consolidate overlapping tools.",
-  },
-  {
-    question: "How do no-code tool reviews and ratings work?",
-    answer:
-      "No-code tool reviews are typically collected by third-party platforms like G2, Capterra, and TrustRadius. Users submit ratings (usually 1–5 stars) and written feedback. These platforms verify reviewers, moderate content for authenticity, and aggregate scores to produce overall ratings. Reviews cover criteria like ease of use, customer support, value for money, and feature set. Always read recent reviews and look for patterns rather than outliers.",
-  },
-  {
-    question: "What is the future of no-code and SaaS?",
-    answer:
-      "The future of no-code and SaaS is being shaped by AI-powered features (copilots, automation, predictive analytics), vertical SaaS (industry-specific solutions), product-led growth (PLG) strategies, usage-based and consumption pricing models, and increased focus on interoperability through open APIs. The global no-code market alone is projected to exceed $45 billion by 2030, driven by digital transformation across all industries.",
+      "The low-code market is projected to exceed $65 billion by 2030. Key trends include AI-assisted development (co-pilots that generate logic from natural language), enterprise-grade governance and security features, increased interoperability through open APIs, vertical-specific solutions, and hybrid platforms that let teams switch between visual and code modes seamlessly.",
   },
 ];
 
@@ -266,15 +162,15 @@ export default function FAQPage() {
         <div className="max-w-[800px] mx-auto">
           {/* Header */}
           <div className="text-center mb-12">
-            <span className="inline-block text-xs font-semibold uppercase tracking-wider text-[#3B82F6] bg-[#162440] px-3 py-1.5 rounded-md mb-4">
+            <span className="inline-block text-xs font-semibold uppercase tracking-wider text-[#a78bfa] bg-[#7c3aed]/10 px-3 py-1.5 rounded-md mb-4">
               FAQ
             </span>
-            <h1 className="text-3xl md:text-5xl font-extrabold text-[#F0F4F8] tracking-tight mb-6">
+            <h1 className="text-3xl md:text-5xl font-extrabold text-white tracking-tight mb-6">
               Frequently Asked Questions
             </h1>
-            <p className="text-lg text-[#8BA3BE] max-w-xl mx-auto leading-relaxed">
-              Everything you need to know about no-code tools and SaaS — from choosing the right
-              tools to understanding pricing, security, and industry trends.
+            <p className="text-lg text-white/60 max-w-xl mx-auto leading-relaxed">
+              Everything you need to know about low-code platforms — from choosing the right
+              platform to understanding pricing, security, and industry trends.
             </p>
           </div>
 
@@ -283,18 +179,18 @@ export default function FAQPage() {
             {FAQ_ITEMS.map((item, index) => (
               <div
                 key={index}
-                className="bg-[#0F1D32] border border-[#1E3A5F] rounded-xl overflow-hidden transition-all duration-200"
+                className="card-liquid rounded-xl overflow-hidden transition-all duration-200"
               >
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full flex items-center justify-between p-5 text-left hover:bg-[#162440] transition-colors"
+                  className="w-full flex items-center justify-between p-5 text-left hover:bg-white/5 transition-colors"
                   aria-expanded={openIndex === index}
                 >
-                  <span className="text-[#F0F4F8] font-medium pr-4">
+                  <span className="text-white font-medium pr-4">
                     {item.question}
                   </span>
                   <ChevronDown
-                    className={`w-5 h-5 text-[#3B82F6] flex-shrink-0 transition-transform duration-200 ${
+                    className={`w-5 h-5 text-[#a78bfa] flex-shrink-0 transition-transform duration-200 ${
                       openIndex === index ? "rotate-180" : ""
                     }`}
                   />
@@ -304,7 +200,7 @@ export default function FAQPage() {
                     openIndex === index ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
                   }`}
                 >
-                  <div className="px-5 pb-5 text-[#8BA3BE] leading-relaxed text-sm border-t border-[#1E3A5F] pt-4">
+                  <div className="px-5 pb-5 text-white/60 leading-relaxed text-sm border-t border-[#7c3aed]/10 pt-4">
                     {item.answer}
                   </div>
                 </div>
@@ -314,13 +210,13 @@ export default function FAQPage() {
 
           {/* Bottom CTA */}
           <div className="mt-12 text-center">
-            <p className="text-[#8BA3BE] text-sm">
+            <p className="text-white/50 text-sm">
               Still have questions?{" "}
               <a
                 href="/contact"
-                className="text-[#3B82F6] hover:underline font-medium"
+                className="text-[#a78bfa] hover:underline font-medium"
               >
-                Contact our team
+                Contact the JuniperNode team
               </a>{" "}
               and we&apos;ll get back to you within 24 hours.
             </p>

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — NoCode Tool Hub",
+  title: "Privacy Policy — JuniperNode",
   description:
-    "Learn how NoCode Tool Hub collects, uses, and protects your personal data. Our privacy policy outlines our commitment to your privacy and data security.",
+    "Learn how JuniperNode collects, uses, and protects your personal data. Our privacy policy outlines our commitment to your privacy and data security.",
 };
 
 export default function PrivacyPage() {
@@ -12,44 +12,44 @@ export default function PrivacyPage() {
       <div className="max-w-[800px] mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <span className="inline-block text-xs font-semibold uppercase tracking-wider text-[#3B82F6] bg-[#162440] px-3 py-1.5 rounded-md mb-4">
+          <span className="inline-block text-xs font-semibold uppercase tracking-wider text-[#a78bfa] bg-[#7c3aed]/10 px-3 py-1.5 rounded-md mb-4">
             Legal
           </span>
-          <h1 className="text-3xl md:text-4xl font-extrabold text-[#F0F4F8] tracking-tight mb-3">
+          <h1 className="text-3xl md:text-4xl font-extrabold text-white tracking-tight mb-3">
             Privacy Policy
           </h1>
-          <p className="text-[#8BA3BE] text-sm">
-            Last updated: May 13, 2026
+          <p className="text-white/50 text-sm">
+            Last updated: June 11, 2026
           </p>
         </div>
 
-        <div className="space-y-8 text-[#8BA3BE] leading-relaxed">
+        <div className="space-y-8 text-white/60 leading-relaxed">
           <section>
-            <h2 className="text-xl font-bold text-[#F0F4F8] mb-3">1. Introduction</h2>
+            <h2 className="text-xl font-bold text-white mb-3">1. Introduction</h2>
             <p>
-              NoCode Tool Hub ("we," "our," or "us") is committed to protecting your privacy.
+              JuniperNode (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is committed to protecting your privacy.
               This Privacy Policy explains how we collect, use, disclose, and safeguard your
-              information when you visit our website nocode-tools.net (the "Site"). Please read this
+              information when you visit our website junipernode.com (the &quot;Site&quot;). Please read this
               policy carefully. If you do not agree with the terms, do not access the Site.
             </p>
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-[#F0F4F8] mb-3">2. Information We Collect</h2>
-            <h3 className="text-lg font-semibold text-[#F0F4F8] mb-2">Personal Data</h3>
+            <h2 className="text-xl font-bold text-white mb-3">2. Information We Collect</h2>
+            <h3 className="text-lg font-semibold text-white mb-2">Personal Data</h3>
             <p className="mb-3">
               We may collect personally identifiable information such as your name, email address,
               company name, and job title when you voluntarily submit it through our contact forms,
-              newsletter signups, or tool submission requests.
+              newsletter signups, or platform submission requests.
             </p>
-            <h3 className="text-lg font-semibold text-[#F0F4F8] mb-2">Automatically Collected Data</h3>
+            <h3 className="text-lg font-semibold text-white mb-2">Automatically Collected Data</h3>
             <p className="mb-3">
               When you visit the Site, we automatically collect certain information including your
               IP address, browser type, operating system, referring URLs, device type, and browsing
               behavior. This data helps us improve our services and understand how users interact
               with our platform.
             </p>
-            <h3 className="text-lg font-semibold text-[#F0F4F8] mb-2">Cookies and Tracking Technologies</h3>
+            <h3 className="text-lg font-semibold text-white mb-2">Cookies and Tracking Technologies</h3>
             <p>
               We use cookies, web beacons, and similar tracking technologies to enhance your
               browsing experience, analyze site traffic, and serve targeted advertisements. You
@@ -59,7 +59,7 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-[#F0F4F8] mb-3">3. How We Use Your Information</h2>
+            <h2 className="text-xl font-bold text-white mb-3">3. How We Use Your Information</h2>
             <p className="mb-3">We use the collected data for the following purposes:</p>
             <ul className="list-disc pl-6 space-y-2">
               <li>To operate, maintain, and improve the Site and our services</li>
@@ -73,7 +73,7 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-[#F0F4F8] mb-3">4. Information Sharing and Disclosure</h2>
+            <h2 className="text-xl font-bold text-white mb-3">4. Information Sharing and Disclosure</h2>
             <p className="mb-3">
               We do not sell your personal information. We may share your data in the following
               circumstances:
@@ -87,7 +87,7 @@ export default function PrivacyPage() {
               </li>
               <li>
                 <strong>Advertising Partners:</strong> Google AdSense and other ad networks may
-                use cookies to serve relevant ads based on your browsing history. Google's use of
+                use cookies to serve relevant ads based on your browsing history. Google&apos;s use of
                 advertising cookies enables it and its partners to serve ads based on your visit
                 to our Site.
               </li>
@@ -104,7 +104,7 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-[#F0F4F8] mb-3">5. Cookie Policy</h2>
+            <h2 className="text-xl font-bold text-white mb-3">5. Cookie Policy</h2>
             <p className="mb-3">
               Our Site uses the following types of cookies:
             </p>
@@ -135,7 +135,7 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-[#F0F4F8] mb-3">6. Your Rights (GDPR & CCPA)</h2>
+            <h2 className="text-xl font-bold text-white mb-3">6. Your Rights (GDPR & CCPA)</h2>
             <p className="mb-3">
               Depending on your jurisdiction, you may have the following rights regarding your
               personal data:
@@ -149,13 +149,13 @@ export default function PrivacyPage() {
               <li><strong>Right to Opt Out (CCPA):</strong> California residents may opt out of the sale of their personal information. We do not sell personal information.</li>
             </ul>
             <p className="mt-3">
-              To exercise any of these rights, please contact us at privacy@nocode-tools.net. We
+              To exercise any of these rights, please contact us at privacy@junipernode.com. We
               will respond to your request within 30 days.
             </p>
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-[#F0F4F8] mb-3">7. Data Security</h2>
+            <h2 className="text-xl font-bold text-white mb-3">7. Data Security</h2>
             <p>
               We implement industry-standard security measures including SSL/TLS encryption,
               firewalls, and secure server infrastructure to protect your personal information.
@@ -166,7 +166,7 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-[#F0F4F8] mb-3">8. Third-Party Links</h2>
+            <h2 className="text-xl font-bold text-white mb-3">8. Third-Party Links</h2>
             <p>
               Our Site contains links to third-party websites and tools listed in our directory.
               We are not responsible for the privacy practices of these external sites. We
@@ -176,45 +176,45 @@ export default function PrivacyPage() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-[#F0F4F8] mb-3">9. Children's Privacy</h2>
+            <h2 className="text-xl font-bold text-white mb-3">9. Children&apos;s Privacy</h2>
             <p>
               Our services are not intended for individuals under the age of 16. We do not
               knowingly collect personal information from children. If we become aware that a
               child has provided us with personal data, we will delete it immediately. Parents
               or guardians who believe their child has submitted information to us should contact
-              us at privacy@nocode-tools.net.
+              us at privacy@junipernode.com.
             </p>
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-[#F0F4F8] mb-3">10. International Data Transfers</h2>
+            <h2 className="text-xl font-bold text-white mb-3">10. International Data Transfers</h2>
             <p>
               Your information may be transferred to and processed in countries other than your
-              own, including the United States. We ensure appropriate safeguards are in place
+              own, including Portugal and the United States. We ensure appropriate safeguards are in place
               through standard contractual clauses and data processing agreements to protect your
               information in accordance with applicable data protection laws.
             </p>
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-[#F0F4F8] mb-3">11. Changes to This Policy</h2>
+            <h2 className="text-xl font-bold text-white mb-3">11. Changes to This Policy</h2>
             <p>
               We may update this Privacy Policy from time to time. We will notify you of
-              material changes by posting the updated policy on this page with a revised "Last
-              updated" date. We encourage you to review this policy periodically.
+              material changes by posting the updated policy on this page with a revised &quot;Last
+              updated&quot; date. We encourage you to review this policy periodically.
             </p>
           </section>
 
           <section>
-            <h2 className="text-xl font-bold text-[#F0F4F8] mb-3">12. Contact Us</h2>
+            <h2 className="text-xl font-bold text-white mb-3">12. Contact Us</h2>
             <p>
               If you have questions about this Privacy Policy or our data practices, please
               contact us:
             </p>
-            <div className="mt-4 p-5 bg-[#0F1D32] border border-[#1E3A5F] rounded-xl">
-              <p className="mb-2"><strong className="text-[#F0F4F8]">Email:</strong> privacy@nocode-tools.net</p>
-              <p className="mb-2"><strong className="text-[#F0F4F8]">Support:</strong> support@nocode-tools.net</p>
-              <p><strong className="text-[#F0F4F8]">Address:</strong> 123 Software Row, Suite 200, Austin, TX 78701</p>
+            <div className="mt-4 p-5 card-liquid rounded-xl">
+              <p className="mb-2"><strong className="text-white">Email:</strong> privacy@junipernode.com</p>
+              <p className="mb-2"><strong className="text-white">General:</strong> hello@junipernode.com</p>
+              <p><strong className="text-white">Address:</strong> Rua do Bonfim, 123, 4300-071 Porto, Portugal</p>
             </div>
           </section>
         </div>

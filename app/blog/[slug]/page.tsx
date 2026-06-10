@@ -20,7 +20,7 @@ export async function generateMetadata({
   const post = BLOG_POSTS.find((p) => p.slug === slug);
   if (!post) return { title: "Post Not Found" };
   return {
-    title: `${post.title} — NoCode Tool Hub`,
+    title: `${post.title} — JuniperNode`,
     description: post.excerpt,
   };
 }
@@ -37,7 +37,7 @@ function renderContent(content: string) {
     // Heading (## or ###)
     if (trimmed.startsWith("## ")) {
       elements.push(
-        <h2 key={i} className="text-xl md:text-2xl font-bold text-[#e8e0f7] mt-10 mb-4 tracking-tight">
+        <h2 key={i} className="text-xl md:text-2xl font-bold text-white mt-10 mb-4 tracking-tight">
           {trimmed.replace(/^##\s+/, "")}
         </h2>
       );
@@ -46,7 +46,7 @@ function renderContent(content: string) {
     }
     if (trimmed.startsWith("### ")) {
       elements.push(
-        <h3 key={i} className="text-lg font-bold text-[#e8e0f7] mt-8 mb-3">
+        <h3 key={i} className="text-lg font-bold text-white mt-8 mb-3">
           {trimmed.replace(/^###\s+/, "")}
         </h3>
       );
@@ -67,7 +67,7 @@ function renderContent(content: string) {
 
     // Horizontal rule (--- separator)
     if (trimmed === "---") {
-      elements.push(<hr key={i} className="border-[#3b2566] my-8" />);
+      elements.push(<hr key={i} className="border-[#7c3aed]/20 my-8" />);
       i++;
       continue;
     }
@@ -78,10 +78,27 @@ function renderContent(content: string) {
       continue;
     }
 
+    // Unordered list
+    if (trimmed.startsWith("- ") || trimmed.startsWith("* ")) {
+      const listItems: string[] = [];
+      while (i < lines.length && (lines[i].trim().startsWith("- ") || lines[i].trim().startsWith("* "))) {
+        listItems.push(lines[i].trim().replace(/^[-*]\s+/, ""));
+        i++;
+      }
+      elements.push(
+        <ul key={i} className="list-disc pl-6 space-y-1.5 text-white/70 mb-6">
+          {listItems.map((item, idx) => (
+            <li key={idx}>{renderInlineContent(item)}</li>
+          ))}
+        </ul>
+      );
+      continue;
+    }
+
     // Regular paragraph
     elements.push(
-      <p key={i} className="text-[#c4b5fd] leading-relaxed mb-4 text-base">
-        {formatInline(trimmed)}
+      <p key={i} className="text-white/70 leading-relaxed mb-5">
+        {renderInlineContent(trimmed)}
       </p>
     );
     i++;
@@ -90,70 +107,78 @@ function renderContent(content: string) {
   return elements;
 }
 
-function renderTable(rows: string[], key: string) {
-  // Parse markdown table
-  const parsed = rows.map((row) =>
-    row
-      .replace(/^\||\|$/g, "")
-      .split("|")
-      .map((cell) => cell.trim())
-  );
+function renderInlineContent(text: string) {
+  // Bold: **text**
+  const parts = text.split(/(\*\*[^*]+\*\*)/g);
+  return parts.map((part, idx) => {
+    if (part.startsWith("**") && part.endsWith("**")) {
+      return <strong key={idx} className="font-bold text-white">{part.slice(2, -2)}</strong>;
+    }
+    // Italic: *text*
+    const italicParts = part.split(/(\*[^*]+\*)/g);
+    return italicParts.map((ip, iidx) => {
+      if (ip.startsWith("*") && ip.endsWith("*") && !ip.startsWith("**")) {
+        return <em key={`${idx}-${iidx}`} className="text-white/80">{ip.slice(1, -1)}</em>;
+      }
+      // Links: [text](url)
+      const linkParts = ip.split(/(\[[^\]]+\]\([^)]+\))/g);
+      return linkParts.map((lp, liidx) => {
+        const linkMatch = lp.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+        if (linkMatch) {
+          return (
+            <a key={`${idx}-${iidx}-${liidx}`} href={linkMatch[2]} target="_blank" rel="noopener noreferrer" className="text-[#a78bfa] hover:underline">
+              {linkMatch[1]}
+            </a>
+          );
+        }
+        return lp;
+      });
+    });
+  });
+}
 
-  // Skip the separator row (|---|)
-  const headerRow = parsed[0];
-  const dataRows = parsed.slice(2);
+function renderTable(rows: string[], key: string) {
+  if (rows.length < 2) return null;
+
+  // Parse header
+  const headerCells = rows[0].split("|").filter(Boolean).map((c) => c.trim());
+  // Check for alignment row (|---|---|---)
+  let dataStart = 2;
+  if (rows.length > 1 && rows[1].trim().match(/^[\s|:]+$/)) {
+    dataStart = 2;
+  } else {
+    dataStart = 1;
+  }
 
   return (
-    <div key={key} className="overflow-x-auto mb-6">
+    <div key={key} className="overflow-x-auto mb-8">
       <table className="w-full text-sm border-collapse">
         <thead>
-          <tr className="bg-[#2a1a4e]">
-            {headerRow.map((h, idx) => (
-              <th
-                key={idx}
-                className="px-4 py-3 text-left text-xs font-bold uppercase tracking-wider text-[#6d3aff] border-b border-[#3b2566]"
-              >
-                {h}
+          <tr className="border-b border-[#7c3aed]/20">
+            {headerCells.map((cell, idx) => (
+              <th key={idx} className="text-left py-3 px-4 font-bold text-white whitespace-nowrap">
+                {cell}
               </th>
             ))}
           </tr>
         </thead>
         <tbody>
-          {dataRows.map((row, rIdx) => (
-            <tr key={rIdx} className="border-b border-[#3b2566]/50 hover:bg-[#2a1a4e]/50 transition-colors">
-              {row.map((cell, cIdx) => (
-                <td key={cIdx} className="px-4 py-3 text-[#c4b5fd]">
-                  {cell}
-                </td>
-              ))}
-            </tr>
-          ))}
+          {rows.slice(dataStart).map((row, rowIdx) => {
+            const cells = row.split("|").filter(Boolean).map((c) => c.trim());
+            return (
+              <tr key={rowIdx} className="border-b border-white/5 hover:bg-white/5 transition-colors">
+                {cells.map((cell, cellIdx) => (
+                  <td key={cellIdx} className="py-2.5 px-4 text-white/70">
+                    {cell}
+                  </td>
+                ))}
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </div>
   );
-}
-
-function formatInline(text: string): React.ReactNode {
-  // Bold: **text**
-  const parts = text.split(/(\*\*[^*]+\*\*)/g);
-  return parts.map((part, idx) => {
-    if (part.startsWith("**") && part.endsWith("**")) {
-      return (
-        <strong key={idx} className="font-bold text-[#e8e0f7]">
-          {part.slice(2, -2)}
-        </strong>
-      );
-    }
-    return part;
-  });
-}
-
-// Find related posts
-function getRelatedPosts(currentSlug: string, category: string) {
-  return BLOG_POSTS.filter(
-    (p) => p.slug !== currentSlug && p.category === category
-  ).slice(0, 3);
 }
 
 export default async function BlogPostPage({
@@ -168,57 +193,40 @@ export default async function BlogPostPage({
     notFound();
   }
 
-  const contentElements = renderContent(post.content);
-  const relatedPosts = getRelatedPosts(slug, post.category);
+  // JSON-LD structured data
+  const jsonLd = blogPostSchema(post);
 
-  const blogJsonLd = blogPostSchema(
-    post.title,
-    post.author,
-    post.date,
-    'NoCode Tool Hub',
-    post.excerpt
-  );
-  const orgJsonLd = organizationSchema(
-    'NoCode Tool Hub',
-    'https://nocode-tools.net',
-    'Comprehensive no-code and low-code directory and tool hub for modern teams.'
-  );
+  // Related posts (same category, exclude current)
+  const relatedPosts = BLOG_POSTS.filter(
+    (p) => p.category === post.category && p.slug !== slug
+  ).slice(0, 3);
 
   return (
-    <div className="relative pt-32 pb-20">
-      {/* JSON-LD Schema */}
+    <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
-      />
-      <div className="max-w-[1200px] mx-auto px-6">
-        {/* Back Link */}
-        <Link
-          href="/blog"
-          className="inline-flex items-center gap-2 text-sm text-[#c4b5fd] hover:text-[#6d3aff] transition-colors mb-8"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          Back to Blog
-        </Link>
 
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-10">
-          {/* Main Content */}
-          <article>
-            {/* Header */}
-            <header className="mb-10">
-              <div className="flex flex-wrap items-center gap-3 mb-4">
-                <span className="text-xs font-semibold uppercase tracking-wider text-[#6d3aff] bg-[#2a1a4e] px-3 py-1.5 rounded-md">
+      <div className="relative pt-32 pb-20 px-6">
+        <div className="max-w-[1100px] mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-10">
+            {/* Main Content */}
+            <article className="min-w-0">
+              {/* Back link */}
+              <Link
+                href="/blog"
+                className="inline-flex items-center gap-1.5 text-sm text-[#a78bfa] hover:text-[#7c3aed] transition-colors mb-8"
+              >
+                <ArrowLeft className="w-4 h-4" /> Back to Blog
+              </Link>
+
+              {/* Category & Meta */}
+              <div className="flex items-center flex-wrap gap-3 mb-4">
+                <span className="text-xs font-semibold uppercase tracking-wider text-[#a78bfa] bg-[#7c3aed]/10 px-2.5 py-1 rounded-md">
                   {post.category}
                 </span>
-                <div className="flex items-center gap-2 text-xs text-[#a78bfa]">
-                  <User className="w-3.5 h-3.5" />
-                  {post.author}
-                </div>
-                <div className="flex items-center gap-2 text-xs text-[#a78bfa]">
+                <div className="flex items-center gap-2 text-xs text-white/50">
                   <Calendar className="w-3.5 h-3.5" />
                   {new Date(post.date).toLocaleDateString("en-US", {
                     month: "long",
@@ -226,118 +234,66 @@ export default async function BlogPostPage({
                     year: "numeric",
                   })}
                 </div>
-                <div className="flex items-center gap-1.5 text-xs text-[#a78bfa]">
+                <div className="flex items-center gap-1.5 text-xs text-white/50">
                   <Clock className="w-3.5 h-3.5" />
                   {post.readTime} min read
                 </div>
               </div>
 
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#e8e0f7] tracking-tight leading-[1.1] mb-4">
+              {/* Title */}
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-[1.08] mb-6">
                 {post.title}
               </h1>
 
-              <p className="text-lg text-[#c4b5fd] leading-relaxed max-w-3xl">
-                {post.excerpt}
-              </p>
+              {/* Author */}
+              <div className="flex items-center gap-3 mb-10 pb-6 border-b border-[#7c3aed]/10">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#7c3aed] to-[#a78bfa] flex items-center justify-center text-white font-bold text-sm">
+                  {post.author.split(" ").map(n => n[0]).join("")}
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-white">{post.author}</p>
+                  <p className="text-xs text-white/50">{post.authorRole} · JuniperNode</p>
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="prose-custom">
+                {renderContent(post.content)}
+              </div>
 
               {/* Tags */}
-              {post.tags && post.tags.length > 0 && (
-                <div className="flex flex-wrap gap-2 mt-6">
+              <div className="mt-10 pt-6 border-t border-[#7c3aed]/10">
+                <div className="flex items-center gap-2 mb-3">
+                  <Tag className="w-4 h-4 text-[#a78bfa]" />
+                  <span className="text-sm font-semibold text-white">Tags</span>
+                </div>
+                <div className="flex flex-wrap gap-2">
                   {post.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="flex items-center gap-1.5 px-3 py-1 bg-[#1a1233] border border-[#3b2566] rounded-full text-xs text-[#a78bfa]"
+                      className="px-3 py-1 text-xs text-white/70 bg-white/5 rounded-full"
                     >
-                      <Tag className="w-3 h-3" />
                       {tag}
                     </span>
                   ))}
                 </div>
-              )}
-            </header>
-
-            {/* Content */}
-            <div className="prose-custom max-w-none">
-              {contentElements}
-            </div>
-
-            {/* Article Footer */}
-            <div className="mt-12 pt-8 border-t border-[#3b2566]">
-              <div className="bg-[#1a1233] border border-[#3b2566] rounded-xl p-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#6d3aff] to-[#a78bfa] flex items-center justify-center text-white font-bold text-lg">
-                    {post.author.charAt(0)}
-                  </div>
-                  <div>
-                    <p className="font-bold text-[#e8e0f7]">{post.author}</p>
-                    <p className="text-sm text-[#c4b5fd]">{post.authorRole}</p>
-                    <p className="text-xs text-[#a78bfa] mt-2">
-                      Nocode-tool-hub independently researches and verifies all product data. Ratings sourced from G2, Capterra, and other trusted review platforms.
-                    </p>
-                  </div>
-                </div>
               </div>
-            </div>
+            </article>
 
-            {/* Related Posts (mobile) */}
-            {relatedPosts.length > 0 && (
-              <div className="mt-12 lg:hidden">
-                <h3 className="text-lg font-bold text-[#e8e0f7] mb-4">Related Articles</h3>
-                <div className="grid gap-4">
-                  {relatedPosts.map((rp) => (
-                    <Link
-                      key={rp.slug}
-                      href={`/blog/${rp.slug}`}
-                      className="block bg-[#1a1233] border border-[#3b2566] rounded-xl p-4 hover:border-[#4c2d82] transition-all"
-                    >
-                      <h4 className="font-bold text-[#e8e0f7] hover:text-[#6d3aff] transition-colors text-sm">
-                        {rp.title}
-                      </h4>
-                      <p className="text-xs text-[#a78bfa] mt-1">
-                        {rp.readTime} min read · {new Date(rp.date).toLocaleDateString("en-US", {
-                          month: "short",
-                          day: "numeric",
-                          year: "numeric",
-                        })}
-                      </p>
-                    </Link>
-                  ))}
+            {/* Sidebar */}
+            <aside className="space-y-6">
+              {/* Table of Contents - simple */}
+              <div className="card-liquid rounded-xl p-5">
+                <h3 className="text-sm font-bold text-white mb-4">On This Page</h3>
+                <div className="space-y-2 text-sm text-white/60">
+                  <p>In-depth comparison guide covering features, pricing, and use cases.</p>
                 </div>
-              </div>
-            )}
-          </article>
-
-          {/* Sidebar (desktop) */}
-          <aside className="hidden lg:block">
-            <div className="sticky top-24 space-y-6">
-              {/* Table of Contents */}
-              <div className="bg-[#1a1233] border border-[#3b2566] rounded-xl p-5">
-                <h3 className="text-sm font-bold text-[#e8e0f7] mb-3 uppercase tracking-wider">
-                  In This Article
-                </h3>
-                <nav className="space-y-2">
-                  {post.content
-                    .split("\n")
-                    .filter((l) => l.trim().startsWith("## "))
-                    .slice(0, 8)
-                    .map((heading, idx) => (
-                      <a
-                        key={idx}
-                        href={`#`}
-                        className="block text-xs text-[#c4b5fd] hover:text-[#6d3aff] transition-colors"
-                      >
-                        {heading.replace(/^##\s+/, "")}
-                      </a>
-                    ))}
-                </nav>
               </div>
 
               {/* Related Posts */}
               {relatedPosts.length > 0 && (
-                <div className="bg-[#1a1233] border border-[#3b2566] rounded-xl p-5">
-                  <h3 className="text-sm font-bold text-[#e8e0f7] mb-3 uppercase tracking-wider">
-                    Related Articles
-                  </h3>
+                <div className="card-liquid rounded-xl p-5">
+                  <h3 className="text-sm font-bold text-white mb-4">Related Guides</h3>
                   <div className="space-y-3">
                     {relatedPosts.map((rp) => (
                       <Link
@@ -345,10 +301,10 @@ export default async function BlogPostPage({
                         href={`/blog/${rp.slug}`}
                         className="block group"
                       >
-                        <h4 className="text-sm font-bold text-[#c4b5fd] group-hover:text-[#6d3aff] transition-colors leading-snug">
+                        <h4 className="text-sm font-bold text-[#a78bfa] group-hover:text-[#7c3aed] transition-colors leading-snug">
                           {rp.title}
                         </h4>
-                        <p className="text-xs text-[#a78bfa] mt-1">
+                        <p className="text-xs text-white/50 mt-1">
                           {rp.readTime} min read
                         </p>
                       </Link>
@@ -358,25 +314,25 @@ export default async function BlogPostPage({
               )}
 
               {/* CTA */}
-              <div className="bg-gradient-to-br from-[#2a1a4e] to-[#1a1233] border border-[#3b2566] rounded-xl p-5 text-center">
-                <div className="w-10 h-10 rounded-full bg-[#6d3aff]/20 flex items-center justify-center mx-auto mb-3">
-                  <Star className="w-5 h-5 text-[#6d3aff]" />
+              <div className="bg-gradient-to-br from-[#7c3aed]/20 to-[#5b21b6]/20 border border-[#7c3aed]/20 rounded-xl p-5 text-center">
+                <div className="w-10 h-10 rounded-full bg-[#7c3aed]/20 flex items-center justify-center mx-auto mb-3">
+                  <Star className="w-5 h-5 text-[#a78bfa]" />
                 </div>
-                <h3 className="text-sm font-bold text-[#e8e0f7] mb-2">Find the Right Tool</h3>
-                <p className="text-xs text-[#c4b5fd] mb-4">
-                  Browse 79+ enterprise software reviews
+                <h3 className="text-sm font-bold text-white mb-2">Find the Right Platform</h3>
+                <p className="text-xs text-white/60 mb-4">
+                  Browse {BLOG_POSTS.length}+ low-code platform reviews
                 </p>
                 <Link
                   href="/"
-                  className="inline-flex items-center gap-1 px-4 py-2 bg-[#6d3aff] hover:bg-[#6d3aff] text-white text-xs font-bold rounded-lg transition-colors"
+                  className="inline-flex items-center gap-1 px-4 py-2 bg-[#7c3aed] hover:bg-[#6d28d9] text-white text-xs font-bold rounded-lg transition-colors"
                 >
-                  Browse Tools <ArrowRight className="w-3 h-3" />
+                  Browse Platforms <ArrowRight className="w-3 h-3" />
                 </Link>
               </div>
-            </div>
-          </aside>
+            </aside>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

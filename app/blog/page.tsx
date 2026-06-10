@@ -4,9 +4,9 @@ import { BLOG_POSTS } from "@/data/blog-posts";
 import { Calendar, Clock, User, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Blog — NoCode Tool Hub",
+  title: "Blog — JuniperNode",
   description:
-    "Expert insights, comparisons, and strategies for choosing and using no-code and SaaS tools. Stay informed with the latest in software and technology.",
+    "Expert insights, comparisons, and strategies for choosing and using low-code and no-code platforms. Stay informed with the latest in low-code development.",
 };
 
 const CATEGORIES = Array.from(new Set(BLOG_POSTS.map((post) => post.category)));
@@ -22,15 +22,15 @@ export default function BlogPage() {
       <div className="max-w-[1200px] mx-auto">
         {/* Hero */}
         <div className="text-center mb-12">
-          <span className="inline-block text-xs font-semibold uppercase tracking-wider text-[#3B82F6] bg-[#162440] px-3 py-1.5 rounded-md mb-4">
+          <span className="inline-block text-xs font-semibold uppercase tracking-wider text-[#a78bfa] bg-[#7c3aed]/10 px-3 py-1.5 rounded-md mb-4">
             Blog
           </span>
-          <h1 className="text-3xl md:text-5xl font-extrabold text-[#F0F4F8] tracking-tight mb-3">
-            NoCode Tool{" "}
+          <h1 className="text-3xl md:text-5xl font-extrabold text-white tracking-tight mb-3">
+            JuniperNode{" "}
             <span className="text-gradient">Guides</span>
           </h1>
-          <p className="text-lg text-[#8BA3BE] max-w-2xl mx-auto">
-            In-depth guides and comparisons of no-code platforms, automation tools, and website builders. Expert reviews to help you build without code.
+          <p className="text-lg text-white/60 max-w-2xl mx-auto">
+            In-depth guides and comparisons of low-code and no-code platforms. Expert reviews from our team in Porto.
           </p>
         </div>
 
@@ -40,7 +40,7 @@ export default function BlogPage() {
             <a
               key={cat}
               href={cat === "All" ? "/blog" : `/blog?category=${cat}`}
-              className="px-3.5 py-1.5 rounded-full border border-[#1E3A5F] bg-[#0F1D32] text-sm text-[#8BA3BE] hover:text-[#F0F4F8] hover:border-[#2A5080] transition-colors"
+              className="px-3.5 py-1.5 rounded-full border border-[#7c3aed]/20 card-liquid text-sm text-white/70 hover:text-white hover:border-[#a78bfa]/40 transition-colors"
             >
               {cat}
             </a>
@@ -55,25 +55,25 @@ export default function BlogPage() {
               href={`/blog/${post.slug}`}
               className="group"
             >
-              <article className="bg-[#0F1D32] border border-[#1E3A5F] rounded-xl p-6 card-hover h-full flex flex-col">
+              <article className="card-liquid rounded-xl p-6 h-full flex flex-col">
                 {/* Category Badge */}
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-xs font-semibold uppercase tracking-wider text-[#3B82F6] bg-[#162440] px-2.5 py-1 rounded-md">
+                  <span className="text-xs font-semibold uppercase tracking-wider text-[#a78bfa] bg-white/10 px-2.5 py-1 rounded-md">
                     {post.category}
                   </span>
-                  <div className="flex items-center gap-1.5 text-xs text-[#4A6380]">
+                  <div className="flex items-center gap-1.5 text-xs text-white/50">
                     <Clock className="w-3.5 h-3.5" />
                     {post.readTime} min read
                   </div>
                 </div>
 
                 {/* Title */}
-                <h2 className="text-lg font-bold text-[#F0F4F8] mb-3 group-hover:text-[#3B82F6] transition-colors leading-snug">
+                <h2 className="text-lg font-bold text-white mb-3 group-hover:text-[#a78bfa] transition-colors leading-snug">
                   {post.title}
                 </h2>
 
                 {/* Excerpt */}
-                <p className="text-sm text-[#8BA3BE] mb-4 leading-relaxed flex-grow line-clamp-3">
+                <p className="text-sm text-white/60 mb-4 leading-relaxed flex-grow line-clamp-3">
                   {post.excerpt}
                 </p>
 
@@ -82,7 +82,7 @@ export default function BlogPage() {
                   {post.tags.slice(0, 3).map((tag) => (
                     <span
                       key={tag}
-                      className="text-xs text-[#4A6380] bg-[#0A1628] px-2 py-0.5 rounded-md"
+                      className="text-[10px] text-white/40 bg-white/5 px-2 py-0.5 rounded"
                     >
                       {tag}
                     </span>
@@ -90,11 +90,12 @@ export default function BlogPage() {
                 </div>
 
                 {/* Meta */}
-                <div className="flex items-center justify-between pt-4 border-t border-[#1E3A5F]">
-                  <div className="flex items-center gap-2 text-xs text-[#4A6380]">
+                <div className="flex items-center justify-between pt-4 border-t border-white/10">
+                  <div className="flex items-center gap-2 text-xs text-white/40">
                     <User className="w-3.5 h-3.5" />
                     {post.author}
-                    <span className="mx-1">·</span>
+                  </div>
+                  <div className="flex items-center gap-1 text-xs text-white/40">
                     <Calendar className="w-3.5 h-3.5" />
                     {new Date(post.date).toLocaleDateString("en-US", {
                       month: "short",
@@ -102,7 +103,6 @@ export default function BlogPage() {
                       year: "numeric",
                     })}
                   </div>
-                  <ArrowRight className="w-4 h-4 text-[#3B82F6] opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
               </article>
             </Link>

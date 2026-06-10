@@ -37,26 +37,33 @@ export function softwareSchema(
 }
 
 // JSON-LD Schema for BlogPosting (used on blog pages)
+// Accept either individual params or a post object
 export function blogPostSchema(
-  headline: string,
-  author: string,
-  datePublished: string,
-  publisherName: string,
-  description: string
+  headlineOrPost: any,
+  author?: string,
+  datePublished?: string,
+  publisherName?: string,
+  description?: string
 ) {
+  // Support both object-style and individual param style
+  const headline = typeof headlineOrPost === "object" ? headlineOrPost.title : headlineOrPost;
+  const authorName = typeof headlineOrPost === "object" ? headlineOrPost.author : author;
+  const publishedDate = typeof headlineOrPost === "object" ? headlineOrPost.date : datePublished;
+  const desc = typeof headlineOrPost === "object" ? headlineOrPost.excerpt : description;
+
   return {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline,
     author: {
       "@type": "Person",
-      name: author,
+      name: authorName,
     },
-    datePublished,
-    description,
+    datePublished: publishedDate,
+    description: desc,
     publisher: {
       "@type": "Organization",
-      name: publisherName,
+      name: "JuniperNode",
     },
   };
 }

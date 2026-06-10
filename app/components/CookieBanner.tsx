@@ -26,12 +26,12 @@ export default function CookieBanner() {
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 p-4">
-      <div className="max-w-[1200px] mx-auto bg-[#0F1D32] border border-[#1E3A5F] rounded-xl p-4 md:p-5 shadow-2xl flex flex-col sm:flex-row items-start sm:items-center gap-4">
-        <p className="text-sm text-[#8BA3BE] flex-1 leading-relaxed">
+      <div className="max-w-[1200px] mx-auto card-liquid rounded-xl p-4 md:p-5 shadow-2xl flex flex-col sm:flex-row items-start sm:items-center gap-4">
+        <p className="text-sm text-white/60 flex-1 leading-relaxed">
           We use cookies to improve your experience and show relevant ads.{" "}
           <a
             href="/privacy"
-            className="text-[#3B82F6] hover:underline font-medium"
+            className="text-[#a78bfa] hover:underline font-medium"
           >
             Read our Privacy Policy
           </a>
@@ -39,13 +39,13 @@ export default function CookieBanner() {
         <div className="flex items-center gap-3 shrink-0">
           <button
             onClick={handleDecline}
-            className="px-4 py-2 text-sm font-medium text-[#8BA3BE] hover:text-[#F0F4F8] border border-[#1E3A5F] rounded-lg hover:border-[#3B82F6] transition-colors"
+            className="px-4 py-2 text-sm font-medium text-white/60 hover:text-white border border-[#7c3aed]/20 rounded-lg hover:border-[#a78bfa]/40 transition-colors"
           >
             Decline
           </button>
           <button
             onClick={handleAccept}
-            className="px-5 py-2 text-sm font-medium text-white bg-[#3B82F6] hover:bg-[#2563EB] rounded-lg transition-colors"
+            className="px-5 py-2 text-sm font-medium text-white bg-[#7c3aed] hover:bg-[#6d28d9] rounded-lg transition-colors"
           >
             Accept
           </button>
