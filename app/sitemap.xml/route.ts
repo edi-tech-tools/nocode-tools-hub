@@ -2,6 +2,7 @@ import { MetadataRoute } from "next";
 
 const BLOG_SLUGS = [
   "best-no-code-website-builders-2026",
+  "hubspot-vs-mailchimp-vs-activecampaign-2026",
     "top-no-code-app-builders-entrepreneurs",
     "no-code-automation-zapier-vs-make-vs-n8n",
     "airtable-vs-nocodb-vs-budibase-database-comparison",
