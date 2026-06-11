@@ -23,6 +23,7 @@ const BLOG_SLUGS = [
     "design-tools-2026-canva-figma-penpot-balsamiq-creatie",
     "best-no-code-landing-page-builders-2026",
     "nocode-lowcode-trends-2026-market-analysis",
+    "airtable-vs-firebase-vs-supabase-backend-2026",
 ] as const;
 
 const TOOL_SLUGS = [
