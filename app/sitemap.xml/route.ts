@@ -24,6 +24,8 @@ const BLOG_SLUGS = [
     "best-no-code-landing-page-builders-2026",
     "nocode-lowcode-trends-2026-market-analysis",
     "airtable-vs-firebase-vs-supabase-backend-2026",
+    "no-code-workflow-automation-pipedream-make-parabola-2026",
+    "airtable-vs-notion-vs-monday-pm-2026",
 ] as const;
 
 const TOOL_SLUGS = [
