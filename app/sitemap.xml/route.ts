@@ -105,6 +105,7 @@ const CATEGORY_SLUGS = [
     "e-commerce",
     "education-and-e-learning",
     "website-builders",
+    "airtable-vs-nocodb-vs-rowy-2026",
 ] as const;
 
 export async function GET() {
