@@ -26,6 +26,7 @@ const BLOG_SLUGS = [
     "airtable-vs-firebase-vs-supabase-backend-2026",
     "no-code-workflow-automation-pipedream-make-parabola-2026",
     "airtable-vs-notion-vs-monday-pm-2026",
+    "airtable-vs-nocodb-vs-rowy-2026",
 ] as const;
 
 const TOOL_SLUGS = [
@@ -105,7 +106,6 @@ const CATEGORY_SLUGS = [
     "e-commerce",
     "education-and-e-learning",
     "website-builders",
-    "airtable-vs-nocodb-vs-rowy-2026",
 ] as const;
 
 export async function GET() {
