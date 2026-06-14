@@ -13,6 +13,51 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
 {
+    slug: "junipernode-low-code-platforms-porto",
+    title: "JuniperNode: Porto's Boutique Low-Code Studio Making Big Waves",
+    excerpt: "Nestled in Porto's vibrant Ribeira district, JuniperNode is redefining what a small studio can achieve in the low-code space. Since 2020, this seven-person team has built bespoke internal tools for European logistics firms, healthcare startups, and municipal agencies -- all without writing a single line of boilerplate code. Their story offers rare clarity on how intentionality, deep domain collaboration, and geographic advantage can outpace scale.",
+    content: `In the crowded landscape of no-code and low-code platforms -- dominated by billion-dollar SaaS giants and flashy accelerators -- a quiet but compelling counterpoint has emerged from northern Portugal: JuniperNode.
+
+Founded in early 2020 in Porto's historic yet rapidly modernizing tech corridor, JuniperNode isn't building another drag-and-drop website builder or generic workflow app. Instead, they operate as a boutique low-code platform studio -- a hybrid of consultancy, product studio, and embedded engineering partner. With just seven full-time team members (including two UX researchers, three low-code architects, and two delivery leads), they've delivered over 38 custom internal platforms across finance, healthcare, and public administration -- all tailored, maintainable, and owned entirely by their clients.
+
+What sets JuniperNode apart isn't just *what* they build, but *how* -- and *where*.
+
+Porto may not yet rival Lisbon in startup headlines, but its ecosystem is quietly maturing with intention. Affordable co-working spaces like UPTEC and Beta-i Porto host incubators focused on deep-tech and civic innovation. The city's strong engineering tradition -- anchored by the University of Porto's Faculty of Engineering -- feeds a steady pipeline of talent fluent in both systems thinking and pragmatic tooling. JuniperNode leverages that context deliberately: they don't offshore work or rely on templated solutions. Every project begins with a two-week discovery sprint conducted onsite -- whether that's in a hospital admin wing in Braga, a warehouse control room near Vila do Conde, or a municipal IT office in Guimaraes.
+
+Their approach centers on *platform literacy*, not just platform delivery. Rather than handing over a finished Airtable clone or Retool dashboard and walking away, JuniperNode trains client teams to extend, audit, and govern their own tools. For example, when building an asset-tracking system for a regional ambulance service, they co-designed data validation rules *with* dispatch supervisors -- translating real-world triage logic into conditional logic blocks inside their internal low-code engine. Later, nurses updated dropdown options and added new equipment categories themselves, using guided configuration panels JuniperNode built *into* the platform.
+
+This reflects their core philosophy: low-code shouldn't mean low-control. It should mean high-context empowerment.
+
+JuniperNode's flagship offering isn't a commercial product you can sign up for -- it's their proprietary *Loom Framework*, an open-core toolkit they've refined across projects. Loom isn't a visual IDE; it's a composable layer that sits atop PostgreSQL, Next.js, and Supabase, exposing declarative abstractions for forms, workflows, role-based permissions, and audit trails -- all editable via YAML or intuitive UI editors. Crucially, Loom generates clean, readable TypeScript and SQL -- meaning developers *or* power users can inspect, tweak, or export logic at any time. One client, a sustainability reporting firm in Coimbra, used Loom's export feature to migrate their emissions calculator into a production-grade microservice -- no rewrite required.
+
+That transparency is intentional. Where many low-code vendors obscure underlying logic behind black-box components, JuniperNode treats abstraction as scaffolding -- not a wall. Their documentation includes annotated architecture diagrams, migration playbooks, and even video walkthroughs of how each permission rule maps to actual database policies.
+
+So how does a seven-person studio compete with enterprise vendors?
+
+First, they refuse to chase breadth. While others add AI form builders or multi-cloud connectors, JuniperNode doubles down on *integration fidelity*: they've built first-party adapters for SAP S/4HANA, Veeam backup logs, and Portugal's national eID system (Cartao de Cidadao). Second, they price transparently -- fixed-scope engagements starting at EUR28,000, with optional annual support tiers that include quarterly co-governance reviews. No per-seat fees. No vendor lock-in clauses. Third, they embed *domain fluency*: two team members hold clinical informatics certifications, and another spent five years optimizing ERP workflows for manufacturing SMEs before joining.
+
+For the broader no-code/low-code community, JuniperNode offers three actionable lessons:
+
+1. *Small teams win by specializing in friction points -- not features.* While big platforms optimize for user acquisition, JuniperNode optimizes for *handover confidence*. Their success metric isn't time-to-first-form, but time-to-first-user-led enhancement.
+
+2. *Localization isn't just language -- it's compliance, culture, and infrastructure.* Their GDPR-compliant audit trail module auto-configures based on Portuguese data retention laws. Their municipal platform templates include fields for DGAL (General Directorate of Local Administration) reporting codes. This kind of contextual precision doesn't scale easily -- but it builds unassailable trust.
+
+3. *The most powerful low-code tool is often a shared whiteboard.* JuniperNode mandates collaborative modeling sessions -- using physical cards and paper prototypes -- before touching any digital tool. One logistics client scrapped a fully built prototype after realizing, mid-workshop, that their real bottleneck wasn't data entry speed, but cross-departmental handoff timing. That insight reshaped the entire architecture.
+
+Looking ahead, JuniperNode is expanding -- carefully. They're launching *Loom Labs*, a free public repository of validated low-code patterns for EU public sector use cases (think: accessibility-compliant citizen feedback portals, multilingual grant application flows). They're also piloting a remote apprenticeship program with Polytechnic Institute of Porto, training junior designers and analysts in low-code governance -- not just usage.
+
+They have no plans to raise venture capital. No ambitions to become a platform-as-a-service. As co-founder Ana Costa told us over pasteis de nata at Cafe Majestic: 'We're not here to replace developers. We're here to make sure the person who knows the problem best -- the nurse, the warehouse manager, the social worker -- never has to beg for a dev ticket again.'
+
+That ethos -- rooted in Porto's collaborative spirit, sharpened by technical rigor, and scaled through restraint -- makes JuniperNode more than a studio. It's a quiet manifesto for what low-code could truly mean: not less code, but code that serves people -- precisely, ethically, and locally.`,
+    author: "Tim Miller",
+    authorRole: "No-Code Tools Analyst",
+    date: "2026-06-15",
+    category: "Low-Code Platforms",
+    readTime: 5,
+    tags: ["JuniperNode", "Low-Code", "Porto", "Portugal", "No-Code", "Startup", "Low-Code Platforms"],
+  },
+
+{
     slug: "hubspot-saas-growth-signals-2026",
     title: "HubSpot at $3.5B ARR: What Enterprise SaaS Growth Signals Mean for Your 2026 Strategy",
     excerpt: "HubSpot just reported $3.5B in ARR with 23% growth — but a 16% stock drop tells a deeper story. I analyze the numbers, compare them across the SaaS landscape, and share actionable takeaways for B2B software buyers and sellers navigating the post-hypergrowth era.",
