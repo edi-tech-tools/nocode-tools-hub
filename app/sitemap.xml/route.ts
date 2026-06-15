@@ -12,7 +12,7 @@ const BLOG_SLUGS = [
   "hr-software-digital-transformation",
   "customer-support-automation",
   "slack-vs-microsoft-teams-2026-comparison",
-  "best-data-analytics-tools-b2b-2026",
+  "best-data-analytics-tools-business-2026",
   "top-project-management-tools-2026",
   "marketing-automation-platforms-comparison-2026",
   "customer-success-software-reduce-churn",
@@ -21,16 +21,16 @@ const BLOG_SLUGS = [
   "best-video-conferencing-tools-2026",
   "accounting-software-enterprise-2026",
   "best-ai-writing-tools-2026",
-  "best-cybersecurity-tools-b2b-2026",
+  "best-cybersecurity-tools-business-2026",
   "best-data-warehousing-tools-2026",
   "best-customer-success-software-2026",
-  "best-ecommerce-platforms-b2b-2026",
+  "best-ecommerce-platforms-business-2026",
   "enterprise-ai-agent-orchestration-2026",
   "google-io-2026-gemini-enterprise-ai",
   "hubspot-saas-growth-signals-2026",
   "mixpanel-vs-amplitude-vs-hotjar-2026",
 
-  "outreach-vs-salesloft-vs-gong-b2b-sales-engagement-2026",
+  "outreach-vs-salesloft-vs-gong-business-sales-engagement-2026",
 ];
 
 const TOOL_SLUGS = [

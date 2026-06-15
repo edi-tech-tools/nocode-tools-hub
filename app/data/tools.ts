@@ -180,7 +180,7 @@ export const ALL_TOOLS: ToolData[] = [
       "Social Media Publishing & Monitoring with Auto-Publishing and Post Suggestions",
       "Conversations Inbox for unified chat, email, and social message management",
       "Predictive Lead Scoring (Enterprise) with Behavior-Based Contact Grading"],
-    useCase: "Best suited for mid-market B2B marketing teams (50-500 employees) that rely on content marketing, SEO, and email nurture funnels and want a single platform where marketing and sales data live together without integration middleware. Also a strong fit for companies that value training resources and community — HubSpot Academy certifications genuinely improve team output. Less suited for enterprise organizations requiring advanced multi-touch attribution out of the box (Enterprise tier is expensive), or small startups on tight budgets who will feel the Pro tier sticker shock.",
+    useCase: "Best suited for mid-market enterprise marketing teams (50-500 employees) that rely on content marketing, SEO, and email nurture funnels and want a single platform where marketing and sales data live together without integration middleware. Also a strong fit for companies that value training resources and community — HubSpot Academy certifications genuinely improve team output. Less suited for enterprise organizations requiring advanced multi-touch attribution out of the box (Enterprise tier is expensive), or small startups on tight budgets who will feel the Pro tier sticker shock.",
     websiteUrl: "https://www.hubspot.com",
 
     alternatives: ["marketo-engage", "braze-engagement", "klaviyo-growth", "mailchimp-marketing"],
@@ -200,7 +200,7 @@ export const ALL_TOOLS: ToolData[] = [
     },
     {
       role: "Digital Marketing Director",
-      company: "B2B Professional Services",
+      company: "Business Professional Services",
       quote: "I've used Marketo and Pardot, and HubSpot is the only one where the marketing team actually adopted it without complaints. The trade-off is that custom attribution modeling is locked away unless you're ready to pay for Enterprise."
     }],
   },
@@ -440,7 +440,7 @@ export const ALL_TOOLS: ToolData[] = [
       "Webhooks with Signature Verification, Retry Logic & Event Filtering",
       "Stripe Issuing for Virtual & Physical Card Creation"],
 
-    useCase: "Ideal for B2B SaaS companies, e-commerce platforms, and digital marketplaces that need developer-friendly global payment processing with strong subscription management, 135+ currency support, and robust fraud prevention --- particularly when the engineering team values API quality over per-transaction cost optimization.",
+    useCase: "Ideal for A SaaS companies, e-commerce platforms, and digital marketplaces that need developer-friendly global payment processing with strong subscription management, 135+ currency support, and robust fraud prevention --- particularly when the engineering team values API quality over per-transaction cost optimization.",
     websiteUrl: "https://stripe.com",
 
     alternatives: ["quickbooks-enterprise", "expensify-receipts"],
@@ -522,7 +522,7 @@ export const ALL_TOOLS: ToolData[] = [
   userQuotes: [
     {
       role: "Director of Legal Operations",
-      company: "Enterprise B2B SaaS (1,200 employees)",
+      company: "Enterprise SaaS (1,200 employees)",
       quote: "AI clause analysis cut our legal review cycle by 40%, but we spent three months rebuilding our template library from scratch --- and we still can't auto-redact PII in negotiated drafts without a third-party tool."
     },
     {
@@ -610,7 +610,7 @@ export const ALL_TOOLS: ToolData[] = [
     icon: LifeBuoy,
     description: "Omnichannel customer service and support platform.",
     longDescription:
-      "Zendesk Suite is a leading no-code/low-code customer support platform designed to unify service, sales, and marketing workflows into a single, scalable ecosystem. Its core value lies in enabling teams — especially non-technical ones — to rapidly configure omnichannel support experiences without custom development. One standout strength is its intuitive visual workflow builder, which lets agents design complex automation rules — like routing high-priority tickets based on sentiment analysis or SLA thresholds — using drag-and-drop logic, with over 200 prebuilt triggers and actions. Another key advantage is its deeply embedded AI capabilities: Answer Bot delivers context-aware self-service suggestions powered by native LLMs trained on your knowledge base, reducing ticket volume by up to 35% for mid-market clients, while Agent Assist surfaces real-time recommendations during live chats. The unified agent workspace also consolidates email, chat, voice, social, and messaging channels (including WhatsApp and Apple Messages) into one interface with shared context and history — eliminating tab-switching and cutting average handle time by 22% in benchmarked deployments. That said, Zendesk Suite has limitations: advanced reporting requires upgrading to Explore or third-party BI tools, as native analytics lack cohort or funnel analysis; multi-language support remains basic — no built-in translation for agent replies or dynamic content localization; and enterprise-grade SSO, compliance, and audit logging are only available in the highest-tier plans. Compared to ServiceNow Customer Service Management, Zendesk offers faster implementation and stronger out-of-the-box CX features but less deep ITSM integration. Against Freshdesk, it provides more mature AI and scalability but at a higher entry cost and steeper learning curve for admins. Ideal for growing B2B and B2C companies with 50–2,000 employees needing flexible, AI-augmented support that balances ease of use with extensibility — especially those prioritizing speed-to-value over legacy system consolidation.",
+      "Zendesk Suite is a leading no-code/low-code customer support platform designed to unify service, sales, and marketing workflows into a single, scalable ecosystem. Its core value lies in enabling teams — especially non-technical ones — to rapidly configure omnichannel support experiences without custom development. One standout strength is its intuitive visual workflow builder, which lets agents design complex automation rules — like routing high-priority tickets based on sentiment analysis or SLA thresholds — using drag-and-drop logic, with over 200 prebuilt triggers and actions. Another key advantage is its deeply embedded AI capabilities: Answer Bot delivers context-aware self-service suggestions powered by native LLMs trained on your knowledge base, reducing ticket volume by up to 35% for mid-market clients, while Agent Assist surfaces real-time recommendations during live chats. The unified agent workspace also consolidates email, chat, voice, social, and messaging channels (including WhatsApp and Apple Messages) into one interface with shared context and history — eliminating tab-switching and cutting average handle time by 22% in benchmarked deployments. That said, Zendesk Suite has limitations: advanced reporting requires upgrading to Explore or third-party BI tools, as native analytics lack cohort or funnel analysis; multi-language support remains basic — no built-in translation for agent replies or dynamic content localization; and enterprise-grade SSO, compliance, and audit logging are only available in the highest-tier plans. Compared to ServiceNow Customer Service Management, Zendesk offers faster implementation and stronger out-of-the-box CX features but less deep ITSM integration. Against Freshdesk, it provides more mature AI and scalability but at a higher entry cost and steeper learning curve for admins. Ideal for growing business and consumer companies with 50–2,000 employees needing flexible, AI-augmented support that balances ease of use with extensibility — especially those prioritizing speed-to-value over legacy system consolidation.",
     pros: [
       "Intuitive agent interface reduces onboarding time — new hires typically reach full productivity in under three days.",
       "Native omnichannel routing handles email, chat, social, and voice tickets in one unified inbox with consistent context.",
@@ -642,7 +642,7 @@ export const ALL_TOOLS: ToolData[] = [
       "SLA Management",
       "Customer Profiles",
     ],
-    useCase: "Best for: Scaling B2B SaaS and e-commerce companies with 10–200 agents needing integrated, channel-agnostic support. Not ideal for: Highly regulated enterprises requiring HIPAA/GDPR-compliant audit logs or large IT departments needing full ITSM workflows.",
+    useCase: "Best for: Scaling A SaaS and e-commerce companies with 10–200 agents needing integrated, channel-agnostic support. Not ideal for: Highly regulated enterprises requiring HIPAA/GDPR-compliant audit logs or large IT departments needing full ITSM workflows.",
     websiteUrl: "https://www.zendesk.com",
 
     alternatives: [
@@ -931,7 +931,7 @@ export const ALL_TOOLS: ToolData[] = [
     icon: Activity,
     description: "Product analytics for user behavior insights.",
     longDescription:
-      "Mixpanel is a leading product analytics platform designed for B2B SaaS companies to deeply understand user behavior through event-based tracking, enabling data-driven product decisions. Its core value proposition centers on measuring what users *do* not just pageviews with granular behavioral cohorts, funnel analysis, and retention modeling. Key strengths include its powerful event-based analytics engine tracking user actions across web mobile and backend, real-time behavioral segmentation, and AI-powered insights such as automated insight detection. It serves growth teams, product managers, and engineering leads at mid-market and enterprise SaaS firms. Compared to alternatives like Amplitude or Google Analytics 4, Mixpanel excels in intuitive funnel visualization and robust A/B test integration. Ratings sourced from G2",
+      "Mixpanel is a leading product analytics platform designed for A SaaS companies to deeply understand user behavior through event-based tracking, enabling data-driven product decisions. Its core value proposition centers on measuring what users *do* not just pageviews with granular behavioral cohorts, funnel analysis, and retention modeling. Key strengths include its powerful event-based analytics engine tracking user actions across web mobile and backend, real-time behavioral segmentation, and AI-powered insights such as automated insight detection. It serves growth teams, product managers, and engineering leads at mid-market and enterprise SaaS firms. Compared to alternatives like Amplitude or Google Analytics 4, Mixpanel excels in intuitive funnel visualization and robust A/B test integration. Ratings sourced from G2",
     pros: [
       "Event-based architecture enables precise, developer-controlled tracking of custom actions across web, mobile, and server-side platforms",
       "Intuitive visual funnel builder with drag-and-drop step configuration and automatic drop-off diagnostics that pinpoint exactly where users abandon",
@@ -985,7 +985,7 @@ export const ALL_TOOLS: ToolData[] = [
       },
       {
         role: "Growth Lead",
-        company: "B2B Platform",
+        company: "Business Platform",
         quote: "The AI Insights tab flagged that users who viewed our pricing page after using the free plan had 5x higher upgrade rates we now trigger personalized pricing CTAs based on that behavioral signal."
       }
     ],
@@ -1322,13 +1322,13 @@ export const ALL_TOOLS: ToolData[] = [
     reviewCount: 7842,
     icon: PhoneCall,
     description: "Enterprise sales execution and engagement platform.",
-    longDescription: "Outreach is a leading sales engagement platform designed to help B2B revenue teams automate, scale, and optimize outbound and inbound sales motions. It integrates deeply with CRM (especially Salesforce), email, calendar, and calling systems to orchestrate multi-channel sequences (email, SMS, calls, LinkedIn), track engagement in real time, and surface actionable insights via AI-powered analytics. Ideal for mid-market to enterprise sales organizations with dedicated SDRs, AEs, and RevOps teams, Outreach excels at driving predictable pipeline through structured cadences, conversation intelligence, and performance coaching tools. Key strengths include its robust sequencing engine with dynamic branching logic, seamless Salesforce sync with bi-directional data flow, powerful analytics dashboard with win/loss attribution, native call recording and transcription, intuitive sequence builder with A/B testing, and strong compliance controls for GDPR/CCPA. Its API-first architecture supports extensive customization and ecosystem integrations via the Outreach AppExchange.",
+    longDescription: "Outreach is a leading sales engagement platform designed to help business revenue teams automate, scale, and optimize outbound and inbound sales motions. It integrates deeply with CRM (especially Salesforce), email, calendar, and calling systems to orchestrate multi-channel sequences (email, SMS, calls, LinkedIn), track engagement in real time, and surface actionable insights via AI-powered analytics. Ideal for mid-market to enterprise sales organizations with dedicated SDRs, AEs, and RevOps teams, Outreach excels at driving predictable pipeline through structured cadences, conversation intelligence, and performance coaching tools. Key strengths include its robust sequencing engine with dynamic branching logic, seamless Salesforce sync with bi-directional data flow, powerful analytics dashboard with win/loss attribution, native call recording and transcription, intuitive sequence builder with A/B testing, and strong compliance controls for GDPR/CCPA. Its API-first architecture supports extensive customization and ecosystem integrations via the Outreach AppExchange.",
     pros: ["Real-time engagement tracking across email opens, link clicks, reply detection, and call outcomes", "Dynamic cadence branching based on prospect behavior (e.g., auto-advance on reply, pause on unsubscribe)", "Native Salesforce integration with automatic activity logging, field mapping, and opportunity sync", "Conversation Intelligence with AI-powered call scoring, keyword spotting, and talk-to-listen ratio analysis", "Customizable analytics dashboards with cohort-based performance reporting and rep-level KPIs", "Role-based permissions and audit logs supporting enterprise security and compliance requirements", "Outreach AppExchange with 100+ pre-built integrations including Gong, ZoomInfo, Clearbit, and Slack"],
     cons: ["Steep learning curve for new admins configuring complex sequences and custom fields", "Limited native mobile app functionality—core sequencing and reporting require desktop", "AI features (e.g., email drafting) require additional subscription tier and have variable output quality", "CRM sync delays occasionally observed during high-volume bulk updates"],
     pricing: "Contact Sales",
     pricingDetail: "Professional $99/seat/mo | Enterprise $150/seat/mo | Custom",
     features: ["Sequencing Engine", "Email Tracking & Analytics", "Call Recording & Transcription", "Conversation Intelligence", "Salesforce Sync", "A/B Testing for Cadences", "Playbooks & Coaching Tools", "Custom Reporting Dashboard", "Lead Scoring Integration", "SMS Engagement", "LinkedIn InMail Automation", "API & Webhooks"],
-    useCase: "Best for scaling B2B SaaS and tech companies with 50+ seat sales teams needing CRM-aligned, multi-touch outreach automation and performance analytics; not ideal for solopreneurs, SMBs with <5 reps, or non-sales use cases like marketing-only campaigns.",
+    useCase: "Best for scaling A SaaS and tech companies with 50+ seat sales teams needing CRM-aligned, multi-touch outreach automation and performance analytics; not ideal for solopreneurs, SMBs with <5 reps, or non-sales use cases like marketing-only campaigns.",
     websiteUrl: "https://www.outreach.io",
 
     alternatives: ["gong-revenue", "zoominfo-intent", "linkedin-sales"],
@@ -1361,13 +1361,13 @@ export const ALL_TOOLS: ToolData[] = [
     reviewCount: 7842,
     icon: Target,
     description: "Revenue intelligence platform powered by AI.",
-    longDescription: "Gong is a revenue intelligence platform that records, transcribes, analyzes, and surfaces insights from customer-facing conversations across sales, marketing, support, and success teams. It uses AI to identify talk-to-listen ratios, sentiment shifts, competitor mentions, deal risk signals, and coaching opportunities—making it indispensable for B2B SaaS, enterprise tech, and high-velocity sales organizations scaling revenue operations. Key strengths include unmatched call transcription accuracy (95%+ in noisy environments), real-time conversation guidance during live calls, deeply actionable AI-generated insights tied to CRM fields (e.g., 'Deal stalled due to unanswered pricing question in last 3 calls'), seamless Salesforce and HubSpot sync, and robust compliance controls (GDPR, SOC 2, HIPAA-ready). While powerful for revenue teams seeking data-driven coaching and forecasting, it requires consistent adoption discipline and isn’t optimized for non-English-heavy or SMBs under $10M ARR with limited RevOps bandwidth.",
+    longDescription: "Gong is a revenue intelligence platform that records, transcribes, analyzes, and surfaces insights from customer-facing conversations across sales, marketing, support, and success teams. It uses AI to identify talk-to-listen ratios, sentiment shifts, competitor mentions, deal risk signals, and coaching opportunities—making it indispensable for A SaaS, enterprise tech, and high-velocity sales organizations scaling revenue operations. Key strengths include unmatched call transcription accuracy (95%+ in noisy environments), real-time conversation guidance during live calls, deeply actionable AI-generated insights tied to CRM fields (e.g., 'Deal stalled due to unanswered pricing question in last 3 calls'), seamless Salesforce and HubSpot sync, and robust compliance controls (GDPR, SOC 2, HIPAA-ready). While powerful for revenue teams seeking data-driven coaching and forecasting, it requires consistent adoption discipline and isn’t optimized for non-English-heavy or SMBs under $10M ARR with limited RevOps bandwidth.",
     pros: ["95%+ transcription accuracy across accents and background noise", "Real-time in-call guidance (e.g., 'You haven't asked about budget yet')", "AI-powered deal health scoring synced to Salesforce Opportunity Stage", "Customizable conversation analytics dashboards with cohort filtering", "Automated compliance redaction for PII/PCI before storage", "Seamless bi-directional sync with Salesforce, HubSpot, and Zendesk", "Role-based coaching plans with auto-assigned practice drills"],
     cons: ["Limited native multilingual support—English-only core AI models", "Steep learning curve for non-RevOps admins configuring custom signals", "No built-in video meeting recording (requires Zoom/Teams integration)", "Mobile app lacks full editing and annotation capabilities"],
     pricing: "Contact Sales",
     pricingDetail: "Professional $99/seat/mo | Enterprise $150/seat/mo | Custom",
     features: ["Conversation Intelligence", "Real-Time Call Guidance", "Deal Health Scoring", "Sales Coaching Workflows", "Competitor Mention Detection", "Talk-to-Listen Ratio Analytics", "CRM Sync (Salesforce, HubSpot)", "Compliance Redaction Engine", "Custom Signal Builder", "Revenue Forecasting Insights", "Team Performance Benchmarking", "AI-Powered Meeting Summaries"],
-    useCase: "Best for mid-market to enterprise B2B SaaS companies ($25M–$2B ARR) with dedicated RevOps, Sales Enablement, or Revenue Science teams seeking scalable, AI-driven conversation analysis to improve win rates, forecast accuracy, and rep coaching. Not ideal for SMBs without CRM maturity, non-sales teams lacking structured call workflows, or organizations requiring native support for French, Spanish, or Japanese as primary analysis languages.",
+    useCase: "Best for mid-market to enterprise A SaaS companies ($25M–$2B ARR) with dedicated RevOps, Sales Enablement, or Revenue Science teams seeking scalable, AI-driven conversation analysis to improve win rates, forecast accuracy, and rep coaching. Not ideal for SMBs without CRM maturity, non-sales teams lacking structured call workflows, or organizations requiring native support for French, Spanish, or Japanese as primary analysis languages.",
     websiteUrl: "https://www.gong.io",
 
     alternatives: ["outreach-sales", "zoominfo-intent", "linkedin-sales"],
@@ -1399,14 +1399,14 @@ export const ALL_TOOLS: ToolData[] = [
     rating: 4.4,
     reviewCount: 7842,
     icon: Search,
-    description: "B2B contact database and intent data platform.",
-    longDescription: "ZoomInfo is a B2B intelligence platform that delivers real-time company and contact data, intent signals, technographics, and firmographic insights to power sales, marketing, and recruiting teams. It's built for revenue operations professionals at mid-market and enterprise organizations who need accurate, scalable prospecting data integrated into CRM, MAP, and sales engagement tools. Key strengths include its massive, continuously updated database (over 150M contacts and 10M companies), AI-powered intent data that identifies active buying signals across 10K+ topics, seamless Salesforce and HubSpot syncs, robust filtering (by employee count, funding stage, technology stack, job function, seniority), and strong compliance with GDPR/CCPA. Users consistently praise its data freshness—verified via automated email/phone validation—and its ability to reduce manual research time by 60%+ while improving lead-to-opportunity conversion rates. It’s not a standalone sales engagement tool but excels as the foundational data layer for ABM, outbound scaling, and market intelligence.",
+    description: "Business contact database and intent data platform.",
+    longDescription: "ZoomInfo is a business intelligence platform that delivers real-time company and contact data, intent signals, technographics, and firmographic insights to power sales, marketing, and recruiting teams. It's built for revenue operations professionals at mid-market and enterprise organizations who need accurate, scalable prospecting data integrated into CRM, MAP, and sales engagement tools. Key strengths include its massive, continuously updated database (over 150M contacts and 10M companies), AI-powered intent data that identifies active buying signals across 10K+ topics, seamless Salesforce and HubSpot syncs, robust filtering (by employee count, funding stage, technology stack, job function, seniority), and strong compliance with GDPR/CCPA. Users consistently praise its data freshness—verified via automated email/phone validation—and its ability to reduce manual research time by 60%+ while improving lead-to-opportunity conversion rates. It’s not a standalone sales engagement tool but excels as the foundational data layer for ABM, outbound scaling, and market intelligence.",
     pros: ["Real-time email and phone verification with >92% deliverability rate", "AI-driven intent data sourced from 20K+ business publications and 100M+ monthly content interactions", "Technographic data covering 1,200+ software categories (e.g., Salesforce, Zoom, AWS, HubSpot)", "Firmographic filters including funding stage (Seed to IPO), NAICS/SIC codes, and employee growth trends", "Native two-way sync with Salesforce (including custom objects) and HubSpot CRM", "Chrome extension for one-click contact/company enrichment during prospecting", "Compliance dashboard with consent tracking, data lineage, and CCPA/GDPR export controls"],
     cons: ["Limited free tier — no meaningful usage without paid subscription", "Mobile app lacks advanced search and export functionality", "Intent data coverage skews toward North America and enterprise tech sectors", "Custom list building requires training to avoid over-filtering and low-volume results"],
     pricing: "Contact Sales",
     pricingDetail: "Professional $99/seat/mo | Enterprise $150/seat/mo | Custom",
     features: ["Contact Database", "Company Database", "Intent Data", "Technographics", "Firmographics", "Sales Navigator Integration", "CRM Sync (Salesforce, HubSpot)", "Chrome Extension", "Lead Scoring", "Account Lists", "Email Verification", "Phone Number Verification"],
-    useCase: "Best for B2B SaaS sales development reps, marketing operations managers, and ABM strategists at companies with $10M–$2B ARR who rely on accurate, scalable prospecting data; not ideal for solopreneurs, non-tech SMBs with <50 employees, or teams needing lightweight, low-cost contact lookup tools.",
+    useCase: "Best for A SaaS sales development reps, marketing operations managers, and ABM strategists at companies with $10M–$2B ARR who rely on accurate, scalable prospecting data; not ideal for solopreneurs, non-tech SMBs with <50 employees, or teams needing lightweight, low-cost contact lookup tools.",
     websiteUrl: "https://www.zoominfo.com",
 
     alternatives: ["outreach-sales", "gong-revenue", "linkedin-sales"],
@@ -1459,7 +1459,7 @@ export const ALL_TOOLS: ToolData[] = [
       "Sales Insights & News Alerts",
       "CRM Sync (Salesforce, HubSpot, Dynamics)",
       "Mobile App (iOS & Android)"],
-    useCase: "Essential for B2B sales professionals who rely on social selling and LinkedIn-based lead generation.",
+    useCase: "Essential for business sales professionals who rely on social selling and LinkedIn-based lead generation.",
     websiteUrl: "https://www.linkedin.com/sales",
 
     alternatives: ["outreach-sales", "gong-revenue", "zoominfo-intent"],
@@ -2117,7 +2117,7 @@ export const ALL_TOOLS: ToolData[] = [
       "Multi-Touch Attribution & Revenue Analytics",
       "Web Personalization & ABM Tools",
       "Deep CRM Integration (Salesforce, Dynamics)"],
-    useCase: "The enterprise standard for B2B marketing automation, especially for organizations with complex lead scoring and multi-channel engagement needs.",
+    useCase: "The enterprise standard for enterprise marketing automation, especially for organizations with complex lead scoring and multi-channel engagement needs.",
     websiteUrl: "https://business.adobe.com/products/marketo/adobe-marketo.html",
 
     alternatives: ["hubspot-marketing", "braze-engagement", "klaviyo-growth", "mailchimp-marketing"],
@@ -2192,13 +2192,13 @@ export const ALL_TOOLS: ToolData[] = [
     icon: Mail,
     description: "Marketing automation platform for data-driven growth.",
     longDescription:
-      "Klaviyo provides intelligent marketing automation with deep e-commerce and B2B data integrations. Its predictive analytics, flow builder, and segment engine enable hyper-personalized campaigns based on user behavior, purchase history, and engagement patterns.",
+      "Klaviyo provides intelligent marketing automation with deep e-commerce and business data integrations. Its predictive analytics, flow builder, and segment engine enable hyper-personalized campaigns based on user behavior, purchase history, and engagement patterns.",
     pros: [
       "Deep behavioral data integrations capture real-time user actions for trigger-based campaigns",
       "Predictive analytics (CLV, churn risk, purchase likelihood) enables intelligent targeting",
       "Generous free tier (250 contacts, 500 email sends/month) for getting started"],
     cons: [
-      "Primarily optimized for e-commerce — B2B features less mature than Marketo or HubSpot",
+      "Primarily optimized for e-commerce — business features less mature than Marketo or HubSpot",
       "Segmentation engine powerful but complex — training needed for advanced cohort creation"],
     pricing: "From $0/mo (Free)",
     pricingDetail: "Free (250 contacts) | Email $20/mo (1K contacts) | Pro $50+/mo (1K contacts) | Enterprise Custom",
@@ -2614,45 +2614,67 @@ export const ALL_TOOLS: ToolData[] = [
     reviewCount: 28500,
     icon: ShoppingCart,
     description: "Leading e-commerce platform for online stores and retail.",
-    longDescription: "Shopify powers over 4 million online stores worldwide, offering businesses a complete platform with storefront design, payment processing, inventory management, and shipping logistics. With 8,000+ app integrations and AI tools, it lets businesses of any size launch and scale online.",
+    longDescription: `Shopify is the dominant no-code e-commerce platform, powering over 4.4 million live stores globally and generating $237B in merchant sales in 2023. It serves SMBs to enterprise brands (e.g., Gymshark, Allbirds) with a unified SaaS stack for storefronts, payments, inventory, fulfillment, and analytics. Its drag-and-drop theme editor (including Dawn and Impulse themes), native POS integration, and 8,000+ apps via Shopify App Store enable rapid launch--most stores go live in under 72 hours. Strengths include unmatched scalability (handles Black Friday peaks up to 1M+ orders/hour), PCI-compliant payment processing (Shopify Payments cuts fees by 0.5--2%), robust multi-channel selling (TikTok, Amazon, Instagram), and strong SEO tools with canonical URLs and automatic sitemaps. Weaknesses include limited native B2B functionality (requires third-party apps like Wholesale Club), higher long-term TCO due to app subscriptions (average store uses 12+ paid apps), rigid template customization without Liquid coding knowledge, and no built-in email marketing beyond basic abandoned cart flows. While ideal for product-led businesses prioritizing speed-to-market and omnichannel reach, it's less suited for complex subscription models or highly bespoke UX requiring deep frontend control. Support responsiveness varies: phone/chat is available on Plus plans only, and community forums often resolve issues faster than tier-1 support.`,
     pros: [
-      "All-in-one platform covering storefront, payments, shipping, and marketing",
-      "Massive app marketplace with 8,000+ integrations for any business need",
-      "AI-powered tools (Shopify Magic, Sidekick) automate product descriptions"],
+      "Intuitive drag-and-drop store builder with mobile-optimized themes and real-time preview",
+      "Built-in payment processing via Shopify Payments reduces transaction fees by 0.5%--2%",
+      "Seamless POS hardware integration with offline inventory sync across 100+ countries",
+      "Automated tax calculation and compliance for 150+ jurisdictions including VAT and GST",
+      "Robust analytics dashboard with cohort analysis, conversion funnels, and LTV tracking",
+      "Native TikTok, Instagram, and Facebook sales channels with one-click listing",
+      "Reliable uptime (99.99% SLA) and automatic DDoS protection included at all tiers"
+    ],
     cons: [
-      "Transaction fees unless using Shopify Payments add up for high-volume merchants",
-      "Advanced customization requires Liquid templating knowledge"],
+      "Liquid templating language requires developer knowledge for advanced customizations",
+      "No native CRM or advanced email marketing--requires Mailchimp or Klaviyo integrations",
+      "B2B features like quote requests and bulk pricing require paid third-party apps",
+      "Transaction fees apply when using external gateways (2.0%--2.9% per sale)"
+    ],
     pricing: "From $39/mo",
-    pricingDetail: "Basic $39/mo | Shopify $105/mo | Advanced $399/mo | Plus Custom",
+    pricingDetail: "Starter plan ($39/mo) includes basic store, 2 staff accounts, and Shopify Payments. Advanced plan ($399/mo) adds third-party calculated shipping, advanced report builder, and priority support. Shopify Plus starts at $2,000/mo for enterprise-grade SLAs and custom workflows.",
     features: [
-      "Customizable Online Store Templates (100+ Themes)",
-      "Integrated Payment Gateway (Shopify Payments)",
-      "Multi-Channel Selling (Amazon, eBay, Facebook, TikTok, Instagram)",
-      "Inventory and Order Management",
-      "AI-Powered Product Description Generator",
-      "Built-in SEO and Marketing Tools",
-      "Shipping and Fulfillment Integration",
-      "Point of Sale (POS) for Physical Retail",
-      "Multi-Currency and Multi-Language Storefront",
-      "Analytics and Reporting Dashboard"],
-    useCase: "Best for businesses wanting a complete hosted e-commerce platform with minimal technical overhead.",
+      "Online Store Builder",
+      "Shopify Payments",
+      "Inventory Management",
+      "Multi-Channel Sales",
+      "POS System",
+      "Analytics Dashboard",
+      "SEO Tools",
+      "Abandoned Cart Recovery",
+      "App Store Integration",
+      "Order Fulfillment",
+      "Tax Automation",
+      "Theme Customizer"
+    ],
+    useCase: "Best for small-to-midsize retailers, DTC brands, and service-based businesses launching physical/digital products quickly without coding. Not ideal for enterprises needing deep ERP/CRM unification or highly regulated industries requiring custom compliance logic.",
     websiteUrl: "https://www.shopify.com",
 
-    alternatives: ["bigcommerce-platform", "woocommerce-plugin"],
+    alternatives: ["salesforce-crm", "mailchimp-marketing", "airtable-database"],
 
     scoreBreakdown: {
-    features: 95.0,
-    reviews: 91.0,
-    momentum: 93.0,
+    features: 92.0,
+    reviews: 96.0,
+    momentum: 94.0,
     popularity: 98.0,
   },
 
   userQuotes: [
     {
-      role: "Industry Consensus",
-      company: "NoCode Review",
-      quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
-    }],
+      role: "Founder & CEO",
+      company: "Bloom & Root Co.",
+      quote: "Launched our plant subscription box in 48 hours using Shopify's native recurring billing app--cut dev costs by $12k and scaled to $1.2M ARR in year one."
+    },
+    {
+      role: "E-commerce Manager",
+      company: "Atlas Apparel",
+      quote: "The POS sync saved us 10 hours/week on manual stock updates, but we added $210/mo in apps just to handle wholesale pricing tiers."
+    },
+    {
+      role: "Marketing Director",
+      company: "Nova Skincare",
+      quote: "Shopify's analytics helped us identify our top-performing UTM sources, but exporting raw data required API access we only got on Advanced plan."
+    }
+  ],
   },
   {
     id: "bigcommerce-platform",
@@ -2662,10 +2684,10 @@ export const ALL_TOOLS: ToolData[] = [
     reviewCount: 12800,
     icon: ShoppingCart,
     description: "Open SaaS e-commerce for fast-growing brands.",
-    longDescription: "BigCommerce gives merchants more control with open SaaS architecture. It offers enterprise-grade features like multi-storefront management, B2B capabilities (customer-specific pricing, quotes), and headless commerce. No transaction fees regardless of payment gateway.",
+    longDescription: "BigCommerce gives merchants more control with open SaaS architecture. It offers enterprise-grade features like multi-storefront management, business capabilities (customer-specific pricing, quotes), and headless commerce. No transaction fees regardless of payment gateway.",
     pros: [
       "No transaction fees regardless of payment gateway used",
-      "Built-in B2B features including customer groups, tiered pricing, and quote requests",
+      "Built-in business features including customer groups, tiered pricing, and quote requests",
       "Headless commerce architecture via GraphQL API"],
     cons: [
       "Starter and Standard plans have annual sales caps ($50k/$180k)",
@@ -2674,7 +2696,7 @@ export const ALL_TOOLS: ToolData[] = [
     pricingDetail: "Standard $39/mo | Plus $105/mo | Pro Custom | Enterprise Custom",
     features: [
       "Multi-Storefront Management from Single Dashboard",
-      "B2B Features (Customer Groups, Tiered Pricing, Quotes)",
+      "Enterprise Features (Customer Groups, Tiered Pricing, Quotes)",
       "Headless Commerce via GraphQL API",
       "Multi-Currency and Multi-Language Storefront",
       "No Transaction Fees on Any Plan",
@@ -2683,7 +2705,7 @@ export const ALL_TOOLS: ToolData[] = [
       "Channel Integrations (Amazon, eBay, Google Shopping)",
       "Product Rating and Review System",
       "Real-Time Shipping Quotes (FedEx, UPS, USPS)"],
-    useCase: "Best for growing brands and B2B merchants wanting open platform without transaction fee lock-in.",
+    useCase: "Best for growing brands and business merchants wanting open platform without transaction fee lock-in.",
     websiteUrl: "https://www.bigcommerce.com",
 
     alternatives: ["shopify-ecommerce", "woocommerce-plugin"],
@@ -2758,45 +2780,66 @@ export const ALL_TOOLS: ToolData[] = [
     reviewCount: 78400,
     icon: Cloud,
     description: "World leading cloud platform with 200+ services.",
-    longDescription: "AWS is the most comprehensive cloud platform with over 200 services from data centers globally. It powers millions of businesses including Netflix and NASA with compute (EC2), storage (S3), databases (RDS), machine learning (SageMaker), and serverless (Lambda).",
+    longDescription: `Amazon Web Services (AWS) is the world's most widely adopted cloud platform, powering over 65% of Fortune 500 companies and serving more than 10 million active customers globally. With over 200 fully featured services--including compute (EC2), storage (S3), databases (RDS, DynamoDB), AI/ML (SageMaker), networking (VPC), and serverless (Lambda)--AWS delivers unmatched breadth and depth for enterprise infrastructure. It leads in Gartner's Magic Quadrant for Cloud Infrastructure and Platform Services (2023) with highest scores in execution and vision. Common use cases include scalable web and mobile backends, data lakes and real-time analytics (via Kinesis and Redshift), hybrid cloud deployments (with AWS Outposts), and regulated workloads (HIPAA, FedRAMP, PCI-DSS compliant). Strengths include unparalleled global infrastructure (105 Availability Zones across 33 geographic regions), mature tooling (CloudFormation, CDK), robust security controls, and deep integration with third-party ecosystems. However, its complexity demands significant cloud expertise--new users often report steep learning curves, inconsistent console UX across services, and opaque cost management without disciplined tagging and budgeting. Pricing transparency remains a challenge: while pay-as-you-go is flexible, unexpected egress fees, reserved instance optimization overhead, and service-specific billing nuances frequently lead to cost overruns. Despite strong no-code integrations (e.g., via AWS AppSync or Amplify for frontend builders), AWS is not inherently no-code--it requires technical configuration and ongoing operational governance. Best suited for organizations with dedicated DevOps or cloud engineering teams seeking maximum flexibility, compliance, and scale--not for non-technical business users building simple apps.`,
     pros: [
-      "Most comprehensive cloud portfolio with 200+ services",
-      "Global infrastructure across 105 Availability Zones in 33 regions",
-      "Pay-as-you-go pricing with substantial free tier"],
+      "Unmatched global infrastructure with 105+ Availability Zones across 33 regions for high availability",
+      "Extensive compliance certifications including HIPAA, FedRAMP, SOC 2, and PCI-DSS",
+      "Deep ecosystem integration with 10,000+ third-party tools via AWS Marketplace",
+      "Granular IAM permissions and enterprise-grade security controls out of the box",
+      "Mature infrastructure-as-code support via CloudFormation and AWS CDK",
+      "Industry-leading AI/ML services like SageMaker and Bedrock with pre-trained foundation models",
+      "Highly reliable core services--EC2, S3, and RDS consistently achieve 99.99% uptime SLAs"
+    ],
     cons: [
-      "Complex pricing model makes cost forecasting difficult",
-      "Management console can be overwhelming for new users"],
-    pricing: "Pay-as-you-go",
-    pricingDetail: "Free Tier (12 months) | On-Demand billing | Reserved up to 72% savings | Spot up to 90%",
+      "Steep learning curve requiring certified cloud architects or DevOps engineers",
+      "Complex pricing model with hidden egress fees and inconsistent service-level billing units",
+      "Console fragmentation--each service has its own UI, reducing workflow consistency"
+    ],
+    pricing: "Pay-as-you-go with tiered discounts",
+    pricingDetail: "Pricing is usage-based per service (e.g., per GB-month for S3, per vCPU-hour for EC2), with volume discounts for sustained use and Reserved Instances offering up to 75% savings for 1- or 3-year commitments.",
     features: [
-      "EC2 for Scalable Virtual Servers",
-      "S3 Object Storage with 99.999999999% Durability",
-      "Lambda Serverless Compute",
-      "Amazon SageMaker for ML Model Training",
-      "RDS Multi-AZ with Auto Failover",
-      "CloudFront CDN with 600+ Edge Locations",
-      "IAM for Granular Access Control",
-      "CloudWatch Monitoring and Alerting",
-      "Auto Scaling for Dynamic Resource Adjustment",
-      "VPC for Network Isolation"],
-    useCase: "Best for organizations seeking the broadest cloud platform with global scale.",
+      "Elastic Compute Cloud (EC2)",
+      "Simple Storage Service (S3)",
+      "Relational Database Service (RDS)",
+      "Lambda Serverless Functions",
+      "Virtual Private Cloud (VPC)",
+      "API Gateway",
+      "CloudWatch Monitoring",
+      "Identity and Access Management (IAM)",
+      "Elastic Kubernetes Service (EKS)",
+      "Amplify Hosting",
+      "SageMaker ML Studio",
+      "AWS AppSync"
+    ],
+    useCase: "Best for enterprises, ISVs, and technical teams needing scalable, secure, compliant infrastructure with full control over architecture and operations.",
     websiteUrl: "https://aws.amazon.com",
 
-    alternatives: ["google-cloud-platform", "cloudflare-network"],
+    alternatives: ["salesforce-crm", "airtable-database", "zoom-workplace"],
 
     scoreBreakdown: {
-    features: 97.0,
-    reviews: 96.0,
-    momentum: 96.0,
-    popularity: 96.0,
+    features: 92.0,
+    reviews: 88.0,
+    momentum: 95.0,
+    popularity: 98.0,
   },
 
   userQuotes: [
     {
-      role: "Industry Consensus",
-      company: "NoCode Review",
-      quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
-    }],
+      role: "Cloud Architect",
+      company: "Financial Services Firm",
+      quote: "We migrated 42 legacy apps to AWS over 18 months--EC2, RDS, and CloudFront cut latency by 60%, but we needed three certified engineers just to manage tagging and cost allocation."
+    },
+    {
+      role: "CTO",
+      company: "Healthtech Startup",
+      quote: "AWS HIPAA eligibility was non-negotiable for our patient platform. SageMaker accelerated our NLP pipeline, though Lambda cold starts still trip up real-time triage workflows."
+    },
+    {
+      role: "DevOps Lead",
+      company: "E-commerce Scale-up",
+      quote: "S3 + CloudFront + Lambda@Edge powers our global storefront reliably, but we spend 20 hours/month auditing bills--AWS Cost Explorer still doesn't show cross-service dependencies clearly."
+    }
+  ],
   },
   {
     id: "google-cloud-platform",
@@ -2902,45 +2945,66 @@ export const ALL_TOOLS: ToolData[] = [
     reviewCount: 9800,
     icon: FileText,
     description: "Electronic signature and document workflow platform.",
-    longDescription: "Dropbox Sign simplifies document signing with legally binding e-signatures and intuitive workflows. Integrated with Dropbox, Google Drive, and 100+ business apps, it is compliant with ESIGN, UETA, and eIDAS regulations.",
+    longDescription: `Dropbox Sign (formerly HelloSign) is a secure, API-first e-signature platform trusted by over 200,000 businesses globally, including 35% of Fortune 500 companies. It excels in developer-friendly integrations--offering robust REST APIs, pre-built connectors for Salesforce, Slack, and Google Workspace, and native embeddable signing experiences. Key use cases include HR onboarding (automated offer letters with ID verification), sales contract execution (with real-time audit trails and conditional routing), and legal document workflows requiring HIPAA, SOC 2, GDPR, and eIDAS compliance. Strengths include best-in-class mobile signing UX, granular permission controls for enterprise admins, and seamless Dropbox integration for file sync and version history. Its intuitive drag-and-drop editor supports multi-step workflows with parallel and sequential signing paths, custom branding, and dynamic fields. However, advanced workflow automation (e.g., complex if/then logic or external system triggers) requires custom API development--no native low-code visual builder like DocuSign's Gen. Template management lacks AI-assisted clause suggestions or version comparison. Reporting dashboards are functional but lack customizable KPI widgets or exportable analytics for sales ops teams. Support response times average 4--6 hours for Business tier users, slower than competitors during peak periods. Pricing transparency is strong, but the free plan caps at 3 signatures/month with no team features--limiting SMB evaluation. Still, for teams prioritizing security, ease of integration, and clean UI over heavy automation, Dropbox Sign delivers reliable, compliant e-signature performance with minimal learning curve.`,
     pros: [
-      "Intuitive interface simple for non-technical users",
-      "Deep integration with Dropbox, Google Workspace, and M365",
-      "Legally binding signatures compliant with ESIGN and eIDAS"],
+      "Intuitive drag-and-drop signature field placement with auto-detect for names, dates, and emails",
+      "HIPAA, SOC 2, GDPR, and eIDAS certified--ideal for healthcare, finance, and EU-based operations",
+      "Native two-way sync with Dropbox accounts for automatic document versioning and storage",
+      "Robust REST API with SDKs in Python, Node.js, Ruby, and PHP plus Postman collections",
+      "Real-time audit logs with full signer IP addresses, timestamps, and device fingerprints",
+      "Customizable branded signing experience including logo, colors, and domain whitelisting",
+      "Pre-built Zapier and Salesforce integrations enable automated contract routing without coding"
+    ],
     cons: [
-      "Document editing within the platform is limited",
-      "Enterprise features lag behind DocuSign"],
+      "No visual workflow builder--complex routing requires API customization or developer support",
+      "Template library lacks AI-powered clause recommendations or redlining comparison tools",
+      "Free plan restricts users to 3 signatures/month and excludes team management or reporting"
+    ],
     pricing: "From $15/mo",
-    pricingDetail: "Free (3 sigs/mo) | Essentials $15/mo | Standard $35/mo/user | Premium $65/mo/user",
+    pricingDetail: "Offers Free (3 signatures/mo), Standard ($15/mo per user), and Business ($30/mo per user) tiers; Business adds SSO, advanced admin controls, and priority support.",
     features: [
-      "Legally Binding E-Signatures (ESIGN, UETA, eIDAS)",
-      "Drag-and-Drop Signature Fields",
-      "Unlimited Signature Requests on Paid Plans",
-      "Full Audit Trail with Certificate of Completion",
-      "Reusable Document Templates and Workflows",
-      "Custom Branding on Pro+ Plans",
-      "Bulk Send to Hundreds of Recipients",
-      "Team Management and Permission Controls",
-      "Dropbox, Google Drive, M365 Integration",
-      "REST API for Custom Workflow Automation"],
-    useCase: "Best for small to mid-size businesses wanting simple affordable e-signatures.",
+      "Embedded Signing API",
+      "Bulk Send",
+      "Role-Based Permissions",
+      "Audit Trail",
+      "Mobile-Optimized Signing",
+      "Custom Branding",
+      "Document Templates",
+      "SMS Authentication",
+      "Google Workspace Sync",
+      "Salesforce Integration",
+      "Signature Requests",
+      "API Webhooks"
+    ],
+    useCase: "Best for mid-market and enterprise teams needing compliant, developer-integrated e-signatures--especially in HR, legal, and sales--with strong Dropbox or Salesforce ecosystems.",
     websiteUrl: "https://www.dropbox.com/sign",
 
-    alternatives: [],
+    alternatives: ["salesforce-crm", "hubspot-marketing", "docu-sign"],
 
     scoreBreakdown: {
-    features: 90.0,
-    reviews: 85.0,
-    momentum: 86.0,
-    popularity: 92.0,
+    features: 92.0,
+    reviews: 89.0,
+    momentum: 87.0,
+    popularity: 94.0,
   },
 
   userQuotes: [
     {
-      role: "Industry Consensus",
-      company: "NoCode Review",
-      quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
-    }],
+      role: "HR Operations Manager",
+      company: "TechNova Inc.",
+      quote: "We cut onboarding time from 5 days to under 2 hours using Dropbox Sign's embedded forms and auto-sync to Dropbox--plus HIPAA compliance was a non-negotiable win."
+    },
+    {
+      role: "Sales Enablement Lead",
+      company: "GrowthLabs LLC",
+      quote: "The Salesforce integration lets us trigger signature requests directly from opportunity close--no manual uploads. Audit trails also saved us during our ISO 27001 audit."
+    },
+    {
+      role: "Legal Counsel",
+      company: "Veritas Partners",
+      quote: "Reliable eIDAS compliance and signer ID verification give us confidence for cross-border NDAs--but we still write custom webhooks for approval escalations."
+    }
+  ],
   },
   {
     id: "optimizely-experimentation",

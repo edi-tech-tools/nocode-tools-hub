@@ -11,8 +11,8 @@ import { ALL_TOOLS } from "@/data/tools";
 import { BLOG_POSTS } from "@/data/blog-posts";
 
 // ============================================================
-// 模板D：画廊场景式首页 — NoCode Tools Hub 适配版
-// 主色：橙色 #EA580C
+// Template D: Gallery-Style Homepage — NoCode Tools Hub Adapted Version
+// Primary Color: Orange #EA580C
 // ============================================================
 
 const ACCENT_COLOR = "#EA580C";
@@ -56,7 +56,7 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-[#0A0A10]">
-      {/* ======== HERO 画廊风格 ======== */}
+      {/* ======== HERO Gallery Style ======== */}
       <section className="relative pt-24 pb-8 px-6 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#0A0A10] via-[#0F0B1A] to-[#0A0A10]" />
         <div className="absolute top-0 right-0 w-72 h-72 rounded-full opacity-[0.06] blur-[120px]"
@@ -112,7 +112,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ======== 视图切换 ======== */}
+      {/* ======== View Toggle ======== */}
       <section className="px-6 py-4">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-2">
@@ -132,7 +132,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ======== 画廊网格 ======== */}
+      {/* ======== Gallery Grid ======== */}
       <section className="px-6 py-4 pb-12">
         <div className="max-w-6xl mx-auto">
           <div className={viewMode === "grid"
@@ -190,7 +190,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ======== 最新文章 ======== */}
+      {/* ======== Recent Posts ======== */}
       {latestPosts.length > 0 && (
         <section className="px-6 py-10">
           <div className="max-w-6xl mx-auto">
