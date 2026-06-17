@@ -34,6 +34,7 @@ const BLOG_SLUGS = [
 
   "build-customer-dashboard-no-code-airtable-notion-softr-2026",
   "no-code-ai-automation-trends-2026",
+  "bubble-vs-webflow-vs-flutterflow-2026",
 ];
 
 const TOOL_SLUGS = [
