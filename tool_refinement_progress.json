@@ -41,6 +41,23 @@
     ],
     "queue": []
   },
+  "nocode-tools.net": {
+    "last_refined": "2026-06-18",
+    "total": 77,
+    "completed": 9,
+    "refined": [
+      "salesforce-crm",
+      "hubspot-marketing",
+      "slack-enterprise",
+      "zoom-workplace",
+      "figma-design",
+      "notion-enterprise",
+      "jira-software",
+      "clickup-tasks",
+      "bigcommerce-platform"
+    ],
+    "queue": []
+  },
   "martech-tools-hub.com": {
     "last_refined": "2026-05-22",
     "total": 58,
