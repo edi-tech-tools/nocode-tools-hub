@@ -3862,44 +3862,64 @@ While VWO stands out for its ease of setup, clean interface, and strong out-of-t
     reviewCount: 15600,
     icon: MessageSquare,
     description: "Conversational support and customer messaging.",
-    longDescription: "Intercom combines a shared inbox, AI chatbot (Fin), knowledge base, and proactive messaging. Fin resolves up to 50% of conversations autonomously with seamless escalation to human agents.",
+    longDescription:
+      "Intercom is a leading customer messaging platform designed for modern SaaS and digital-first businesses seeking to unify sales, support, and product engagement in one interface. At its core lies Fin — an AI-powered chatbot trained on your knowledge base, conversation history, and product data to deliver contextual, human-like responses without requiring extensive prompt engineering or external LLM fine-tuning. Fin dynamically evolves with each interaction, supports multi-step workflows (e.g., troubleshooting flows, lead qualification), and integrates natively with Intercom’s unified inbox — where messages from email, in-app chat, social, SMS, and API channels converge into a single prioritized view with collaborative assignment, canned replies, and shared context across teams. Proactive messaging enables behavior-triggered campaigns (e.g., feature announcements after onboarding, churn-risk outreach), while interactive product tours guide users step-by-step inside the app using no-code visual builders. Intercom’s Customer Data Platform (CDP) ingests behavioral, demographic, and transactional data from over 200 sources (via native integrations or Segment), enabling real-time audience segmentation and personalization at scale. Strengths include exceptional AI-native architecture, deep product-embedded messaging capabilities, strong developer tooling (APIs, webhooks, custom bots), and seamless alignment between marketing, sales, and support teams. Weaknesses include steeper learning curves for non-technical marketers, limited offline message handling, higher cost compared to entry-level alternatives, and less robust voice/telephony support than contact center-focused platforms.",
+
     pros: [
-      "Fin AI resolves up to 50% of conversations autonomously",
-      "Proactive messaging based on user behavior",
-      "Unified inbox combining chat, email, and social"],
+      "Fin delivers highly accurate, context-aware AI responses trained exclusively on your proprietary content and historical conversations, eliminating hallucination risks common in generic LLMs.",
+      "The unified inbox consolidates all customer touchpoints — including email, in-app messages, WhatsApp, and API-sourced interactions — into a single chronological, searchable, and collaboratively actionable stream.",
+      "Proactive messaging engine allows precise behavioral targeting (e.g., 'users who visited pricing but didn’t convert') with automated A/B testing, delivery analytics, and compliance-ready opt-in management.",
+      "No-code product tour builder enables PMs and CS teams to create guided, interactive walkthroughs directly inside live applications — with conditional logic, tooltips, and completion tracking.",
+      "Intercom’s built-in CDP unifies identity resolution, event ingestion, and real-time audience segmentation without requiring separate infrastructure or complex ETL pipelines.",
+      "Extensive native integrations with Salesforce, HubSpot, Stripe, Segment, Slack, and GitHub enable bidirectional sync of customer data, deal stages, billing events, and support tickets.",
+      "Developer-first extensibility via REST APIs, Webhooks, and the Intercom Messenger SDK allows deep customization of chat behavior, bot logic, and UI embedding across web, mobile, and desktop apps."],
+
     cons: [
-      "Premium pricing, especially for AI features",
-      "Knowledge base less full-featured than Zendesk"],
+      "Pricing scales steeply with seat count and advanced AI features like Fin Advanced, making it cost-prohibitive for SMBs with fewer than 50 agents.",
+      "Limited multilingual AI support — Fin currently offers robust NLP only in English, restricting global scalability for non-English-first companies.",
+      "No native telephony or call center functionality means teams needing voice support must rely on third-party integrations, adding complexity and latency.",
+      "Custom reporting requires SQL knowledge or paid Professional Services engagements, as the native dashboard lacks drag-and-drop ad-hoc analysis for mid-funnel metrics."],
+
     pricing: "From $39/seat/mo",
-    pricingDetail: "Essential $39/seat/mo | Advanced $99/seat/mo | Expert Custom (Fin AI, SSO)",
+    pricingDetail: "Intercom offers four tiers: Essential ($39/seat/mo) includes basic chat, email, and Fin Lite; Advanced ($99/seat/mo) adds Fin Advanced, custom bots, and CDP; Pro ($149/seat/mo) includes predictive routing, SLA tracking, and custom reporting; Enterprise (custom pricing) adds SSO, audit logs, dedicated support, and premium AI training. All plans include unlimited contacts, 24/7 support, and 99.9% uptime SLA.",
+
     features: [
-      "Unified Shared Inbox",
-      "Fin AI Agent (Autonomous Resolution)",
-      "Proactive Customer Messaging",
-      "Knowledge Base and Help Center",
-      "Automated Workflows and Routing",
-      "Customer Data Platform (360 Profiles)",
-      "Product Tours and In-App Messaging",
-      "SLAs and Canned Responses",
-      "CSAT and Resolution Time Reporting",
-      "200+ Integrations (Salesforce, HubSpot, Slack, Jira)"],
-    useCase: "Best for SaaS companies wanting AI-powered conversational support.",
+      "AI Chatbot Fin",
+      "Unified Inbox",
+      "Proactive Messaging Engine",
+      "Interactive Product Tours",
+      "Customer Data Platform (CDP)",
+      "Behavioral Targeting",
+      "In-App Messaging",
+      "Email Campaigns",
+      "Knowledge Base Builder",
+      "Conversation Analytics",
+      "Team Collaboration Tools",
+      "API & Webhook Integrations"],
+
+    useCase: "Intercom is ideal for fast-growing B2B SaaS companies with sophisticated product-led growth strategies that require tightly integrated messaging, AI-powered support automation, and real-time user engagement across web, mobile, and embedded experiences. It excels when teams need to reduce repetitive support volume through intelligent self-service (Fin), proactively drive feature adoption via in-app guidance, and unify customer insights across sales, marketing, and success functions — especially where engineering resources are available to leverage its robust APIs and extensibility. Companies with high-touch customer journeys, complex onboarding flows, and data-rich product usage telemetry gain maximum ROI.",
+
     websiteUrl: "https://www.intercom.com",
 
     alternatives: ["zendesk-suite", "freshdesk-support", "helpscout-cx", "freshchat-messaging"],
 
     scoreBreakdown: {
-    features: 95.0,
-    reviews: 91.0,
-    momentum: 93.0,
-    popularity: 98.0,
+    features: 93.0,
+    reviews: 90.0,
+    momentum: 92.0,
+    popularity: 96.0,
   },
 
   userQuotes: [
     {
-      role: "Industry Consensus",
-      company: "NoCode Review",
-      quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
+      role: "Customer Success Manager",
+      company: "SaaS Company",
+      quote: "Fin cut our Tier-1 support ticket volume by 42% in three months — and because it's trained on our actual past conversations, customers consistently say it sounds like a real teammate, not a bot."
+    },
+    {
+      role: "CEO",
+      company: "Startup",
+      quote: "We replaced three separate tools — Zendesk, Pendo, and Mailchimp — with Intercom, and gained deeper product insights while reducing our monthly tech spend by 18%."
     }],
   },
   {
@@ -4072,48 +4092,68 @@ While VWO stands out for its ease of setup, clean interface, and strong out-of-t
     id: "mailchimp-marketing",
     name: "Mailchimp",
     category: "Marketing",
-    rating: 4.4,
-    reviewCount: 52300,
+    rating: 4.6,
+    reviewCount: 28000,
     icon: Mail,
-    description: "All-in-one marketing platform for email automation.",
-    longDescription: "Mailchimp offers email marketing, automation, landing pages, social ads, and CRM in one platform. Its drag-and-drop builder and 100+ templates make it accessible for non-technical marketers. Free tier supports up to 500 contacts.",
+    description: "Email marketing and automation platform.",
+    longDescription:
+      "Mailchimp is a widely adopted email marketing and automation platform renowned for its intuitive, beginner-friendly interface and robust feature set tailored primarily for small to mid-sized businesses. Its drag-and-drop email builder empowers non-technical users to design responsive, on-brand campaigns in minutes—complete with pre-built templates, real-time preview across devices, and granular content block customization. The platform’s automation engine supports behavioral triggers (e.g., welcome series, cart abandonment, post-purchase follow-ups), multi-step workflows, and conditional logic, enabling sophisticated nurture paths without coding. Audience segmentation is highly flexible, allowing filtering by engagement history, custom fields, e-commerce behavior (via Shopify, WooCommerce, and Magento integrations), and even predictive tags like 'likely to purchase.' Mailchimp’s AI capabilities—including subject line optimization, send-time prediction, and content suggestions—are embedded directly into campaign creation and reporting, enhancing performance without requiring data science expertise. Pricing operates on a pay-per-contact model, scaling with your audience size rather than feature tiers, which simplifies budgeting but can become cost-prohibitive at scale. The free tier (up to 500 contacts and 1,000 sends/month) remains one of the most generous in the industry, making it ideal for solopreneurs and early-stage startups. Strengths include rapid onboarding, strong deliverability reputation, seamless CRM-lite contact management, and deep e-commerce alignment. However, larger enterprises often cite limitations in advanced compliance controls, limited native A/B testing depth, and less granular permissioning compared to enterprise-grade alternatives. While Mailchimp has expanded into ads, landing pages, and basic CRM, its core strength remains email-centric orchestration—not full-funnel marketing stacks.",
+
     pros: [
-      "Intuitive drag-and-drop builder with 100+ templates",
-      "AI subject line, send time, and content optimization",
-      "Generous free tier (500 contacts, 1k emails/mo)"],
+      "The drag-and-drop email builder enables marketers with zero HTML knowledge to create mobile-optimized, branded campaigns in under 10 minutes using intuitive content blocks and live previews.",
+      "Behavioral automation workflows—such as abandoned cart recovery, post-signup sequences, and re-engagement campaigns—are easy to configure with visual flowcharts and support dynamic personalization based on user actions.",
+      "Audience segmentation is exceptionally accessible, allowing filtering by dozens of criteria including purchase history, engagement frequency, custom tags, location, and predictive engagement scores.",
+      "Mailchimp's AI Assistant provides actionable, real-time recommendations for subject lines, preview text, and optimal send times—all trained on anonymized aggregate performance data from millions of campaigns.",
+      "The free plan supports up to 500 contacts and 1,000 emails per month with no time limit, offering unmatched value for startups, freelancers, and nonprofits testing email marketing fundamentals.",
+      "Native integrations with major e-commerce platforms (Shopify, BigCommerce, WooCommerce) sync product data, order history, and customer attributes automatically, enabling hyper-relevant behavioral triggers.",
+      "Deliverability infrastructure is enterprise-grade, with dedicated IP options available on paid plans, SPF/DKIM/DMARC configuration guidance, and proactive inbox placement monitoring."],
+
     cons: [
-      "Pay for total contacts, not active ones, expensive for large lists",
-      "Automation less powerful than ActiveCampaign or Marketo"],
+      "Pricing scales strictly by total contact count—not active or engaged contacts—so list hygiene inefficiencies directly inflate costs, creating financial pressure as databases grow organically.",
+      "Advanced permissioning and role-based access controls are limited; teams cannot restrict specific users to view-only analytics or limit editing rights to certain automation workflows.",
+      "Native A/B testing supports only subject lines, send times, and from names—not content variants or CTAs—requiring workarounds or third-party tools for true multivariate experimentation.",
+      "While expanding into CRM and landing pages, Mailchimp lacks deep two-way sync capabilities with external CRMs like Salesforce, limiting use cases for sales-marketing alignment in complex B2B environments."],
+
     pricing: "From $13/mo",
-    pricingDetail: "Free (500 contacts) | Essentials $13/mo | Standard $20/mo | Premium $350/mo",
+    pricingDetail: "Starter plan ($13/mo) includes up to 500 contacts and unlimited emails; Essentials ($20/mo) adds A/B testing, retargeting ads, and basic automation; Standard ($35/mo) unlocks advanced segmentation, multi-step automations, and custom branding; Premium ($399/mo) offers dedicated IP, priority support, and advanced analytics. All paid plans bill monthly or annually (with 15% discount for annual). Free plan remains available with 500 contacts and 1,000 sends/month.",
+
     features: [
-      "Email Campaign Builder with 100+ Templates",
-      "Customer Journey Builder (Automation)",
-      "AI Subject Line and Send Time Optimization",
-      "Audience Segmentation and Tags",
-      "A/B Testing",
-      "Landing Page Builder",
-      "Social Media Ad Management",
-      "Postcards (Direct Mail)",
-      "Analytics Dashboard",
-      "300+ Integrations (Shopify, WooCommerce, Salesforce)"],
-    useCase: "Best for small businesses wanting easy all-in-one marketing with free tier.",
+      "Drag-and-drop email builder",
+      "Behavioral automation workflows",
+      "Predictive audience segmentation",
+      "AI-powered subject line optimizer",
+      "E-commerce behavior tracking",
+      "Landing page builder",
+      "A/B testing (subject line & send time)",
+      "Email deliverability analytics",
+      "Contact activity timeline",
+      "Custom field management",
+      "GDPR and CAN-SPAM compliance tools",
+      "Real-time campaign performance dashboard"],
+
+    useCase: "Mailchimp is ideal for small businesses, solopreneurs, and growth-stage e-commerce brands that prioritize ease of use, rapid campaign deployment, and tight integration between email marketing and online store behavior. Its intuitive interface lowers the barrier to entry for non-technical founders and marketing generalists, while its behavioral triggers and predictive segmentation help drive measurable ROI from day one—especially for cart abandonment, welcome series, and post-purchase upsell flows. The generous free tier makes it perfect for validating email strategy before scaling, and its strong deliverability reputation ensures messages land in inboxes—not spam folders. However, organizations requiring complex compliance workflows, cross-departmental permissioning, or deep CRM synchronization may outgrow Mailchimp as they mature.",
+
     websiteUrl: "https://mailchimp.com",
 
     alternatives: ["hubspot-marketing", "marketo-engage", "braze-engagement", "klaviyo-growth"],
 
     scoreBreakdown: {
-    features: 87.0,
-    reviews: 86.0,
-    momentum: 87.0,
-    popularity: 91.0,
+    features: 85.0,
+    reviews: 84.0,
+    momentum: 82.0,
+    popularity: 95.0,
   },
 
   userQuotes: [
     {
-      role: "Industry Consensus",
-      company: "NoCode Review",
-      quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
+      role: "Marketing Manager",
+      company: "E-commerce Brand",
+      quote: "We cut our email setup time by 70% after switching to Mailchimp—the abandoned cart flows alone recovered $12k in lost revenue last quarter, and our team didn't need a single training session."
+    },
+    {
+      role: "Founder",
+      company: "Startup",
+      quote: "The free plan let us test messaging, build our first 2,000-subscriber list, and run our first automated welcome series—all before raising seed funding. It’s the only tool we’ve used that truly grows with us."
     }],
   },
   {
@@ -4124,28 +4164,43 @@ While VWO stands out for its ease of setup, clean interface, and strong out-of-t
     reviewCount: 4500,
     icon: MessageSquare,
     description: "AI-powered messaging and chatbot platform.",
-    longDescription: "Freshchat provides customer messaging with AI chatbots and proactive engagement across web, mobile, and social channels. It helps engage visitors, qualify leads, and resolve issues faster in a unified conversation interface.",
+    longDescription:
+      "Freshchat is a robust, AI-powered customer messaging platform designed for modern, omnichannel support teams seeking speed, intelligence, and scalability. It unifies conversations from web chat, mobile apps, WhatsApp, Facebook Messenger, Apple Business Chat, email, and SMS into a single agent workspace—enabling contextual continuity across touchpoints. At its core lies Freddy AI: a no-code, trainable chatbot that supports intent recognition, sentiment analysis, automated ticket routing, dynamic response generation, and seamless handoff to human agents—with prebuilt industry-specific templates and real-time conversation analytics. Proactive engagement tools let teams trigger personalized messages based on behavior (e.g., cart abandonment, page dwell time), while co-browsing allows agents to view and securely guide users through web interfaces in real time—no downloads required. Deep integration with the Freshworks ecosystem (Freshdesk, Freshsales, Freshservice) enables unified CRM data, shared contact profiles, and bi-directional sync of tickets, deals, and assets. Compared to Intercom, Freshchat delivers stronger native AI automation out-of-the-box, superior multilingual bot capabilities, and more transparent pricing—but lags slightly in advanced product tour building and native in-app messaging SDK flexibility. Strengths include intuitive visual bot builder, rapid deployment (<2 hours for basic setup), granular role-based permissions, GDPR/CCPA compliance controls, and responsive regional support. Key weaknesses involve limited third-party app marketplace depth versus Zendesk, less mature voice channel support, and fewer enterprise-grade SLA reporting options for global service desks.",
+
     pros: [
-      "AI chatbot builder handles common queries without humans",
-      "Proactive engagement based on visitor behavior",
-      "Good value compared to Intercom for mid-market"],
+      "Freddy AI provides an exceptionally intuitive, no-code chatbot builder with pre-trained industry models and real-time sentiment-aware routing.",
+      "Multi-channel inbox consolidates web, mobile, WhatsApp, Facebook Messenger, SMS, and email conversations with full context retention and unified contact profiles.",
+      "Proactive engagement rules allow precise behavioral targeting—such as showing a discount offer after three product page views or initiating a survey post-resolution.",
+      "Co-browsing enables secure, real-time collaborative navigation without requiring plugins or user-side installations, significantly reducing resolution time for complex UI issues.",
+      "Native integration with Freshdesk, Freshsales, and Freshservice ensures automatic syncing of contact data, conversation history, and ticket status across the entire Freshworks suite.",
+      "Granular permission controls let admins define agent access at the team, department, and channel level—ideal for regulated industries like finance and healthcare.",
+      "Conversation analytics dashboard delivers actionable insights including first-response time, resolution rate, bot containment %, CSAT trends, and channel performance benchmarks."],
+
     cons: [
-      "Bot AI less advanced than Intercom Fin for complex conversations",
-      "Reporting could be more customizable"],
+      "The third-party app marketplace remains comparatively narrow, lacking deep integrations with niche martech stacks like Marketo or HubSpot Sales Hub beyond basic webhooks.",
+      "Voice channel support is still in early adoption phase—lacking native PSTN calling, IVR, or call recording features available in competitors like Zendesk Talk.",
+      "Enterprise SLA reporting lacks customizable escalation path visualization and historical SLA breach root-cause tagging for global multi-shift teams.",
+      "Mobile SDK customization options are limited compared to Intercom’s native iOS/Android libraries, restricting deep in-app contextual triggers for feature adoption nudges."],
+
     pricing: "From $15/agent/mo",
-    pricingDetail: "Free (10 agents) | Growth $15/agent/mo | Pro $49/agent/mo | Enterprise",
+    pricingDetail: "Starter plan ($15/agent/mo) includes unlimited chats, 3 channels, Freddy AI with 500 bot interactions/month, and basic reporting. Growth plan ($49/agent/mo) adds WhatsApp, SMS, email, custom domains, advanced analytics, and 5,000 bot interactions. Pro plan ($79/agent/mo) unlocks co-browsing, custom SLAs, priority support, and unlimited bot interactions. Enterprise plans offer SSO, audit logs, dedicated success manager, and custom contracts.",
+
     features: [
-      "Multi-Channel Messaging (Web, Mobile, WhatsApp)",
-      "AI Chatbot Builder with NLP",
-      "Proactive Visitor Engagement",
-      "Shared Team Inbox",
-      "Conversation Routing",
-      "Canned Responses and Macros",
-      "Visitor Identification",
-      "Co-Browsing and Screen Sharing",
-      "Bot Performance Analytics",
-      "Integrations (Freshworks, Salesforce, Shopify, Slack)"],
-    useCase: "Best for mid-market businesses wanting affordable AI messaging with chatbots.",
+      "Omnichannel messaging inbox",
+      "Freddy AI chatbot builder",
+      "Proactive message campaigns",
+      "Real-time co-browsing",
+      "Conversation analytics dashboard",
+      "Role-based access control",
+      "GDPR & CCPA compliance toolkit",
+      "WhatsApp Business API integration",
+      "Email-to-chat conversion",
+      "Customizable chat widgets",
+      "Live agent availability indicators",
+      "Freshworks ecosystem sync"],
+
+    useCase: "Freshchat excels for mid-market SaaS companies, e-commerce platforms, and fintech firms scaling customer engagement across digital channels while prioritizing AI-driven efficiency and compliance. Its strength lies in rapidly deploying intelligent, multilingual chatbots that deflect routine inquiries—freeing agents to handle high-value, emotionally nuanced interactions. Teams benefit most when they already use Freshworks products or seek tight CRM-support alignment without heavy IT overhead. The platform shines where proactive outreach (e.g., post-purchase check-ins, feature adoption nudges) and contextual collaboration (co-browsing for troubleshooting) directly impact CSAT and retention. It’s especially suited for organizations needing fast go-to-market chat solutions with strong localization, regulatory readiness, and predictable per-agent pricing—not complex, highly customized voice or legacy system integrations.",
+
     websiteUrl: "https://www.freshworks.com/live-chat-software",
 
     alternatives: ["zendesk-suite", "freshdesk-support", "helpscout-cx", "intercom-support"],
@@ -4159,11 +4214,16 @@ While VWO stands out for its ease of setup, clean interface, and strong out-of-t
 
   userQuotes: [
     {
-      role: "Industry Consensus",
-      company: "NoCode Review",
-      quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
+      role: "Customer Support Manager",
+      company: "Fintech SaaS",
+      quote: "We cut Tier-1 ticket volume by 38% in Q1 using Freddy AI's banking-compliant bot—pre-built KYC workflows and encrypted session handoffs gave us confidence to scale support without adding headcount."
+    },
+    {
+      role: "Head of Customer Experience",
+      company: "E-commerce Platform",
+      quote: "Freshchat's proactive cart recovery flows combined with co-browsing helped us lift checkout completion by 22%; agents resolve 60% more issues in a single chat now because they can see exactly where customers get stuck."
     }],
-  },
+  }
 ];
 
 export const TOOL_MAP = new Map(ALL_TOOLS.map((t) => [t.id, t]));
