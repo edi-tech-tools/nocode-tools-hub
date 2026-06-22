@@ -3966,7 +3966,7 @@ While VWO stands out for its ease of setup, clean interface, and strong out-of-t
       "Team Collaboration Tools",
       "API & Webhook Integrations"],
 
-    useCase: "Intercom is ideal for fast-growing B2B SaaS companies with sophisticated product-led growth strategies that require tightly integrated messaging, AI-powered support automation, and real-time user engagement across web, mobile, and embedded experiences. It excels when teams need to reduce repetitive support volume through intelligent self-service (Fin), proactively drive feature adoption via in-app guidance, and unify customer insights across sales, marketing, and success functions — especially where engineering resources are available to leverage its robust APIs and extensibility. Companies with high-touch customer journeys, complex onboarding flows, and data-rich product usage telemetry gain maximum ROI.",
+    useCase: "Intercom is ideal for fast-growing companies with sophisticated product-led growth strategies that require tightly integrated messaging, AI-powered support automation, and real-time user engagement across web, mobile, and embedded experiences. It excels when teams need to reduce repetitive support volume through intelligent self-service (Fin), proactively drive feature adoption via in-app guidance, and unify customer insights across sales, marketing, and success functions — especially where engineering resources are available to leverage its robust APIs and extensibility. Companies with high-touch customer journeys, complex onboarding flows, and data-rich product usage telemetry gain maximum ROI.",
 
     websiteUrl: "https://www.intercom.com",
 
