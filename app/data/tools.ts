@@ -1448,16 +1448,20 @@ export const ALL_TOOLS: ToolData[] = [
     reviewCount: 8921,
     icon: Users,
     description: "Social selling and lead discovery on LinkedIn.",
-    longDescription:
-      "LinkedIn Sales Navigator leverages LinkedIn's 875M+ member network to help sales professionals discover leads, build relationships, and engage with decision-makers. Its advanced search filters and real-time lead recommendations transform LinkedIn into a powerful sales tool.",
-    pros: [
-      "Access to LinkedIn's 875M+ professional network with advanced search filters unavailable to non-paying users",
-      "Real-time lead recommendations based on your saved leads, accounts, and deal stages",
-      "TeamLink surfaces mutual connections within your organization for warm introductions"],
-    cons: [
-      "Enterprise pricing at $99.99/user/month — expensive for individual users",
-      "CRM sync limitations on lower tiers — advanced Salesforce integration requires Enterprise plan"],
-    pricing: "From $79.99/user/mo",
+        longDescription:
+      "LinkedIn Sales Navigator is a premium sales intelligence platform designed for revenue teams, founders, and no-code practitioners who need to prospect, qualify, and engage high-intent B2B leads without writing code or managing complex CRM integrations. It transforms LinkedIn's 875M+ professional network into a dynamic lead engine with AI-powered search filters (by role, company size, funding stage, tech stack, and more), real-time account alerts, and personalized lead recommendations--enabling non-technical users to build targeted pipelines directly from the platform. No-code builders use it to enrich Airtable or Notion CRM workflows, trigger outreach sequences via Zapier or Make.com, and validate ICP fit before building automated sales motions. Its intuitive interface, pre-built templates for InMail campaigns, and seamless one-click CRM syncs (Salesforce, HubSpot, Pipedrive) make it ideal for solo founders and growth teams prioritizing speed over engineering overhead.",
+        pros: [
+      "Advanced search filters--including firmographic, technographic, and intent signals like job changes or company funding events--that go far beyond standard LinkedIn search and require no technical setup.",
+      "Real-time 'Lead Recommendations' and 'Account Alerts' powered by LinkedIn's proprietary AI, automatically surfacing new prospects matching your saved criteria without manual monitoring.",
+      "TeamLink feature reveals shared connections across your entire organization, enabling warm intros with zero coding or API configuration--critical for no-code teams relying on relationship-based outreach.",
+      "Native, no-code CRM syncs with Salesforce, HubSpot, and Pipedrive (including custom fields and deal-stage mapping), plus robust Zapier/Make.com integration for building end-to-end prospecting-to-follow-up automations.",
+      "InMail templates with A/B testing, response tracking, and built-in analytics let non-technical users optimize outreach performance without needing marketing ops support or email infrastructure.",
+    ],    cons: [
+      "Pricing starts at $99.99/user/month--a significant barrier for solopreneurs or early-stage no-code teams with limited budgets, especially when basic prospecting needs could be met with free alternatives.",
+      "Advanced CRM features like two-way sync, custom object mapping, and Salesforce CPQ integration are locked behind the $149.99/month Enterprise plan, limiting scalability for growing no-code businesses.",
+      "No native mobile app for lead management--users must rely on the browser version or clunky workarounds, reducing field-sales flexibility for on-the-go no-code practitioners.",
+      "Limited data export options: CSV exports omit key fields like 'lead score' or 'engagement history,' forcing manual workarounds when feeding data into Notion or Airtable for pipeline tracking.",
+    ],pricing: "From $79.99/user/mo",
     pricingDetail: "Professional $79.99/user/mo | Team $134.99/user/mo | Enterprise $99.99/user/mo (annual)",
     features: [
       "Advanced Lead & Account Search (70+ Filters)",
@@ -4068,15 +4072,20 @@ While VWO stands out for its ease of setup, clean interface, and strong out-of-t
     reviewCount: 28900,
     icon: GitBranch,
     description: "Complete DevOps platform with built-in CI/CD.",
-    longDescription: "GitLab covers the entire DevOps lifecycle in one application: source code management, CI/CD, container registry, security scanning, and monitoring. Over 100,000 organizations use GitLab to eliminate complexity of integrating multiple tools.",
-    pros: [
-      "Single application for entire DevOps lifecycle",
-      "Built-in SAST, DAST, and container scanning in CI/CD",
-      "Self-managed or SaaS deployment options"],
-    cons: [
-      "Self-hosted instances need significant infrastructure",
-      "UI slower and less polished than GitHub"],
-    pricing: "From $19/user/mo",
+        longDescription:
+      "GitLab is a unified DevOps platform designed for engineering teams--and increasingly valuable for no-code practitioners who collaborate with developers or manage internal tools. It integrates source control, CI/CD pipelines, issue tracking, security scanning (SAST/DAST), container registry, and observability in one interface--eliminating context-switching between fragmented tools. Non-technical users benefit from built-in project management features like epics, roadmaps, and value stream analytics, enabling cross-functional alignment without coding. Teams use GitLab to automate app deployments, enforce compliance policies via merge request approvals, and securely manage low-code/no-code backend integrations (e.g., Airtable syncs or Zapier webhooks) through version-controlled configuration-as-code. Its self-hosted option also empowers privacy-conscious organizations--like government agencies or fintech startups--to retain full data ownership while supporting internal tooling workflows.",
+        pros: [
+      "End-to-end DevOps in a single UI reduces tool sprawl and accelerates collaboration between developers, product managers, and no-code builders.",
+      "Built-in security scanning (SAST, DAST, dependency, and container scanning) runs automatically in CI/CD pipelines--no third-party integrations or security expertise required.",
+      "Robust project management features--including epics, milestones, burndown charts, and value stream analytics--empower non-technical stakeholders to track progress and prioritize work visually.",
+      "Flexible deployment options (SaaS, self-managed, or GitLab Dedicated) let teams choose based on compliance needs, data residency requirements, or infrastructure preferences.",
+      "Tight integration with popular no-code/low-code tools via webhooks, REST APIs, and Git-triggered workflows enables automated syncing of documentation, dashboards, or internal apps.",
+    ],    cons: [
+      "Self-hosted instances require substantial hardware resources (16+ GB RAM, 4+ CPU cores minimum) and ongoing DevOps expertise for upgrades, backups, and scaling.",
+      "The UI--while functional--can feel dense and less intuitive than GitHub or modern no-code platforms, especially for users unfamiliar with Git workflows or DevOps terminology.",
+      "Advanced features like Auto DevOps and CI/CD templates assume foundational knowledge of YAML, pipelines, and Git branching--creating a learning curve for pure no-code users.",
+      "Limited native visual workflow builders mean non-technical users must rely on external tools (e.g., Retool or n8n) or custom scripts to orchestrate complex automation beyond basic webhooks.",
+    ],pricing: "From $19/user/mo",
     pricingDetail: "Free (5 users) | Premium $19/user/mo | Ultimate $99/user/mo (all security)",
     features: [
       "Source Code Management",
@@ -4116,15 +4125,20 @@ While VWO stands out for its ease of setup, clean interface, and strong out-of-t
     reviewCount: 7800,
     icon: Database,
     description: "Data transformation for analytics engineering.",
-    longDescription: "dbt lets analysts transform data in their warehouse using SQL SELECT statements. It applies version control, testing, documentation, and CI/CD to data transformations. Used by 30,000+ companies, it is the standard for analytics engineering.",
-    pros: [
-      "Analysts write transformations in SQL, dbt handles dependencies",
-      "Built-in testing framework ensures data quality",
-      "Auto-generated documentation stays in sync with code"],
-    cons: [
-      "dbt Core requires technical setup, dbt Cloud has costs",
-      "Strong SQL skills are a prerequisite"],
-    pricing: "Free (dbt Core open-source)",
+        longDescription:
+      "dbt (data build tool) is a transformation layer that empowers analytics engineers--and increasingly, no-code-savvy analysts--to model, test, document, and deploy data transformations directly in their cloud data warehouse using clean, modular SQL. While not fully no-code, it dramatically lowers the barrier for non-engineers by abstracting infrastructure complexity, enabling version-controlled, collaborative data workflows without writing Python or managing servers. Teams use dbt to build reliable marketing attribution models, finance-ready KPI dashboards, and customer 360 views--all with lineage tracking, automated testing, and self-documenting code. Its integration with low-code BI tools (e.g., Looker, Mode) and emerging UI-driven dbt interfaces (like dbt Cloud's IDE) makes it accessible to business analysts who understand SQL logic but lack DevOps expertise.",
+        pros: [
+      "Enables analysts to write reusable, modular SQL transformations--no Python or backend coding required--while dbt automatically manages execution order and dependencies.",
+      "Built-in data testing (e.g., uniqueness, not_null, custom assertions) catches errors early and ensures downstream reports stay trustworthy without manual QA.",
+      "Auto-generates interactive, searchable documentation from code comments and model definitions--keeping stakeholder-facing docs always up-to-date and eliminating siloed wikis.",
+      "Seamlessly integrates with popular low-code BI platforms and offers a visual interface in dbt Cloud, allowing non-technical users to explore models, run tests, and trigger deployments via point-and-click actions.",
+      "Supports Git-based collaboration and CI/CD pipelines out-of-the-box, letting cross-functional teams (including non-engineers) safely review, approve, and deploy changes using familiar GitHub/GitLab workflows.",
+    ],    cons: [
+      "Requires foundational SQL proficiency--users must understand JOINs, CTEs, and aggregation logic to author effective models, limiting accessibility for true beginners.",
+      "dbt Core demands local setup (Python, CLI, warehouse credentials), while dbt Cloud's full feature set requires paid plans starting at $500/month--costs that may deter small teams or solo practitioners.",
+      "No native drag-and-drop or visual modeling: all transformations are code-first, meaning even simple logic requires writing and maintaining SQL files rather than configuring flows visually.",
+      "Learning curve increases significantly when implementing advanced features like macros, custom adapters, or incremental materializations--tasks typically requiring engineering support.",
+    ],pricing: "Free (dbt Core open-source)",
     pricingDetail: "dbt Core Free | dbt Cloud Team $100/mo (5 seats) | Enterprise Custom",
     features: [
       "SQL-Based Data Transformations",
