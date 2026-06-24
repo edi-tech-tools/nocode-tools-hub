@@ -42,9 +42,9 @@
     "queue": []
   },
   "nocode-tools.net": {
-    "last_refined": "2026-06-18",
+    "last_refined": "2026-06-25",
     "total": 77,
-    "completed": 9,
+    "completed": 12,
     "refined": [
       "salesforce-crm",
       "hubspot-marketing",
@@ -54,7 +54,10 @@
       "notion-enterprise",
       "jira-software",
       "clickup-tasks",
-      "bigcommerce-platform"
+      "bigcommerce-platform",
+      "snyk-security",
+      "google-workspace",
+      "freshsales-crm"
     ],
     "queue": []
   },
