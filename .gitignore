@@ -11,3 +11,4 @@ app/data/newtools.js
 app/new-tools-batch.ts
 next-env.d.ts
 patch.diff
+.next_old/
