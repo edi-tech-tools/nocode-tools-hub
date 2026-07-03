@@ -44,7 +44,7 @@
   "nocode-tools.net": {
     "last_refined": "2026-06-25",
     "total": 77,
-    "completed": 12,
+    "completed": 15,
     "refined": [
       "salesforce-crm",
       "hubspot-marketing",
@@ -57,7 +57,10 @@
       "bigcommerce-platform",
       "snyk-security",
       "google-workspace",
-      "freshsales-crm"
+      "freshsales-crm",
+      "freshdesk-support",
+      "gusto-payroll",
+      "braze-engagement"
     ],
     "queue": []
   },
