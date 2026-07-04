@@ -46,6 +46,10 @@ const BLOG_SLUGS = [
   "nocode-ai-tools-2026-build-apps-without-coding",
   "ai-powered-no-code-workflows-automating-complex-business-processes",
   "nocode-mobile-app-builders-glide-adalo-draftbit-flutterflow-2026",
+  "building-saas-mvp-with-no-code-tools-2026",
+  "no-code-form-builders-2026-typeform-jotform-tally-fillout",
+  "building-nocode-customer-feedback-loop-2026",
+  "nocode-database-migration-airtable-to-supabase",
 ];
 
 const TOOL_SLUGS = [

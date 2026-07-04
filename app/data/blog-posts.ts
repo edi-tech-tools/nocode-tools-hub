@@ -6203,5 +6203,122 @@ Build the loop. Listen deeply. Act visibly. Repeat.
     tags: ["customer feedback", "no-code automation", "product management", "Airtable", "Typeform"],
   },
 
+  {
+    slug: "nocode-database-migration-airtable-to-supabase",
+    title: "No-Code Database Migration: Moving from Airtable to Supabase Without Writing SQL",
+    excerpt: "A practical step-by-step guide for non-developers migrating from Airtable to Supabase -- export CSV, convert with no-code tools, set up row-level security, and connect your frontend -- all in under 4 hours.",
+    content: `
+# No-Code Database Migration: Moving from Airtable to Supabase Without Writing SQL
+
+If you've built a robust internal tool, client portal, or operational dashboard in Airtable -- only to hit pricing walls, record limits, or API throttling -- you're not alone. Many no-code builders reach a tipping point where Airtable's simplicity starts costing more than it saves. The good news? You *can* migrate to a powerful, scalable, and truly open database like Supabase -- without writing a single line of SQL.
+
+This guide walks non-technical users through a real-world, no-code-friendly migration from Airtable to Supabase. We'll cover *why* to move, *how* to do it safely (in under 4 hours), and how to keep your apps running smoothly afterward -- all using intuitive interfaces and free or low-cost tools.
+
+## Why Migrate from Airtable?
+
+Airtable shines for early-stage projects, but scaling brings friction:
+
+- **Pricing**: Airtable's Team plan costs $20 per seat per month -- and seats add up fast. A 10-person team pays $200/month *just to access the same base*. At that price point, you're paying for collaboration features, not database power.
+- **Record limits**: The Team plan caps at 5,000 records *per base*. Hit that, and you either upgrade to Enterprise ($24/seat) or split data across bases -- which breaks relational integrity.
+- **API limitations**: Free and Team plans restrict API calls to 5 requests/second and 200,000 calls/month. That's fragile for live frontends or automations.
+- **No native row-level security**: You can't enforce "user A sees only their own orders" without complex workarounds -- or custom code.
+
+Supabase solves these with its free tier: **500MB database**, unlimited rows, 2M API requests/month, and built-in Row-Level Security (RLS) -- all managed via point-and-click dashboards.
+
+## Your No-Code Migration Roadmap (2-4 Hours)
+
+You don't need PostgreSQL experience. Here's how to move a 10-table Airtable workspace reliably:
+
+### Step 1: Export Clean Data from Airtable
+- In each Airtable base, click the three dots → "Export to CSV".  
+- **Pro tip**: Export *one table at a time*, and rename files clearly (e.g., 'customers.csv', 'orders.csv').  
+- Avoid "grouped" or "filtered" views -- export full tables to preserve relationships.
+
+### Step 2: Prepare CSVs for PostgreSQL
+Airtable exports include column headers and quoted values -- great! But Supabase expects clean, consistent types. Use **TableConvert.com** (free, no sign-up):
+- Upload your CSV.
+- Under "Output Format", select **PostgreSQL INSERT statements** or **SQL CREATE + INSERT**.
+- Let TableConvert auto-detect data types (string, number, date). It handles Airtable's "multiple select" and "checkbox" fields gracefully.
+- Download the generated '.sql' file -- or copy-paste the statements directly into Supabase later.
+
+*Alternative*: For larger datasets (>50k rows), use **pgloader.io** (desktop app, free). Drag-and-drop your CSVs, map columns visually, and run -- no terminal commands needed.
+
+### Step 3: Import Into Supabase
+- Log into [Supabase](https://supabase.com), create a new project, and open **Table Editor**.
+- Click "New table" → "Import table" → "Upload SQL file" (your TableConvert output).
+- Or: Paste INSERT statements directly into the SQL editor (under "SQL Editor" tab) and run.
+- Supabase instantly creates tables, indexes, and primary keys. Confirm each table appears with correct row counts.
+
+✅ *Validation check*: Open each imported table in Supabase Studio. Spot-check 5-10 records. Verify dates aren't scrambled, numbers aren't truncated, and text fields retain line breaks.
+
+## Enabling Row-Level Security -- Zero SQL Required
+
+This is where Supabase shines for non-devs. RLS lets you control *exactly* who sees or edits what -- no coding.
+
+- In Supabase Studio, go to **Table Editor** → select a table (e.g., 'orders') → click the shield icon (🔒) next to the table name.
+- Toggle "Row Level Security" ON.
+- Click "Manage policies" → "Create policy".
+- Choose policy type: "SELECT", "INSERT", etc.
+- Under "Using expression", pick from pre-built templates:
+  - "User ID matches auth.uid()" (for personal data)
+  - "Organization ID matches current org" (for multi-tenant apps)
+- Click "Save".
+
+That's it. Supabase auto-generates and applies the underlying SQL -- you never see it.
+
+## Connect Your Frontend -- No Backend Needed
+
+Your Bubble, Softr, WeWeb, or DronaHQ app doesn't care where data lives -- only that it's accessible via REST or GraphQL.
+
+- In Supabase, go to **Project Settings → API**.
+- Copy your **anon public key** and **API URL** (e.g., 'https://abc123.supabase.co').
+- In Softr: Go to "Data Sources" → "Add new" → "Supabase" → paste keys + table name.
+- In Bubble: Use the "Supabase API Connector" plugin -- enter URL/key, then call 'GET /rest/v1/orders'.
+- In WeWeb: Add Supabase as a "REST API" data source; map endpoints to collections.
+
+All these tools auto-detect your table structure -- no manual field mapping required.
+
+## Watch Out For These Common Pitfalls
+
+Even with no-code tools, small oversights cause big headaches:
+
+- **Linked records become orphaned IDs**: Airtable's "Link to another record" exports as comma-separated IDs (e.g., '"recA1b2c3, recD4e5f6"'). Supabase needs foreign keys. *Fix*: Before importing, use Excel/Google Sheets to replace linked IDs with actual values (e.g., "Acme Corp" instead of "recA1b2c3") -- or import links as text fields first, then convert later.
+
+- **Formulas disappear**: Airtable formulas (like 'CONCATENATE({First}, " ", {Last})') won't survive CSV export. *Fix*: In Airtable, create a new "Single line text" field, copy-paste formula results there, then export *that* field.
+
+- **Date/time confusion**: Airtable exports dates as 'YYYY-MM-DD', but timestamps (e.g., "Created Time") come as 'YYYY-MM-DD HH:MM:SS'. Supabase accepts both -- just ensure your target column is 'DATE' or 'TIMESTAMP WITH TIME ZONE'.
+
+- **Attachments become broken URLs**: Airtable attachment fields export as JSON arrays of URLs. Supabase stores them as text. *Fix*: Keep attachments in Airtable *or* migrate files to Cloudflare R2/S3 and store only URLs in Supabase.
+
+## Realistic Timeline: 2-4 Hours, Top to Bottom
+
+For a typical 10-table workspace (e.g., Customers, Orders, Products, Invoices, Users):
+
+- Export & clean CSVs: 30-45 mins  
+- Convert & validate with TableConvert: 20 mins  
+- Import into Supabase + spot-check: 45 mins  
+- Set up RLS on 3-5 core tables: 20 mins  
+- Connect one frontend (e.g., Softr dashboard): 30 mins  
+- Test end-to-end (create record → see in frontend → verify permissions): 30 mins  
+
+Total: ~3 hours. Complex logic (multi-step approvals, nested relations) may add 30-60 mins -- but still far less than hiring a developer.
+
+## You've Got This
+
+Migrating from Airtable to Supabase isn't about replacing a tool -- it's about unlocking scalability, security, and ownership without sacrificing ease-of-use. You keep your familiar workflows, your team's existing knowledge, and your no-code stack -- while gaining enterprise-grade infrastructure.
+
+Start small: pick *one* high-value base (like your CRM or inventory tracker), follow this guide, and test thoroughly. Once it's live, you'll wonder why you waited.
+
+And remember: Supabase's free tier covers most small-to-midsize teams indefinitely. At $0/month versus Airtable's $200+, the math -- and the peace of mind -- speak for themselves.
+    `,
+    author: "Sofia Garcia",
+    authorRole: "Database Migration Specialist",
+    date: "2026-07-05",
+    category: "No-Code Databases",
+    readTime: 6,
+    tags: ["no-code database", "Airtable", "Supabase", "database migration", "PostgreSQL", "no-code backend", "2026 no-code tools"],
+  },
+
+
 ];
 
