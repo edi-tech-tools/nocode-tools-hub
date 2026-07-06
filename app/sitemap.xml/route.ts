@@ -50,6 +50,8 @@ const BLOG_SLUGS = [
   "no-code-form-builders-2026-typeform-jotform-tally-fillout",
   "building-nocode-customer-feedback-loop-2026",
   "nocode-database-migration-airtable-to-supabase",
+  "no-code-seo-tools-guide",
+  "best-no-code-form-builders-2026-comparison",
 ];
 
 const TOOL_SLUGS = [
