@@ -9,7 +9,7 @@ interface JsonLdProps {
 
 export default function JsonLd({
   siteName = 'NoCode Tools Hub',
-  siteUrl = 'https://nocode-tools-hub.com',
+  siteUrl = 'https://nocode-tools.net',
   description = 'Comprehensive no-code and low-code directory and tool hub for modern makers.',
 }: JsonLdProps) {
   useEffect(() => {
