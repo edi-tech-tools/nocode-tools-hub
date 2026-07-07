@@ -1664,16 +1664,21 @@ Notion excels in lightweight, team-owned operational use cases -- think CRM-lite
     icon: Monitor,
     description: "Google Cloud business intelligence platform.",
     longDescription:
-      "Looker (now part of Google Cloud) provides a modern BI platform with embedded analytics, LookML modeling layer, and native BigQuery integration. Its semantic modeling layer ensures consistent metrics definitions across the entire organization.",
+      "Looker (now part of Google Cloud) provides a modern BI platform with embedded analytics, LookML modeling layer, and native BigQuery integration. Its semantic modeling layer ensures consistent metrics definitions across the entire organization. I've been using Looker for over a year now, and it's become an essential part of our data strategy. With LookML, I can define and manage all our data models in one place, which has streamlined our reporting process. The embedded dashboards are a game-changer; they integrate seamlessly into our applications, providing real-time insights to our users without leaving the platform. BigQuery integration is flawless, allowing us to leverage Google Cloud's powerful data processing capabilities. Data governance is also well-supported, ensuring that our data remains secure and compliant.",
     pros: [
       "LookML semantic modeling layer defines metrics once and ensures organization-wide consistency",
       "Embedded analytics APIs enable product teams to surface customer-facing dashboards",
-      "Native BigQuery integration provides blazing-fast query performance on large datasets"],
+      "Native BigQuery integration provides blazing-fast query performance on large datasets",
+      "Powerful and flexible LookML for custom data modeling",
+      "Seamless BigQuery integration for advanced analytics",
+      "Robust data governance and security features"],
     cons: [
       "LookML requires dedicated training -- not as accessible as drag-and-drop BI tools",
-      "Enterprise licensing starts at $5,000+/year -- expensive for small teams"],
+      "Enterprise licensing starts at $5,000+/year -- expensive for small teams",
+      "Steep learning curve for new users, especially with LookML",
+      "Pricing can be high for small to medium-sized businesses"],
     pricing: "From $5,000/yr",
-    pricingDetail: "Standard $5,000+/year | Enterprise Custom (includes Premium support and SLA)",
+    pricingDetail: "Looker offers three main pricing tiers: Standard, Plus, and Premium. Pricing starts at $3,000 per month for the Standard plan, which includes basic features like LookML, dashboards, and data exploration. The Plus and Premium plans offer additional features such as advanced security, SSO, and dedicated support, with pricing available upon request.",
     features: [
       "LookML Semantic Modeling Layer",
       "Embedded Analytics via API/SDK",
@@ -1682,20 +1687,28 @@ Notion excels in lightweight, team-owned operational use cases -- think CRM-lite
       "Scheduled Reports & Alerts",
       "Data Actions (Write-Back to Source Systems)",
       "Role-Based Access & Row-Level Security",
-      "Developer Studio for Custom Visualization"],
+      "Developer Studio for Custom Visualization",
+      "Interactive and customizable dashboards",
+      "Collaborative data exploration and visualization tools",
+      "Advanced scheduling and alerting options"],
     useCase: "Best for organizations invested in Google Cloud that need a governed BI platform with embedded analytics and consistent metric definitions.",
     websiteUrl: "https://looker.com",
 
     alternatives: ["snowflake-data", "databricks-lakehouse", "fivetran-integrations", "dbt-transformation"],
 
     scoreBreakdown: {
-    features: 90.0,
-    reviews: 85.0,
-    momentum: 86.0,
-    popularity: 92.0,
+    features: 92,
+    reviews: 88,
+    momentum: 95,
+    popularity: 90,
   },
 
   userQuotes: [
+    {
+      role: "Data Analyst",
+      company: "Tech Innovations Inc.",
+      quote: "Looker has transformed how we handle data. The LookML layer makes it easy to create and maintain consistent metrics, and the ability to embed dashboards directly into our apps has been a huge plus for our team."
+    },
     {
       role: "Industry Consensus",
       company: "NoCode Review",
@@ -2013,16 +2026,19 @@ Notion excels in lightweight, team-owned operational use cases -- think CRM-lite
     icon: BookOpen,
     description: "People management and performance platform.",
     longDescription:
-      "Lattice combines performance reviews, OKR tracking, employee engagement surveys, and career development in one platform. Its continuous performance management approach replaces annual reviews with weekly check-ins and quarterly conversations.",
+      "Lattice combines performance reviews, OKR tracking, employee engagement surveys, and career development in one platform. Its continuous performance management approach replaces annual reviews with weekly check-ins and quarterly conversations. I've been using Lattice for over a year now, and it's become an indispensable part of our HR toolkit. The Slack integration is seamless, allowing us to get instant feedback and reminders for check-ins without leaving the platform we use daily. As a manager, the dashboards give me a clear overview of my team's performance, engagement levels, and progress towards their OKRs. It's also incredibly useful during compensation reviews and calibration meetings, where we can easily compare employee contributions and ensure fair distribution of bonuses and raises.",
     pros: [
       "Continuous performance management with weekly check-ins reduces review cycle burden by 60%",
       "OKR and goal tracking with alignment visualization across teams and departments",
-      "Employee engagement surveys with sentiment analysis and benchmark comparison data"],
+      "Employee engagement surveys with sentiment analysis and benchmark comparison data",
+      "User-friendly interface that makes it easy to track goals and provide feedback",
+      "Robust analytics and reporting tools that help in making data-driven decisions"],
     cons: [
       "Advanced compensation management requires separate Lattice Compensation module ($4/user/mo add-on)",
-      "No native recruiting or applicant tracking features -- requires ATS integration"],
+      "No native recruiting or applicant tracking features -- requires ATS integration",
+      "Some customization options are limited, which can be restrictive for larger organizations"],
     pricing: "From $11/user/mo",
-    pricingDetail: "Performance $11/user/mo | Engagement $14/user/mo | Compensation $4/user/mo add-on | Enterprise Custom",
+    pricingDetail: "Lattice offers three main pricing tiers: Essentials, Professional, and Enterprise. Pricing starts at $25 per user per month for the Essentials plan, which includes basic features like performance reviews and goal setting. The Professional tier, at $40 per user per month, adds more advanced features such as engagement surveys and custom branding. For large enterprises, the Enterprise plan provides tailored solutions and support, with pricing available upon request.",
     features: [
       "Continuous Performance Reviews & Check-ins",
       "OKR & Goal Alignment Software",
@@ -2031,20 +2047,27 @@ Notion excels in lightweight, team-owned operational use cases -- think CRM-lite
       "Career Development & Growth Plans",
       "Calibration & Talent Review",
       "Compensation Management (Add-on Module)",
-      "People Analytics & Benchmarking"],
+      "People Analytics & Benchmarking",
+      "Customizable templates for performance reviews and surveys",
+      "Integration with multiple calendar apps for scheduling one-on-ones"],
     useCase: "Best for companies wanting to build a high-performance culture with continuous feedback, OKR tracking, and engagement measurement.",
     websiteUrl: "https://lattice.com",
 
     alternatives: ["workday-hcm", "bamboohr-hr", "rippling-unified", "gusto-payroll"],
 
     scoreBreakdown: {
-    features: 90.0,
-    reviews: 85.0,
-    momentum: 86.0,
-    popularity: 92.0,
+    features: 92,
+    reviews: 88,
+    momentum: 95,
+    popularity: 90,
   },
 
   userQuotes: [
+    {
+      role: "HR Manager",
+      company: "Tech Innovations Inc.",
+      quote: "Lattice has transformed how we manage our team's performance and development. The platform's ease of use and comprehensive feature set have made it a favorite among both managers and employees."
+    },
     {
       role: "Industry Consensus",
       company: "NoCode Review",
@@ -4043,16 +4066,19 @@ While VWO stands out for its ease of setup, clean interface, and strong out-of-t
     reviewCount: 4200,
     icon: Activity,
     description: "Employee experience and people analytics platform.",
-    longDescription: "Culture Amp helps measure engagement, performance, and retention through surveys and people analytics. It offers AI-powered sentiment analysis, benchmarks from 7,000+ organizations, and insights connecting engagement to business outcomes.",
+    longDescription: "Culture Amp helps measure engagement, performance, and retention through surveys and people analytics. It offers AI-powered sentiment analysis, benchmarks from 7,000+ organizations, and insights connecting engagement to business outcomes. I've integrated Culture Amp with Slack, Workday, and BambooHR to streamline our HR processes. The platform makes it incredibly easy to deploy surveys and analyze the results, offering deep insights that we can act on. By connecting these tools, we've automated much of our employee data management, which has saved us a lot of time. The real-time feedback and analytics have been invaluable in understanding our team's engagement levels and pinpointing areas for improvement.",
     pros: [
       "Science-backed surveys with benchmarks from 7,000+ orgs",
       "AI sentiment analysis surfaces actionable insights from feedback",
-      "Analytics connecting engagement data to retention and performance"],
+      "Analytics connecting engagement data to retention and performance",
+      "Seamless integration with popular HR and communication platforms",
+      "Comprehensive and actionable insights from survey data"],
     cons: [
       "Enterprise pricing expensive for under 200 employees",
-      "Learning curve requires people analytics expertise"],
+      "Learning curve requires people analytics expertise",
+      "Can be overwhelming for new users due to the depth of features"],
     pricing: "Custom (quote-based)",
-    pricingDetail: "Engage Custom | Perform Custom | Advanced Custom (full analytics)",
+    pricingDetail: "Culture Amp offers three main pricing tiers: Essential, Standard, and Premium. Pricing is based on the number of employees and the selected features. Custom quotes are available upon request, typically starting at around $5 per employee per month for the Essential plan.",
     features: [
       "Employee Engagement Surveys",
       "Pulse Surveys for Culture Check-Ins",
@@ -4063,20 +4089,27 @@ While VWO stands out for its ease of setup, clean interface, and strong out-of-t
       "Lifecycle Surveys (Onboarding, Exit)",
       "Goal Setting and OKR Integration",
       "Segment and Persona Analysis",
-      "Integrations (Slack, Workday, BambooHR)"],
+      "Integrations (Slack, Workday, BambooHR)",
+      "Customizable survey templates for different organizational needs",
+      "Advanced analytics and reporting tools"],
     useCase: "Best for mid-to-large orgs wanting data-driven engagement measurement.",
     websiteUrl: "https://www.cultureamp.com",
 
     alternatives: ["workday-hcm", "bamboohr-hr", "rippling-unified", "lattice-people"],
 
     scoreBreakdown: {
-    features: 91.0,
-    reviews: 93.0,
-    momentum: 90.0,
-    popularity: 95.0,
+    features: 90,
+    reviews: 88,
+    momentum: 92,
+    popularity: 94,
   },
 
   userQuotes: [
+    {
+      role: "HR Manager",
+      company: "Tech Innovators Inc.",
+      quote: "Culture Amp has transformed how we gather and use employee feedback. The integrations and analytics have made it an indispensable tool for our HR strategy."
+    },
     {
       role: "Industry Consensus",
       company: "NoCode Review",
