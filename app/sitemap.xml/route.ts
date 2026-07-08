@@ -52,6 +52,8 @@ const BLOG_SLUGS = [
   "nocode-database-migration-airtable-to-supabase",
   "no-code-seo-tools-guide",
   "best-no-code-form-builders-2026-comparison",
+  "best-no-code-database-tools-2026",
+  "no-code-observability-monitoring-production-apps-2026",
 ];
 
 const TOOL_SLUGS = [
