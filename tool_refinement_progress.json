@@ -42,9 +42,9 @@
     "queue": []
   },
   "nocode-tools.net": {
-    "last_refined": "2026-06-25",
+    "last_refined": "2026-07-10",
     "total": 77,
-    "completed": 15,
+    "completed": 18,
     "refined": [
       "salesforce-crm",
       "hubspot-marketing",
@@ -60,7 +60,10 @@
       "freshsales-crm",
       "freshdesk-support",
       "gusto-payroll",
-      "braze-engagement"
+      "braze-engagement",
+      "snowflake-data",
+      "terraform-iac",
+      "github-enterprise"
     ],
     "queue": []
   },
