@@ -38,8 +38,8 @@ const BLOG_SLUGS = [
   "vertical-nocode-platforms-winning-2026",
   "bubble-saas-mvp-guide",
   "nocodb-vs-airtable-vs-baserow-practical-diary",
-  "nocode-api-integration-tools-comparison-2026",
   "nocode-2026-non-developers-building-production-apps",
+  "nocode-api-integration-tools-comparison-2026",
   "nocode-internal-tools-builder-comparison-2026",
   "zapier-vs-make-vs-n8n-2026-comparison",
   "nocode-vs-traditional-development-2026",
@@ -54,6 +54,8 @@ const BLOG_SLUGS = [
   "best-no-code-form-builders-2026-comparison",
   "best-no-code-database-tools-2026",
   "no-code-observability-monitoring-production-apps-2026",
+  "building-internal-tools-without-code-2026-retool-budibase-appsmith-tooljet",
+  "no-code-automation-workflow-best-practices-2026"
 ];
 
 const TOOL_SLUGS = [
