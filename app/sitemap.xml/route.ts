@@ -56,7 +56,8 @@ const BLOG_SLUGS = [
   "no-code-observability-monitoring-production-apps-2026",
   "building-internal-tools-without-code-2026-retool-budibase-appsmith-tooljet",
   "no-code-automation-workflow-best-practices-2026",
-  "building-a-no-code-saas-mvp-step-by-step-guide-2026"
+  "building-a-no-code-saas-mvp-step-by-step-guide-2026",
+  "data-analytics-without-code-snowflake-vs-databricks"
 ];
 
 const TOOL_SLUGS = [
