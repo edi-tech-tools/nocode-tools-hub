@@ -66,7 +66,7 @@ export default function ToolDetailPage() {
 
     const org = organizationSchema(
       'NoCode Tools Hub',
-      'https://nocode-tools-hub.com',
+      'https://nocode-tools.net',
       'Comprehensive no-code and low-code directory and tool hub for modern makers.'
     );
     const s2 = document.createElement('script');

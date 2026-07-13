@@ -180,7 +180,7 @@ export default async function BlogPostPage({
   );
   const orgJsonLd = organizationSchema(
     'NoCode Tools Hub',
-    'https://nocode-tools-hub.com',
+    'https://nocode-tools.net',
     'Comprehensive no-code and low-code directory and tool hub for modern makers.'
   );
 
