@@ -58,7 +58,8 @@ const BLOG_SLUGS = [
   "no-code-automation-workflow-best-practices-2026",
   "building-a-no-code-saas-mvp-step-by-step-guide-2026",
   "data-analytics-without-code-snowflake-vs-databricks",
-  "building-production-ready-apps-with-no-code-real-world-success-stories"
+  "building-production-ready-apps-with-no-code-real-world-success-stories",
+  "no-code-devops-deployment-pipelines-2026"
 ];
 
 const TOOL_SLUGS = [
