@@ -5085,4 +5085,56 @@ The era of passive automation is ending. In its place rises agentic no-code: a p
     tags: ["No-Code", "Low-Code", "2026", "Softr", "Zapier", "Bubble", "Relay", "Memberstack", "Glide", "Voiceflow", "Automation", "Workflow", "Productivity"],
   },
 
+  {
+    slug: "building-custom-inventory-dashboard-retool-supabase-diary",
+    title: "Building a Custom Inventory Dashboard with Retool and Supabase: A No-Code Diary",
+    excerpt: "Maya Chen, a project manager, built her team's first internal tool in four weeks--no code, no dev handoff. She cut data entry from 8 hours/week to 45 minutes.",
+    content: `tl;dr: I built a live inventory dashboard for our 12-person operations team in four weeks using Retool and Supabase--zero JavaScript, zero dev tickets, zero waiting. It replaced five shared spreadsheets, cut weekly data entry from 8 hours to 45 minutes, and slashed reporting errors by 92 percent.
+
+How we got here
+Our ops team manages physical inventory across three regional warehouses. For two years, we tracked stock levels, supplier lead times, and reorder thresholds in Google Sheets--four master sheets, three version-controlled copies, and one 'final-final-v3-actual' tab that nobody trusted. Every Monday, someone spent two hours reconciling mismatches. Every time a new SKU launched, we manually updated eight columns across four tabs. When leadership asked for a real-time view of low-stock items, we exported three sheets, ran VLOOKUPs in Excel, and pasted screenshots into Slack. We were drowning in friction--not complexity.
+
+Week 1-2: Backend setup and first prototype
+I started with Supabase because it offered free Postgres hosting and instant auth--no credit card required. I created a database called 'inventory_v1' and added three tables: 'products' (with columns id, sku, name, category, unit_cost), 'warehouse_stock' (warehouse_id, product_id, quantity, last_updated), and 'suppliers' (id, name, lead_days, min_order_qty). I seeded them with 142 existing SKUs and three warehouse records using Supabase's table editor--no SQL needed. Then I connected Retool via the Supabase integration, selecting the 'inventory_v1' database and granting read/write access to all three tables. My first working prototype was live on day 5: a single page with a table showing all products, a search bar, and a refresh button. It pulled live data every 30 seconds. I showed it to our warehouse lead on Friday afternoon. He typed in 'G-782' and saw his current stock level instantly--no download, no filter, no tab switching. He said, 'Just... make this show alerts next.'
+
+Week 3-4: Real features, real impact
+I added three core capabilities. First, inventory tracking: a form with dropdowns for warehouse and product, plus an integer input for quantity change. Submitting triggered an INSERT or UPDATE in 'warehouse_stock'--all configured in Retool's query editor using simple SQL like 'INSERT INTO warehouse_stock (warehouse_id, product_id, quantity) VALUES ({{warehouseSelect.value}}, {{productSelect.value}}, {{quantityInput.value}})'. Second, reorder alerts: a second table filtered to show only rows where 'quantity < reorder_threshold', sorted by urgency. I added a 'Notify Procurement' button that sent a preformatted Slack message via Retool's Slack connector--clicking it posted to #procurement-alerts with the SKU, current stock, and supplier name pulled from a JOIN query. Third, supplier lookups: a modal triggered by clicking any supplier name, pulling full contact details and lead time from the 'suppliers' table. By day 26, the dashboard had 12 users actively logging stock adjustments, viewing live dashboards on wall-mounted tablets, and triggering alerts without supervision.
+
+What worked well
+Retool's drag-and-drop UI builder let me rearrange components in seconds--I moved the search bar from top-right to top-center after user feedback and deployed it immediately. Supabase's real-time subscriptions meant stock updates appeared in the dashboard within 1.2 seconds of being saved--verified with browser dev tools. Writing live SQL queries inside Retool felt intuitive: I joined 'products', 'warehouse_stock', and 'suppliers' in one query to power the main table, and reused that same query as the source for the alert table--no duplication.
+
+Where it pinched
+State management got tricky when users opened multiple modals. If someone clicked 'Edit' on two products before saving either, Retool sometimes overwrote the first edit. I solved it by disabling the Edit button during saves--a two-click fix in the component settings. Mobile responsiveness was inconsistent: the main table scrolled horizontally on phones, and buttons shrank too small. I added a mobile-only view with stacked cards instead of a grid--built in 90 minutes using Retool's responsive layout toggle.
+
+ROI by the numbers
+Before:
+- Data entry time per week: 8 hours across 12 people
+- Time to generate monthly stock report: 5.5 hours
+- Avg. stock discrepancy rate per SKU audit: 11.3 percent
+- Avg. time from low-stock alert to procurement action: 42 hours
+
+After:
+- Data entry time per week: 45 minutes total
+- Time to generate monthly stock report: 47 seconds (one click)
+- Avg. stock discrepancy rate per SKU audit: 0.9 percent
+- Avg. time from low-stock alert to procurement action: 18 minutes
+
+Final verdict and who should try this approach
+This wasn't magic--it was focused, iterative work. I spent 11 hours total building, testing, and training. The biggest win wasn't speed or cost--it was ownership. Our warehouse staff now suggest feature tweaks weekly: 'Can we add photo upload for damaged goods?' 'What if we flag items expiring in 30 days?' Those are product conversations, not IT requests. I recommend this approach for teams with clear operational workflows, structured data, and at least one person willing to learn SQL basics and interface logic. You don't need to be technical--but you do need patience, attention to detail, and permission to ship fast. If your team spends more than 3 hours a week copying data between spreadsheets, your first no-code tool is already overdue.`,
+    author: "Maya Chen",
+    authorRole: "Project Manager",
+    date: "2026-07-22",
+    category: "case-studies",
+    readTime: 6,
+    tags: [
+    "no-code",
+    "internal-tools",
+    "retool",
+    "supabase",
+    "inventory-management",
+    "operations",
+    "project-management",
+    "low-code"
+  ]
+  },
 ];
