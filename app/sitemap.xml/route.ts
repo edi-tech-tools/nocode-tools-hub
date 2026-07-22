@@ -40,6 +40,7 @@ const BLOG_SLUGS = [
   "vertical-nocode-platforms-winning-2026",
   "zapier-vs-make-vs-n8n-2026-comparison",
   "building-custom-inventory-dashboard-retool-supabase-diary",
+  "nocode-automation-ticket-system-make-airtable-diary",
 ];
 
 const TOOL_SLUGS = [
