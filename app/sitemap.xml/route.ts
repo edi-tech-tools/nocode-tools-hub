@@ -41,6 +41,7 @@ const BLOG_SLUGS = [
   "zapier-vs-make-vs-n8n-2026-comparison",
   "building-custom-inventory-dashboard-retool-supabase-diary",
   "nocode-automation-ticket-system-make-airtable-diary",
+  "ai-in-no-code-platforms-2026",
 ];
 
 const TOOL_SLUGS = [
