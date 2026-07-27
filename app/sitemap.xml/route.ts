@@ -42,6 +42,7 @@ const BLOG_SLUGS = [
   "building-custom-inventory-dashboard-retool-supabase-diary",
   "nocode-automation-ticket-system-make-airtable-diary",
   "ai-in-no-code-platforms-2026",
+  "nocode-2026-enterprise-infrastructure",
 ];
 
 const TOOL_SLUGS = [
