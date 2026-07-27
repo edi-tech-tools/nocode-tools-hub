@@ -5139,35 +5139,35 @@ This wasn't magic--it was focused, iterative work. I spent 11 hours total buildi
   },
 {
     slug: "nocode-automation-ticket-system-make-airtable-diary",
-    title: "无代码自动化工作流实战：我们如何用Make和Airtable搭建自动化工单系统",
-    excerpt: "当每天300+条客户工单压垮团队时，我们用了零预算、零开发资源，用Make和Airtable在3天内搭了一套自动化工单系统。分享我们的踩坑实录和经验教训。",
-    content: `# 无代码自动化工作流实战：我们如何用Make和Airtable搭建自动化工单系统
+    title: "No-Code Automation Workflows: How We Built a Customer Support Ticket System with Make and Airtable",
+    excerpt: "When our team got crushed by 300+ daily customer support tickets, we used zero budget and zero development resources to build an automated ticket system with Make and Airtable in 3 days. Here's our real-world diary of what worked, what broke, and what we learned.",
+    content: `# No-Code Automation Workflows: How We Built a Customer Support Ticket System with Make and Airtable
 
-我们团队上个月接了一个客户支持量激增的SaaS项目，每天手动处理300+条咨询工单，光是分类、分配、跟进和归档就占了客服同事60%以上的工作时间。大家眼睛发酸、漏单频发，上周还因为一条高优先级工单延误4小时被客户投诉。不能再靠Excel+微信+人工盯表了----我们决定用无代码工具快速搭一套自动化工单系统。
+Last month, our team took on a SaaS project with a sudden surge in customer inquiries. We were manually processing 300+ support tickets per day—just classifying, assigning, following up, and archiving consumed over 60% of our support team's working hours. Exhausted team members started missing tickets, and the previous week a high-priority ticket sat for four hours before anyone noticed, earning us a formal complaint. We couldn't keep relying on spreadsheets, chat apps, and manual tracking. We decided to build an automated ticket system using no-code tools.
 
-我们的目标很实在：收到新工单后，5秒内完成自动分类、指派给对应负责人、同步到企业微信、生成服务记录，并在超时未响应时自动提醒。预算为零，开发资源为零，上线周期不能超过3天。
+Our goals were straightforward: when a new ticket comes in, auto-classify it within 5 seconds, assign it to the right person, sync it to our messaging platform, generate a service record, and send an alert if no one responds within the SLA window. Budget: zero. Development resources: zero. Timeline to launch: no more than 3 days.
 
-我们选了Make（原Integromat）+ Airtable组合。Airtable作为核心数据库，我们建了三张表：'工单主表'（含来源、类型、紧急度、描述、状态）、'客服人员表'（含姓名、技能标签、当前负载数）、'SLA规则表'（如'售后类-高优先级'需2小时内响应）。Make负责所有逻辑编排。
+We chose Make (formerly Integromat) paired with Airtable. Airtable served as our core database with three tables: a 'Tickets' table (source, type, priority, description, status), a 'Team Members' table (name, skill tags, current load count), and an 'SLA Rules' table (e.g., 'Support-High Priority' requires response within 2 hours). Make handled all the workflow logic.
 
-第一版跑通花了18小时。最卡的点是'自动分类'----用户提交的文本五花八门，比如'发票没收到'、'发票没收到！！！'、'发票丢了咋办'。我们试了Airtable自带的条件公式，但模糊匹配太弱。最后在Make里加了一层文本清洗：统一转小写、去标点、关键词提取（用'contains'判断是否含'发票'、'报销'、'付款'等），再结合'紧急度'字段（来自表单下拉选项）做双重判定。这个小模块让我们分类准确率从72%升到94%。
+The first working version took 18 hours to build. The toughest part was auto-classification. Users submitted wildly different text for the same issue—'invoice not received,' 'INVOICE NOT RECEIVED!!!,' 'where's my invoice?' We tried Airtable's built-in conditional formulas, but fuzzy matching was too weak. Our solution was to add a text-cleaning layer in Make: normalize to lowercase, strip punctuation, extract keywords using 'contains' checks (looking for 'invoice,' 'refund,' 'payment'), then combine with the 'priority' field from the form dropdown for a dual decision. This small module pushed classification accuracy from 72% to 94%.
 
-第二个坑是'智能指派'。我们想按'技能标签+当前负载'动态分配，但Airtable不支持实时计算负载数。解决方案是：在Make流程里，每次创建新工单前，先查'客服人员表'，用'filter'筛选出'技能匹配且负载<5'的成员，再用'random item'随机选一个----既避免某人被爆单，又不用维护额外计数字段。
+The second challenge was smart assignment. We wanted to dynamically route tickets based on skill tags plus current workload, but Airtable doesn't support real-time load calculations in formulas. Our fix: in the Make flow, before creating a new ticket, query the 'Team Members' table, filter for 'skill matches AND load < 5,' then pick one at random with 'random item.' This prevented anyone from getting overloaded without needing to maintain a separate counter field.
 
-第三个教训来自通知环节。我们最初只设了企业微信文本消息，结果发现客服常错过。后来补上两个动作：1）在工单记录页自动插入'已通知'时间戳；2）同步在Airtable看板视图里高亮显示'待响应'工单（用'color'字段+视图过滤）。现在团队一眼就能扫出谁在忙、谁有空、哪条快超时。
+The third lesson came from notifications. We initially only set up text messages in our chat tool, and support staff frequently missed them. We added two improvements: 1) auto-insert a 'notified' timestamp on the ticket record, and 2) highlight 'pending response' tickets in Airtable's Kanban view using color fields and view filters. Now the team can instantly see who's busy, who's available, and which tickets are approaching the SLA deadline.
 
-上线第1天，系统处理了327条工单，平均响应时间从原来的3.8小时压缩到1.2小时，漏单率为0。更意外的是，客服同事主动提出优化建议：把'客户联系方式'字段从纯文本改成'phone'类型，让Make能一键拨号----这个细节我们之前根本没想到。
+On day one, the system processed 327 tickets. Average response time dropped from 3.8 hours to 1.2 hours. Zero missed tickets. An unexpected bonus: our support team started proactively suggesting improvements—like changing the 'contact info' field from plain text to 'phone' type so Make could trigger one-click dialing. We'd never thought of that detail.
 
-给正在踩坑的朋友几点建议：
-1）别一上来就追求全自动，先锁定'最痛的3个环节'做最小闭环，比如我们只做了'接收-分类-指派'，其他仍人工操作；
-2）Airtable字段设计要留余量，我们初期没设'处理中'状态，导致超时提醒误触发，补字段时还得批量更新历史数据；
-3）Make的错误日志一定要打开，我们有次因API限频失败，全靠日志定位到是企业微信token过期；
-4）每周花15分钟检查流程健康度：成功率、平均耗时、失败原因分布----我们发现周四下午失败率偏高，排查后是网络波动，加了重试机制。
+For anyone building similar systems, here's what we learned:
+1) Don't try to automate everything at once. Focus on the 'three most painful steps' for your minimum viable flow—we only automated receive-classify-assign and kept everything else manual.
+2) Leave room in your Airtable schema design. We didn't include an 'in progress' status initially, which caused false SLA breach alerts. Adding it later meant batch-updating historical data.
+3) Always enable Make's error logs. We had an API rate-limit failure that turned out to be an expired token—we'd never have found it without logs.
+4) Spend 15 minutes each week reviewing flow health: success rate, average runtime, and failure distribution. We discovered Thursday afternoons had higher failure rates, traced it to network instability, and added retry logic.
 
-现在这套系统已稳定运行22天，节省了每人每天1.5小时重复劳动。更重要的是，它让我们看清：无代码不是替代思考，而是把思考聚焦在业务逻辑本身。工具越简单，越需要你真正懂业务怎么流转、人怎么协作、问题怎么升级。
+The system has been running reliably for 22 days, saving each team member 1.5 hours per day of repetitive work. More importantly, it showed us that no-code isn't about replacing thinking—it's about focusing thinking on the business logic itself. The simpler the tool, the more you need to truly understand how your business flows, how people collaborate, and how problems escalate.
 
-下次，我们打算把客户满意度评价也接入进来，用Make自动分析NPS趋势----毕竟，自动化真正的终点，不是省时间，而是让团队有更多时间去做只有人能做的事。`,
-    author: "David Chen",
-    authorRole: "No-Code Workflow Specialist",
+Next, we're planning to integrate customer satisfaction surveys and use Make to automatically analyze NPS trends. Because the real endgame of automation isn't saving time—it's giving your team more time to do the things only humans can do.`,
+
+
     date: "2026-07-23",
     category: "automation",
     readTime: 5,

@@ -168,9 +168,9 @@ export default function ContactPage() {
                 Office
               </h3>
               <p className="text-sm text-[#8BA3BE] leading-relaxed">
-                200 Broadway, Suite 305
+                205 N Monroe Street, Suite 300
                 <br />
-                San Francisco, CA 94104
+                Austin, TX 78701
                 <br />
                 United States
               </p>
