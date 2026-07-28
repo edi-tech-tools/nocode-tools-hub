@@ -43,6 +43,7 @@ const BLOG_SLUGS = [
   "nocode-automation-ticket-system-make-airtable-diary",
   "ai-in-no-code-platforms-2026",
   "nocode-2026-enterprise-infrastructure",
+  "zapier-vs-make-vs-n8n-2026-automation-comparison",
 ];
 
 const TOOL_SLUGS = [
