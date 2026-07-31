@@ -44,6 +44,10 @@ const BLOG_SLUGS = [
   "ai-in-no-code-platforms-2026",
   "nocode-2026-enterprise-infrastructure",
   "zapier-vs-make-vs-n8n-2026-automation-comparison",
+  "ai-no-code-automation-reshape-workflows-2026",
+  "bubble-customer-portal-lessons",
+  "pkm-system-notion-airtable-make",
+  "nocode-security-audit-framework-2026",
 ];
 
 const TOOL_SLUGS = [
