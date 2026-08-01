@@ -48,6 +48,7 @@ const BLOG_SLUGS = [
   "bubble-customer-portal-lessons",
   "pkm-system-notion-airtable-make",
   "nocode-security-audit-framework-2026",
+  "no-code-ai-agent-builders-2026-comparison",
 ];
 
 const TOOL_SLUGS = [
