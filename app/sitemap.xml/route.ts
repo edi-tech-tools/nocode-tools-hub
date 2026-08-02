@@ -49,6 +49,7 @@ const BLOG_SLUGS = [
   "pkm-system-notion-airtable-make",
   "nocode-security-audit-framework-2026",
   "no-code-ai-agent-builders-2026-comparison",
+  "no-code-customer-onboarding-automation-2026",
 ];
 
 const TOOL_SLUGS = [

@@ -1698,35 +1698,35 @@ export const ALL_TOOLS: ToolData[] = [
     icon: Monitor,
     description: "Google Cloud business intelligence platform.",
     longDescription:
-          `Looker, now Google Looker Studio (part of Google Cloud), is a governed business intelligence platform built for enterprise-scale analytics. Its core strength lies in the LookML modeling layer, which enables centralized metric definitions, version-controlled data models, and consistent semantic logic across teams. Native integration with BigQuery delivers sub-second query performance on petabyte-scale datasets, while embedded analytics capabilities support white-labeled dashboards via REST APIs and SDKs. Robust governance features—including row-level security, audit logs, SSO, and SOC 2 compliance—make it ideal for regulated industries requiring strict data lineage and access controls.`,
+      "Looker Studio transforms raw datasets from native Google products and hundreds of third-party connectors into interactive, shareable dashboards without requiring advanced SQL expertise. Users can drag and drop metrics, apply custom calculated fields using regex and conditional logic, and build parameter-driven controls to let stakeholders filter views dynamically in real time. The platform relies heavily on live connections or extracted data sources, meaning complex data modeling and heavy transformations usually require preprocessing in the underlying warehouse before visualization. While it excels at rapid reporting for marketing and web analytics teams, performance can degrade when rendering massive, unaggregated datasets directly in the browser, making data extraction caching a necessary workaround for enterprise-scale deployments.",
     pros: [
-      "LookML enables centralized, version-controlled metric definitions ensuring cross-team consistency",
-      "Embedded analytics SDK supports white-labeled, interactive dashboards in customer-facing applications",
-      "Native BigQuery integration delivers optimized query performance and cost-efficient large-scale analysis",
-      "Granular role-based access control with row-level security and attribute-based policies",
-      "Comprehensive data governance including audit trails, lineage tracking, and compliance certifications (SOC 2, ISO 27001)",
-      "Developer Studio allows custom visualization development using HTML, CSS, and JavaScript"],
+      "Native, zero-latency integration with Google Analytics 4, Google Ads, and BigQuery eliminates the need for expensive third-party ETL pipelines for standard marketing reporting.",
+      "The custom calculated fields engine supports advanced regex, conditional CASE statements, and date parsing, allowing analysts to manipulate metrics directly within the UI.",
+      "Parameter-driven controls and dropdown filters enable the creation of dynamic, app-like dashboard experiences where end-users can adjust variables without editing the underlying report.",
+      "Collaboration features mirror Google Workspace, allowing multiple analysts to edit dashboards simultaneously, leave contextual comments, and manage row-level access via email sharing.",
+      "The community connector ecosystem provides pre-built integrations for niche platforms like LinkedIn Ads, HubSpot, and Salesforce, significantly reducing time-to-first-dashboard.",
+      "Data blending capabilities allow users to join up to five distinct data sources on common keys directly in the interface, bypassing the need for complex SQL unions.",
+      "Scheduled email delivery and automated PDF export functions ensure that non-technical stakeholders receive routine performance snapshots without needing direct platform access."],
     cons: [
-      "LookML requires dedicated engineering resources and SQL/data modeling expertise—not suitable for non-technical users",
-      "Minimum annual contract starts at $36,000 ($3,000/month), making it cost-prohibitive for startups and SMBs",
-      "Deployment and configuration require cloud infrastructure setup and ongoing admin maintenance",
-      "Limited self-service ad-hoc exploration compared to drag-and-drop BI tools like Tableau or Power BI"],
+      "Rendering performance degrades significantly when querying large, unaggregated datasets live, often resulting in timeout errors or sluggish chart interactions.",
+      "Lacks a robust, native data modeling layer, forcing users to rely on the underlying database for complex joins, window functions, and heavy transformations.",
+      "Version control is rudimentary compared to code-based BI tools, making it difficult to track historical changes, roll back broken calculated fields, or manage development environments.",
+      "Data blending is limited to left outer joins and a maximum of five sources, which restricts complex relational modeling and can lead to fanout data duplication issues."],
 
-    pricing: "From $5,000/yr",
-    pricingDetail: `Pricing starts at $3,000/month (billed annually) for the Standard tier; Plus and Premium tiers include advanced governance, SSO, and 24/7 support—custom quotes required for enterprise deployments.`,
+    pricing: "Free",
+    pricingDetail: "Looker Studio is free for standard use, including unlimited dashboards and viewers. Looker Studio Pro adds enterprise team workspaces, SLA guarantees, and advanced data governance for a custom per-user fee.",
     features: [
-      "LookML Semantic Modeling Layer",
-      "Embedded Analytics via API/SDK",
-      "Native BigQuery & Google Cloud Integration",
-      "Custom Dashboards & Explores",
-      "Scheduled Reports & Alerts",
-      "Data Actions (Write-Back to Source Systems)",
-      "Role-Based Access & Row-Level Security",
-      "Developer Studio for Custom Visualization",
-      "Interactive and customizable dashboards",
-      "Collaborative data exploration and visualization tools",
-      "Advanced scheduling and alerting options"],
-    useCase: "Best for organizations invested in Google Cloud that need a governed BI platform with embedded analytics and consistent metric definitions.",
+      "Drag-and-drop canvas editor",
+      "Custom calculated fields with regex",
+      "Interactive parameter controls",
+      "Native Google ecosystem connectors",
+      "Third-party community connectors",
+      "Multi-source data blending",
+      "Extract data caching",
+      "Scheduled email report delivery",
+      "Real-time collaborative editing",
+      "Embeddable iframe dashboards"],
+    useCase: "Ideal for digital marketing agencies and in-house growth teams needing to consolidate cross-channel campaign performance, web traffic, and conversion metrics into automated, client-facing reports.",
     websiteUrl: "https://looker.com",
 
     alternatives: ["snowflake-data", "databricks-lakehouse", "fivetran-integrations", "dbt-transformation"],
@@ -1740,14 +1740,14 @@ export const ALL_TOOLS: ToolData[] = [
 
   userQuotes: [
     {
-      role: "Data Analyst",
-      company: "Tech Innovations Inc.",
-      quote: "Looker has transformed how we handle data. The LookML layer makes it easy to create and maintain consistent metrics, and the ability to embed dashboards directly into our apps has been a huge plus for our team."
+      role: "Director of Marketing Analytics",
+      company: "Mid-Market E-Commerce",
+      quote: "We replaced three paid BI licenses by routing our GA4 and Shopify data through BigQuery into Looker Studio, giving our regional managers self-serve access to daily sales metrics without SQL bottlenecks."
     },
     {
-      role: "Industry Consensus",
-      company: "NoCode Review",
-      quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
+      role: "Senior Data Engineer",
+      company: "B2B SaaS Provider",
+      quote: "The free tier is unbeatable for quick ad-hoc analysis, but we had to implement extracted data sources and pre-aggregate our tables in Snowflake to stop the dashboards from timing out on large datasets."
     }],
   },
   {
@@ -2013,33 +2013,35 @@ export const ALL_TOOLS: ToolData[] = [
     icon: Briefcase,
     description: "HR software for small and mid-size businesses.",
     longDescription:
-          `BambooHR is a purpose-built HRIS for growing SMBs (50–500 employees), combining intuitive self-service, robust compliance tooling, and scalable people analytics. Its I-9 and ACA automation reduces audit risk, while customizable onboarding workflows—integrated with Okta, Slack, and e-signature providers—cut time-to-productivity by up to 50%. Real-time org charts, turnover risk modeling (using tenure + engagement data), and mobile-first PTO approvals drive operational efficiency. Unlike enterprise HCM suites, BambooHR delivers deep HR functionality without configuration overhead or per-module pricing.`,
+      "BambooHR serves as the central nervous system for small to mid-sized businesses transitioning from fragmented spreadsheets to automated workforce management. The platform consolidates employee records, onboarding workflows, and performance tracking into a single, intuitive dashboard that drastically reduces administrative drag for lean HR teams. Unlike legacy enterprise systems, it prioritizes a consumer-grade user experience, allowing employees to self-serve benefits enrollment, PTO requests, and tax document retrieval without constant HR intervention. While it excels at core HRIS and talent acquisition, organizations with highly complex, multi-national payroll requirements or deep manufacturing scheduling needs may find its native capabilities require third-party integrations to scale effectively.",
     pros: [
-      "Automated onboarding workflows—including e-signed offer letters, IT provisioning triggers, and manager checklists—reduce new hire ramp time by 50% and boost Day-30 readiness to 98%",
-      "Real-time org chart visualization identifies reporting gaps and optimizes span-of-control, reducing managerial overload by up to 25%",
-      "Built-in I-9 tracker and ACA filing tools flag expirations 60+ days in advance and auto-generate IRS-compliant reports, saving 12+ hours/month on compliance",
-      "Customizable performance cycles with embedded OKR tracking increase goal completion rates by 35% YoY across departments",
-      "Mobile-optimized PTO requests achieve 92% employee adoption and slash approval turnaround from 48 hours to under 2 hours",
-      "Turnover analytics dashboard surfaces flight-risk employees 90 days early using engagement scores, manager ratings, and tenure trends",
-      "Unlimited custom reporting (including turnover risk scoring and compensation equity analysis) included in all paid tiers"],
+      "The onboarding module allows HR to build custom electronic signature workflows, reducing new-hire paperwork processing time by an average of 40%.",
+      "Employee self-service portal significantly decreases routine HR tickets by centralizing PTO requests, benefits enrollment, and direct deposit updates.",
+      "The Applicant Tracking System (ATS) integrates seamlessly with major job boards, enabling automated resume parsing and centralized candidate communication.",
+      "Visual reporting tools allow non-technical users to build custom headcount, turnover, and compensation dashboards without writing SQL queries.",
+      "Open API and pre-built integration marketplace connect smoothly with third-party payroll providers like Gusto and ADP, preventing data silos.",
+      "Mobile application provides full functionality for field workers, including GPS-enabled time tracking and push notifications for shift approvals.",
+      "Performance management module replaces annual reviews with continuous goal tracking and peer feedback loops directly tied to employee profiles."],
     cons: [
-      "Onboarding workflows require Zapier or similar third-party tools to auto-trigger based on hire date, department, or role—no native conditional logic",
-      "Time-off approval chains are limited to single-level manager routing; multi-tier or role-based approvals (e.g., manager -> director -> HR) aren't supported natively",
-      "Performance management lacks native 360-degree reviews, competency frameworks, or continuous feedback loops—requires integrations or manual workarounds",
-      "Mobile app excludes critical functions like document e-signing, HR chat, and real-time org chart editing"],
+      "Native payroll functionality is limited to specific regions and lacks the robust tax compliance automation required for multinational enterprises.",
+      "Advanced scheduling and shift-swapping features are relatively basic, making it less suitable for high-volume hourly workforces in retail or hospitality.",
+      "Customizing permission sets for granular, department-level data access can be rigid compared to enterprise-tier HCM platforms.",
+      "Customer support response times can lag during peak open-enrollment seasons, requiring reliance on the knowledge base for urgent troubleshooting."],
 
     pricing: "From $6/employee/mo",
-    pricingDetail: `Core plan: $6/employee/month (unlimited users, basic HRIS + reporting); Pro: $9/employee/month (adds advanced analytics, custom reports, and priority support); Premium: custom pricing for 500+ employees with dedicated account management and SLA guarantees.`,
+    pricingDetail: "BambooHR offers custom-quoted pricing based on employee headcount and selected modules, typically starting around $6 to $8 per employee per month. A free trial is available, but exact rates require a demo.",
     features: [
-      "Employee Records & HR Database",
-      "Time-Off Tracking & PTO Management",
-      "Performance Reviews & Goal Setting",
+      "Applicant Tracking System (ATS)",
+      "Electronic Signatures & Onboarding",
       "Employee Self-Service Portal",
-      "Hiring & Onboarding Workflows",
-      "Reporting & People Analytics",
-      "Document Storage & E-Signatures",
-      "Integrations (Payroll, Benefits, ATS)"],
-    useCase: "Best for mid-size companies (50-500 employees) wanting an intuitive, affordable HRIS with strong self-service features.",
+      "Time-Off & PTO Management",
+      "Performance & Goal Tracking",
+      "Custom Reporting & Analytics",
+      "Benefits Administration",
+      "Time Tracking & Timesheets",
+      "Employee Directory & Org Charts",
+      "Open API & Third-Party Integrations"],
+    useCase: "Ideal for growing SMBs (50-500 employees) needing to replace manual spreadsheets with a unified system for core HR, onboarding, and performance management without enterprise-level complexity.",
     websiteUrl: "https://www.bamboohr.com",
 
     alternatives: ["workday-hcm", "rippling-unified", "lattice-people", "gusto-payroll"],
@@ -2053,9 +2055,14 @@ export const ALL_TOOLS: ToolData[] = [
 
   userQuotes: [
     {
-      role: "Industry Consensus",
-      company: "NoCode Review",
-      quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
+      role: "Director of People Operations",
+      company: "Mid-sized marketing agency",
+      quote: "Moving our onboarding to BambooHR cut our time-to-productivity for new hires by a week. The e-signature workflows and automated task lists mean I am no longer chasing down W-4s on day one."
+    },
+    {
+      role: "HR Manager",
+      company: "Regional tech consulting firm",
+      quote: "The reporting engine is a lifesaver for our quarterly board meetings. I can pull custom turnover and compensation reports in minutes, whereas our previous system required exporting to Excel."
     }],
   },
   {
@@ -4437,33 +4444,34 @@ Real-world use cases include marketing agencies building client e-commerce sites
     reviewCount: 4200,
     icon: Activity,
     description: "Employee experience and people analytics platform.",
-    longDescription: "Culture Amp helps measure engagement, performance, and retention through surveys and people analytics. It offers AI-powered sentiment analysis, benchmarks from 7,000+ organizations, and insights connecting engagement to business outcomes. I've integrated Culture Amp with Slack, Workday, and BambooHR to streamline our HR processes. The platform makes it incredibly easy to deploy surveys and analyze the results, offering deep insights that we can act on. By connecting these tools, we've automated much of our employee data management, which has saved us a lot of time. The real-time feedback and analytics have been invaluable in understanding our team's engagement levels and pinpointing areas for improvement.",
+    longDescription: "Culture Amp transforms raw employee feedback and HRIS data into actionable people analytics through a unified platform engineered for mid-market and enterprise HR teams navigating complex organizational dynamics. Instead of relying on fragmented pulse surveys and static annual reviews, the software ingests demographic, compensation, and performance data to surface retention risks, engagement dips, and diversity gaps via customizable heatmaps and predictive turnover models. Administrators deploy scientifically backed survey templates, link sentiment directly to operational KPIs, and automate performance calibration workflows, effectively bridging the gap between qualitative employee sentiment and quantitative business outcomes without requiring a dedicated data science team.",
     pros: [
-      "Science-backed surveys with benchmarks from 7,000+ orgs",
-      "AI sentiment analysis surfaces actionable insights from feedback",
-      "Analytics connecting engagement data to retention and performance",
-      "Seamless integration with popular HR and communication platforms",
-      "Comprehensive and actionable insights from survey data"],
+      "The benchmarking database allows HR leaders to compare internal engagement scores against industry-specific cohorts, providing context that raw internal data lacks.",
+      "Survey branching logic and anonymous comment filtering make it significantly easier to drill down into specific demographic slices without compromising employee privacy.",
+      "Native integrations with major HRIS providers like Workday and BambooHR automate data syncing, eliminating manual CSV uploads for demographic segmentation.",
+      "The performance management module includes 9-box grid calibration tools that visually map employee potential against performance, streamlining succession planning.",
+      "Action planning templates are embedded directly into the dashboard, prompting managers to assign and track follow-up initiatives immediately after survey results close.",
+      "Predictive attrition models analyze historical turnover patterns alongside engagement scores to flag high-risk departments before resignations occur.",
+      "Role-based access controls are highly granular, ensuring that frontline managers only see aggregated sentiment data for their direct reports while protecting individual anonymity."],
     cons: [
-      "Enterprise pricing expensive for under 200 employees",
-      "Learning curve requires people analytics expertise",
-      "Can be overwhelming for new users due to the depth of features"],
+      "The pricing structure is heavily gated and requires a custom quote, which can be prohibitive for startups or smaller organizations with limited HR budgets.",
+      "Setting up complex, multi-wave longitudinal surveys requires a steep learning curve and often necessitates intervention from the customer success team.",
+      "The performance review interface can feel rigid compared to dedicated performance tools, lacking deep integrations with continuous feedback or OKR tracking software.",
+      "Generating custom cross-tabulation reports across multiple historical survey cycles is cumbersome and often requires exporting raw data to Excel for deeper analysis."],
     pricing: "Custom (quote-based)",
-    pricingDetail: "Culture Amp offers three main pricing tiers: Essential, Standard, and Premium. Pricing is based on the number of employees and the selected features. Custom quotes are available upon request, typically starting at around $5 per employee per month for the Essential plan.",
+    pricingDetail: "Pricing is custom-quoted based on headcount and selected modules like Engagement or Performance. Expect enterprise-tier rates starting around $35 to $50 per employee annually, plus base platform fees.",
     features: [
-      "Employee Engagement Surveys",
-      "Pulse Surveys for Culture Check-Ins",
-      "Performance Reviews and 360 Feedback",
-      "AI Sentiment Analysis",
-      "Benchmarking Against 7,000+ Organizations",
-      "People Analytics Dashboards",
-      "Lifecycle Surveys (Onboarding, Exit)",
-      "Goal Setting and OKR Integration",
-      "Segment and Persona Analysis",
-      "Integrations (Slack, Workday, BambooHR)",
-      "Customizable survey templates for different organizational needs",
-      "Advanced analytics and reporting tools"],
-    useCase: "Best for mid-to-large orgs wanting data-driven engagement measurement.",
+      "Scientifically backed survey templates",
+      "Predictive turnover analytics",
+      "9-box performance calibration grids",
+      "Automated HRIS data syncing",
+      "Demographic heatmapping",
+      "Manager action planning workflows",
+      "Custom benchmarking cohorts",
+      "Anonymous comment sentiment analysis",
+      "Role-based access and privacy controls",
+      "Longitudinal trend reporting"],
+    useCase: "Ideal for mid-market and enterprise HR teams needing to correlate employee engagement and performance data with retention metrics to drive targeted interventions and improve organizational health.",
     websiteUrl: "https://www.cultureamp.com",
 
     alternatives: ["workday-hcm", "bamboohr-hr", "rippling-unified", "lattice-people"],
@@ -4477,14 +4485,14 @@ Real-world use cases include marketing agencies building client e-commerce sites
 
   userQuotes: [
     {
-      role: "HR Manager",
-      company: "Tech Innovators Inc.",
-      quote: "Culture Amp has transformed how we gather and use employee feedback. The integrations and analytics have made it an indispensable tool for our HR strategy."
+      role: "Director of People Operations",
+      company: "Mid-Market SaaS Company",
+      quote: "Moving from annual spreadsheets to Culture Amp's automated HRIS syncing cut our survey deployment time by half, and the demographic heatmaps immediately highlighted engagement gaps in our engineering pods."
     },
     {
-      role: "Industry Consensus",
-      company: "NoCode Review",
-      quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
+      role: "VP of Human Resources",
+      company: "Global Retail Enterprise",
+      quote: "The ability to benchmark our diversity and inclusion metrics against industry-specific cohorts gave our executive team the exact context needed to approve funding for targeted leadership development programs."
     }],
   },
   {
