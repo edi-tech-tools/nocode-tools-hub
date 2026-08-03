@@ -19,7 +19,6 @@ const BLOG_SLUGS = [
   "data-analytics-without-code-snowflake-vs-databricks",
   "google-io-2026-gemini-enterprise-ai",
   "hubspot-saas-growth-signals-2026",
-  "junipernode-low-code-platforms-porto",
   "no-code-ai-automation-trends-2026",
   "no-code-automation-workflow-best-practices-2026",
   "no-code-development-best-practices-for-production-ready-applications",
