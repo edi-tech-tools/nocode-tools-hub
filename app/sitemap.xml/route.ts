@@ -49,6 +49,8 @@ const BLOG_SLUGS = [
   "nocode-security-audit-framework-2026",
   "no-code-ai-agent-builders-2026-comparison",
   "no-code-customer-onboarding-automation-2026",
+  "no-code-data-pipeline-ops-guide-2026",
+  "no-code-ecommerce-storefronts-2026-guide",
 ];
 
 const TOOL_SLUGS = [
