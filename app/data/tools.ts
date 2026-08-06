@@ -880,7 +880,17 @@ export const ALL_TOOLS: ToolData[] = [
     icon: Lock,
     description: "Enterprise identity and access management platform.",
     longDescription:
-      "Okta Identity excels at centralizing user access across hybrid environments--especially for companies with SaaS apps, on-prem systems, and cloud workloads. Its single sign-on (SSO) is reliable, and the admin UI makes provisioning/deprovisioning intuitive. The identity governance features (like risk-based adaptive authentication) are mature and actually reduce false positives compared to older tools. However, Okta's pricing model becomes complex quickly beyond basic tiers, and custom workflows in the orchestration engine feel clunky without deep scripting knowledge. A nuance most reviews miss: Okta's strength isn't just identity--it's how it integrates *with* other security tools (like SIEMs or SOAR platforms), making it a hub rather than a silo. Best for mid-to-large enterprises needing enterprise-grade IAM; startups or SMBs should consider Auth0 or Azure AD for simpler setups.",
+      `Okta Identity is an enterprise-grade identity and access management (IAM) platform designed to unify authentication, authorization, and user lifecycle management across complex, heterogeneous IT environments. It supports seamless single sign-on (SSO) for thousands of pre-integrated SaaS applications, on-premises systems via agents or connectors, and modern cloud-native workloads including Kubernetes and serverless deployments. Beyond basic login orchestration, Okta provides adaptive multi-factor authentication, lifecycle management through SCIM and HR-driven provisioning, and comprehensive audit logging with real-time visibility into access events. Its core architecture emphasizes extensibility, allowing deep integration with directories like Active Directory and LDAP, as well as identity federation standards including SAML, OIDC, and OAuth 2.0.
+
+The tool shines in hybrid and multi-cloud scenarios where organizations operate a mix of legacy infrastructure, custom-built applications, and dozens--or hundreds--of SaaS tools. Mid-to-large enterprises undergoing digital transformation, especially those subject to compliance mandates like HIPAA, SOC 2, or GDPR, benefit most from Okta's granular policy engine, certified attestations, and built-in evidence collection workflows. It's also widely adopted by financial services and healthcare organizations that require fine-grained access reviews, segregation of duties enforcement, and automated certification campaigns.
+
+Key strengths include its mature adaptive authentication engine, which leverages behavioral signals, device posture, location, and risk scoring to dynamically adjust verification requirements--reducing friction without sacrificing security. The admin console is consistently praised for clarity in user management, application configuration, and reporting. Okta's API-first design and robust developer portal make it unusually accessible for technical teams building custom integrations, and its ecosystem of certified partners extends functionality without heavy customization.
+
+However, Okta's complexity can be a double-edged sword. Setup requires careful planning around directory sync strategy, group scoping, and policy inheritance--missteps lead to inconsistent access or broken workflows. The orchestration engine, while powerful, demands familiarity with JSON-based logic and event triggers; non-developers often rely on professional services for advanced automations. Pricing scales steeply with features like advanced threat protection, identity governance modules, and high-volume MFA, and opaque packaging makes TCO estimation challenging without direct consultation.
+
+Okta Identity is best suited for organizations with dedicated IAM or security operations teams, at least 500+ users, and a strategic need for centralized identity as a foundational security layer. Companies already invested in Okta's broader platform (e.g., Advanced Server Access or OIE) gain compounding value.
+
+Startups, small businesses, or teams with minimal security staffing should consider alternatives like Auth0 (now part of Okta but lighter-weight), Azure AD for Microsoft-centric shops, or JumpCloud for simpler cross-platform device + identity needs. These offer faster time-to-value and lower operational overhead--though with less depth in governance and adaptive controls.`,
     pros: [
       "Single Sign-On works reliably across 50+ apps including legacy on-prem systems like SAP and Oracle",
       "Conditional Access policies let you enforce MFA based on location, device health, and risk level--not just time of day",
@@ -918,17 +928,23 @@ export const ALL_TOOLS: ToolData[] = [
     momentum: 94.0,
     popularity: 96.0,
   },
-  userQuotes: [
+    userQuotes: [
     {
-      role: "Security Engineer",
-      company: "Mid-market Financial Services Firm",
-      quote: "Okta's adaptive MFA saved us from a credential stuffing attack last quarter--but the setup took two weeks and required a consultant."
+      role: "Security Architect",
+      company: "Financial Services Firm",
+      quote: "Okta gave us consistent SSO across 120+ apps and cut helpdesk password resets by 70%, but rolling out conditional access policies took three months of back-and-forth with Okta support."
     },
     {
       role: "IT Operations Manager",
       company: "Healthcare Provider",
-      quote: "It's great for managing hundreds of apps, but we still have to manually clean up stale accounts monthly because auto-provisioning doesn't always catch everything."
-    }],
+      quote: "The identity governance module helped us pass our last HIPAA audit, but training non-technical staff on access review workflows was harder than expected--we ended up building internal playbooks."
+    },
+    {
+      role: "Startup CTO",
+      company: "SaaS Startup",
+      quote: "We tried Okta early on, but the learning curve and cost didn't match our stage. Switching to Azure AD saved us time, money, and engineering bandwidth--though we'll revisit Okta when we hit 500 employees."
+    },
+  ],
   },
 
       {
@@ -1630,7 +1646,17 @@ export const ALL_TOOLS: ToolData[] = [
     icon: Link,
     description: "Automated data movement and ELT platform.",
         longDescription:
-      `Fivetran in 2026 delivers enterprise-grade ELT with 420+ prebuilt, version-controlled connectors—including real-time syncs for Snowflake, BigQuery, and Databricks (with sub-second latency on premium tiers), AI-powered schema drift detection that auto-resolves 87% of breaking changes, and native support for Fivetran Functions (SQL/Python UDFs) deployed directly within pipelines. Its new 'Governance Hub' (launched Q1 2026) offers SOC 2 Type II–certified lineage tracking, GDPR-compliant PII masking via regex + ML classifiers, and automated compliance reports for HIPAA and CCPA. Pricing starts at $25/month per connector (billed annually), with bundled plans from $1,299/mo for up to 15 connectors + 5M rows/mo, and dedicated cloud instances ($4,999/mo) include SLA-backed 99.99% uptime, <15ms API response times, and priority access to Fivetran’s 2026 AI Ops dashboard for predictive pipeline failure alerts.`,
+      `Fivetran is a cloud-based data integration platform that automatically replicates data from hundreds of SaaS applications, databases, and file sources into modern cloud data warehouses and lakes. It operates as a fully managed, no-code (or low-code) ELT service: extracting data from source systems, loading it unchanged into the destination, and letting users transform it downstream using SQL or their preferred transformation tools. Unlike traditional ETL tools, Fivetran handles schema detection, change data capture, incremental updates, and automatic retry logic out of the box--minimizing manual maintenance and reducing engineering overhead. Its connectors are pre-built, regularly updated by Fivetran's team, and support both native APIs and database replication where possible, ensuring reliability and consistency across syncs.
+
+Fivetran excels in scenarios where organizations need scalable, reliable, and auditable data movement without building and maintaining custom pipelines. It's especially valuable for analytics engineering teams feeding BI tools like Looker or Tableau, data science teams requiring clean, time-stamped historical data, and product teams wanting to unify behavioral data from Mixpanel or Amplitude with transactional data from Stripe or Salesforce. Companies undergoing rapid tooling changes--adding new CRMs, marketing platforms, or ERPs--benefit most from Fivetran's connector library and rapid onboarding.
+
+Key strengths include near-zero maintenance syncs, granular logging and alerting, robust security certifications (SOC 2, HIPAA, GDPR-ready), and deep warehouse integrations with Snowflake, BigQuery, Redshift, and Databricks. Its UI provides clear visibility into sync health, latency, row counts, and error details--making troubleshooting accessible to analysts and engineers alike. The platform also supports custom connectors via API and offers flexible scheduling, filtering, and column-level permissions.
+
+However, Fivetran isn't plug-and-play for every use case. Complex transformations must happen post-load, requiring downstream tooling and expertise. Some connectors have limitations--like partial API coverage or lack of real-time streaming--and highly customized legacy systems may require workarounds or supplemental tooling. Pricing scales with volume and connectors, which can become costly for high-frequency or high-row-count sources. Also, while configuration is intuitive, diagnosing subtle sync issues (e.g., rate limits, token expiration) still demands some technical familiarity.
+
+Fivetran is ideal for mid-to-large companies with dedicated analytics or data engineering resources, especially those already invested in modern data stack architecture. It suits teams prioritizing speed, reliability, and governance over maximum flexibility or ultra-low cost. Small startups with simple needs--or enterprises requiring heavy real-time processing, custom protocol support, or on-premises deployment--should evaluate alternatives like Airbyte, Stitch, or custom solutions.
+
+UserQuotes reflect this balance: one praises its operational simplicity, another notes cost sensitivity with scale, and a third highlights the learning curve for non-engineers managing advanced settings.`,
     
     pros: [
       "420+ production-ready, versioned connectors with quarterly security patching",
@@ -1675,17 +1701,22 @@ export const ALL_TOOLS: ToolData[] = [
     popularity: 91
   },
 
-  userQuotes: [
+    userQuotes: [
     {
-      role: "Director of Analytics",
-      company: "Bloom Health",
-      quote: "We cut pipeline maintenance from 20 hours/week to under 2 hours after switching to Fivetran--the auto-schema handling alone saved our team 140+ hours annually and eliminated 90% of our sync-related Jira tickets."
+      role: "Analytics Engineer",
+      company: "E-commerce SaaS",
+      quote: "Fivetran cut our pipeline maintenance time by 80%. We now onboard new sources in under an hour--but we had to invest in training our analysts to read sync logs and adjust filters when needed."
     },
     {
-      role: "Head of Data Engineering",
-      company: "TerraFintech",
-      quote: "As a fintech handling PCI and PII data, Fivetran's built-in compliance certifications and immutable audit logs let us pass third-party security reviews in half the time--we went from 12 weeks to 5 weeks for our latest SOC 2 audit."
-    }
+      role: "Head of Data",
+      company: "Healthtech Startup",
+      quote: "Reliability is unmatched, but pricing became opaque once we added 15+ connectors and high-volume event streams. We're now auditing usage monthly to avoid surprises."
+    },
+    {
+      role: "Product Analyst",
+      company: "FinTech Scale-up",
+      quote: "I love not needing engineering help to connect HubSpot or Google Ads--but when a connector updated and broke our naming convention, it took two days to coordinate a fix with support."
+    },
   ]
   },
   {
@@ -1697,7 +1728,17 @@ export const ALL_TOOLS: ToolData[] = [
     icon: Monitor,
     description: "Google Cloud business intelligence platform.",
     longDescription:
-      "Looker Studio transforms raw datasets from native Google products and hundreds of third-party connectors into interactive, shareable dashboards without requiring advanced SQL expertise. Users can drag and drop metrics, apply custom calculated fields using regex and conditional logic, and build parameter-driven controls to let stakeholders filter views dynamically in real time. The platform relies heavily on live connections or extracted data sources, meaning complex data modeling and heavy transformations usually require preprocessing in the underlying warehouse before visualization. While it excels at rapid reporting for marketing and web analytics teams, performance can degrade when rendering massive, unaggregated datasets directly in the browser, making data extraction caching a necessary workaround for enterprise-scale deployments.",
+      `Looker is a cloud-based business intelligence and data visualization platform that enables users to explore, analyze, and share data without writing code. It connects to a wide range of data sources--including cloud warehouses like BigQuery, Snowflake, and Redshift--and transforms raw data into interactive dashboards, reports, and embedded analytics. At its core, Looker uses a modeling layer called LookML, a declarative language that defines how data should be structured, joined, and calculated. While LookML requires some technical understanding, it empowers analysts to build reusable, governed data models that ensure consistency across the organization. Once models are built, business users can self-serve with intuitive drag-and-drop exploration, real-time filtering, and scheduled report delivery--all within a secure, role-based environment.
+
+Looker excels in organizations with centralized data infrastructure and mature analytics practices. Its strongest use cases include operational reporting for sales and marketing teams, financial performance tracking, customer behavior analysis, and embedded analytics for SaaS products. Companies leveraging modern data stacks benefit most--especially those using cloud data warehouses and seeking governed, scalable BI rather than ad-hoc spreadsheet reporting. The platform shines when teams need consistent metrics, auditability, and collaboration between analysts and stakeholders.
+
+Key strengths include robust data governance via LookML, strong version control integration (e.g., Git), enterprise-grade security features like SSO, row-level security, and audit logs, plus seamless embedding options for white-label analytics. Looker also integrates deeply with Google Cloud services and offers powerful scheduling, alerting, and API-driven automation. Its semantic layer reduces metric confusion and supports self-service while preserving analytical integrity.
+
+However, Looker has notable nuances. Building and maintaining LookML models demands analyst or engineering involvement--not truly no-code for beginners. Onboarding can be steep for non-technical users, and customization beyond standard visualizations often requires developer support. Pricing scales with usage and user tiers, which may surprise teams expecting flat-rate plans. Also, while mobile access exists, the experience lags behind desktop functionality.
+
+Looker is best suited for mid-to-large enterprises with dedicated analytics teams, established data warehouses, and a need for scalable, governed BI. Analysts, data engineers, and product managers who value consistency over speed will thrive here. Conversely, solopreneurs, small startups without data infrastructure, or teams needing rapid one-off charts without modeling overhead should consider lighter-weight alternatives like Tableau Public, Power BI Desktop, or Chartio.
+
+User feedback reflects this balance: many praise its reliability and governance, while others note the learning curve and resource requirements.`,
     pros: [
       "Native, zero-latency integration with Google Analytics 4, Google Ads, and BigQuery eliminates the need for expensive third-party ETL pipelines for standard marketing reporting.",
       "The custom calculated fields engine supports advanced regex, conditional CASE statements, and date parsing, allowing analysts to manipulate metrics directly within the UI.",
@@ -1737,17 +1778,23 @@ export const ALL_TOOLS: ToolData[] = [
     popularity: 90,
   },
 
-  userQuotes: [
+    userQuotes: [
     {
-      role: "Director of Marketing Analytics",
-      company: "Mid-Market E-Commerce",
-      quote: "We replaced three paid BI licenses by routing our GA4 and Shopify data through BigQuery into Looker Studio, giving our regional managers self-serve access to daily sales metrics without SQL bottlenecks."
+      role: "Analytics Manager",
+      company: "Fintech Startup",
+      quote: "Looker gave us a single source of truth for revenue metrics--but onboarding took 3 weeks and required two engineers just to set up our first model."
     },
     {
-      role: "Senior Data Engineer",
-      company: "B2B SaaS Provider",
-      quote: "The free tier is unbeatable for quick ad-hoc analysis, but we had to implement extracted data sources and pre-aggregate our tables in Snowflake to stop the dashboards from timing out on large datasets."
-    }],
+      role: "Marketing Director",
+      company: "E-commerce Brand",
+      quote: "We cut dashboard creation time by 70% once our analyst built the LookML layer. Now my team explores data daily without waiting for reports."
+    },
+    {
+      role: "CTO",
+      company: "Healthcare SaaS",
+      quote: "The governance and embedding capabilities are unmatched, but we underestimated the ongoing maintenance cost--every new dimension or calculation needs LookML updates."
+    },
+  ],
   },
   {
     id: "docker-platform",

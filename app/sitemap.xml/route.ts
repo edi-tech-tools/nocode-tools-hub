@@ -130,6 +130,8 @@ const TOOL_SLUGS = [
   "dbt-transformation",
   "mailchimp-marketing",
   "freshchat-messaging",
+  "no-code-data-analytics-dashboards-2026-guide",
+  "build-no-code-client-portal-membership-2026-stripe-airtable-softr",
 ];
 
 export async function GET() {
