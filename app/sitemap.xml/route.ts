@@ -51,6 +51,7 @@ const BLOG_SLUGS = [
   "no-code-customer-onboarding-automation-2026",
   "no-code-data-pipeline-ops-guide-2026",
   "no-code-ecommerce-storefronts-2026-guide",
+  "no-code-rag-chatbot-docs-2026",
 ];
 
 const TOOL_SLUGS = [
