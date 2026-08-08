@@ -52,6 +52,9 @@ const BLOG_SLUGS = [
   "no-code-data-pipeline-ops-guide-2026",
   "no-code-ecommerce-storefronts-2026-guide",
   "no-code-rag-chatbot-docs-2026",
+  "build-no-code-client-portal-membership-2026-stripe-airtable-softr",
+  "no-code-data-analytics-dashboards-2026-guide",
+  "no-code-ai-customer-support-automation-copilot-guide-2026",
 ];
 
 const TOOL_SLUGS = [
@@ -131,8 +134,6 @@ const TOOL_SLUGS = [
   "dbt-transformation",
   "mailchimp-marketing",
   "freshchat-messaging",
-  "no-code-data-analytics-dashboards-2026-guide",
-  "build-no-code-client-portal-membership-2026-stripe-airtable-softr",
 ];
 
 export async function GET() {
