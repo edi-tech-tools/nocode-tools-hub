@@ -55,6 +55,7 @@ const BLOG_SLUGS = [
   "build-no-code-client-portal-membership-2026-stripe-airtable-softr",
   "no-code-data-analytics-dashboards-2026-guide",
   "no-code-ai-customer-support-automation-copilot-guide-2026",
+  "webflow-vs-bubble-vs-retool-2026-comparison",
 ];
 
 const TOOL_SLUGS = [
