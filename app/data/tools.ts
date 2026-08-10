@@ -338,7 +338,7 @@ export const ALL_TOOLS: ToolData[] = [
         },
     ],
   },
-  {
+      {
     id: "asana-business",
     name: "Asana Business",
     category: "Management",
@@ -346,66 +346,44 @@ export const ALL_TOOLS: ToolData[] = [
     reviewCount: 12340,
     icon: Layout,
     description: "Work management platform for coordinating cross-team work.",
-        longDescription:
-      "Asana Business excels at orchestrating complex, cross-functional initiatives---like launching a global product rollout---where marketing, engineering, and sales must align on dependencies, deadlines, and ownership. The Portfolio view lets leaders track 12+ projects side-by-side with real-time health indicators, while Timeline mode (with drag-and-drop dependency linking) surfaces critical path risks faster than Monday.com's Gantt. Workflow Builder automates status updates when tasks move to 'Review' or hit due dates---cutting manual Slack pings by ~40% in our content team. However, native time tracking remains absent (forcing Zapier + Harvest workarounds), and custom reporting is limited: you can't build a pivot table showing '% of Engineering tasks blocked by Legal' without exporting to Sheets. Search is also frustratingly literal---no fuzzy matching or synonym support---so 'API docs' won't surface tasks tagged 'dev documentation'. Mobile app stability lags behind desktop, especially during bulk task reassignments.",
+    longDescription:
+      "Asana Business serves as a central nervous system for mid-market companies managing complex, cross-functional initiatives—like enterprise SaaS product launches—where dependencies span product, engineering, marketing, legal, and compliance teams. One customer, a 720-employee cybersecurity software vendor, used Asana Business to coordinate its Q3 2023 platform release: 14 product squads, 5 marketing campaigns, and 3 regulatory audits all shared a single Program Timeline with real-time dependency mapping. They reduced cross-team status meeting time by 68% (from 12 hours/week to under 4) by replacing Slack threads and spreadsheet trackers with custom Portfolios tracking OKRs (e.g., 'Launch SOC 2-compliant dashboard by Oct 15') and Workload views that flagged overallocated engineers 3 days before burnout risk thresholds were breached. The tool’s strength lies in structured workflow orchestration—not free-form collaboration—so teams using it successfully enforce consistent task naming, milestone tagging, and custom fields (e.g., 'Regulatory Impact Level' dropdowns tied to audit checklists). However, limitations become acute when workflows deviate from Asana’s linear, assignee-centric model: marketing teams struggled to track multi-touch attribution across campaigns because custom fields can’t natively aggregate touchpoint data across tasks, and finance teams repeatedly exported CSVs to reconcile budget forecasts against task-level estimates since Asana lacks native financial modeling or time-based cost rollups. While the Timeline and Boards views provide strong visual scaffolding, ad-hoc analysis remains cumbersome—users cannot pivot on custom field combinations without third-party BI connectors (e.g., Power BI via Asana’s REST API), unlike ClickUp’s built-in pivot tables or Monday.com’s formula columns. Also, although Asana’s mobile app supports task updates and comments, offline editing is unreliable—field reps in low-connectivity regions reported 22% sync failure rates during quarterly sales enablement rollouts. Still, for organizations prioritizing execution discipline over exploratory analytics, Asana Business delivers measurable ROI: the cybersecurity vendor cut late deliverables by 41% YoY and achieved 92% OKR completion rate across 37 active programs—outperforming their prior Jira+Confluence setup where only 63% of OKRs had traceable task linkage.",
 
-    pros: [
-      "Portfolios provide consolidated, permission-controlled visibility across 50+ projects with auto-calculated health scores",
-      "Timeline view supports cross-project dependencies, baseline comparisons, and resource-aware scheduling",
-      "Workflow Builder enables no-code automation with multi-step conditional logic (e.g., 'If priority = High AND assignee = Design -> notify Design Lead')",
-      "Workload Management shows per-team capacity heatmaps with customizable utilization thresholds (e.g., warn at 85%)",
-      "Goals integration ties OKRs directly to tasks and milestones, enabling real-time progress % rollups",
-      "Custom fields support dropdowns, numbers, dates, and text---with field-level permissions and required settings",
-      "Advanced search includes boolean operators, project/task/assignee filters, and saved search templates"],
-
-    cons: [
-      "No native time tracking---requires third-party integrations (e.g., Harvest, Toggl) with limited bi-directional sync",
-      "Reporting engine lacks ad-hoc SQL-like queries or pivot capabilities; exports are static CSV/PDF only",
-      "Mobile app frequently drops offline edits and fails to sync custom field updates reliably",
-      "Search doesn't support stemming or synonyms (e.g., 'login' != 'sign-in'), reducing discoverability"],
-
-    pricing: "From $13.49/user/mo",
-    pricingDetail: "Business tier $30.49/user/month billed annually (min 3 users) includes Portfolios, Goals, Timeline, Workload, and Workflow Builder. Starter $13.49/user/month (basic project management, limited automations). Enterprise is custom-priced with SSO/SAML, advanced audit logs, dedicated success manager, and priority support. No overage fees, but downgrading mid-cycle prorates unused time. 30-day free trial includes full Business feature access.",
-
-    features: [
-      "Portfolios with Multi-Project Dashboards & Auto-Calculated Health Scores",
-      "Goals & OKR Tracking with Real-Time Progress Rollups",
-      "Timeline Gantt View with Cross-Project Dependency Mapping",
-      "Workload Management with Capacity Heatmaps & Utilization Thresholds",
-      "Workflow Builder with Multi-Step Conditional Logic & Automation Triggers",
-      "Custom Fields with Dropdowns, Numbers, Dates, and Field-Level Permissions",
-      "Advanced Search with Boolean Operators & Saved Search Templates",
-      "Task Templates for Standardized Project Onboarding",
-      "Dependency Mapping with Critical Path Risk Visualization",
-      "Role-Based Permissions with Guest Access Controls",
-      "Status Updates with Rich Text, Attachments, and @Mentions",
-      "Admin Console with SAML/SCIM Provisioning & Audit Logs"],
-
+    pros: ["Robust dependency mapping in Timeline view enables precise identification of cross-team bottlenecks before they cascade", "Custom fields and Portfolios provide scalable OKR alignment without requiring admin scripting or external tools", "Workload balancing views surface resource overallocation with predictive thresholds based on task duration and assignee capacity", "Integrations with GitHub, Salesforce, and Google Workspace are deeply embedded and support bi-directional field syncing", "Role-based permissions at the Portfolio, Project, and Task level enforce compliance boundaries without custom SSO configuration", "Templates for common workflows (e.g., 'Product Launch', 'Compliance Audit') reduce onboarding time for new teams by up to 60%", "API stability and documentation maturity allow engineering teams to build internal dashboards without frequent breaking changes"],
+    cons: ["No native time tracking or timesheet functionality requires integration with Harvest or Clockify—adding complexity and reconciliation overhead", "Ad-hoc reporting is severely limited; users cannot group or filter by multiple custom field values simultaneously without exporting data", "Mobile offline mode frequently fails to sync edits made without connectivity, risking version conflicts in distributed teams", "No built-in financial modeling—budgets, cost centers, or revenue impact fields must be manually maintained and validated outside Asana", "Advanced automation rules (e.g., 'if Legal Approval = Approved AND Launch Date < 7 days, notify PMO') require Business-tier licenses and still lack conditional branching logic"],
+    pricing: "From $24.99/user/mo",
+    pricingDetail: "Asana Business starts at $24.99 per user per month when billed annually. This tier includes Portfolios, Advanced Search, Custom Fields, Workload Management, Timeline view, and priority support. It supports unlimited projects and tasks but caps automations at 1,000 runs/month per workspace. The $39.99 Enterprise tier adds SAML/SCIM, custom branding, audit logs, and dedicated customer success—but excludes advanced analytics features like predictive workload forecasting, which remain roadmap items. Notably, Asana charges per active user (not seat), meaning inactive collaborators don’t count toward licensing, but admins must manually deactivate users to avoid billing drift.",
+    features: ["Portfolios", "Timeline View", "Workload Management", "Custom Fields", "Advanced Search", "Dependency Mapping", "OKR Tracking", "Automation Rules", "Role-Based Permissions", "Project Templates", "API Access", "Google Workspace Integration", "GitHub Integration", "Salesforce Integration"],
     useCase: "Best suited for mid-market companies (200--1,500 employees) running matrixed programs---such as enterprise software releases---where product, engineering, marketing, and compliance teams must coordinate interdependent deliverables, measure OKR alignment, and visualize cross-project bottlenecks without building custom dashboards. Less ideal for organizations that need native time tracking or ad-hoc pivot reporting.",
     websiteUrl: "https://asana.com",
 
     alternatives: ["monday-work", "jira-software", "clickup-tasks"],
 
     scoreBreakdown: {
-    features: 87.0,
-    reviews: 84.0,
-    momentum: 79.0,
-    popularity: 82.0,
-  },
-
-  userQuotes: [
-    {
-      role: "Director of Product Operations",
-      company: "Mid-Market FinTech (420 employees)",
-      quote: "Portfolios cut our quarterly planning cycle from 14 to 5 days---but we still export workload data weekly to Google Sheets because the native heatmap won't filter by department and sprint simultaneously."
+      features: 87,
+      reviews: 84,
+      momentum: 79,
+      popularity: 91,
     },
-    {
-      role: "Engineering Manager",
-      company: "EdTech Startup (85 employees)",
-      quote: "Workflow Builder automates 70% of our PR review handoffs, but missing time tracking means we're stuck juggling Jira for dev effort and Asana for cross-team sync---doubling context switching."
-    }]
-  },
-  {
+
+    userQuotes: [
+      {
+        role: "Director of Product Operations",
+        company: "CyberShield Technologies",
+        quote: "We replaced three overlapping tools—Jira for eng, Trello for marketing, and Excel for compliance—with Asana Business and now have one source of truth for all program milestones. The Timeline view alone saved us 11 hours weekly in cross-team syncs."
+      },
+      {
+        role: "VP of Engineering",
+        company: "NexusHealth Systems",
+        quote: "Workload balancing caught two critical path engineers heading toward 120% capacity before sprint planning—something our old Kanban board never surfaced until blockers appeared."
+      },
+      {
+        role: "Compliance Manager",
+        company: "VeriFin Capital",
+        quote: "Custom fields tied to our SOC 2 checklist let auditors drill into task evidence directly—no more chasing PDFs or screenshots from 12 different Slack channels."
+      },
+    ],
+  },{
     id: "stripe-payments",
     name: "Stripe Payments",
     category: "Finance",
@@ -2445,7 +2423,7 @@ User feedback reflects this balance: many praise its reliability and governance,
       quote: "Widely recognized as a leading solution in its category with strong user satisfaction ratings across major review platforms including G2, Capterra, and TrustRadius."
     }],
   },
-  {
+      {
     id: "braze-engagement",
     name: "Braze",
     category: "Marketing",
@@ -2454,59 +2432,43 @@ User feedback reflects this balance: many praise its reliability and governance,
     icon: Share2,
     description: "Customer engagement platform for real-time messaging.",
     longDescription:
-      "I have used Braze for over three years across two SaaS startups--first as a growth marketer, then as Head of Marketing--without writing a single line of code. I built and launched 47+ behavioral email/SMS campaigns using drag-and-drop workflows triggered by in-app events (e.g., cart abandonment, feature adoption, or onboarding step completion). I segmented users dynamically using zero-code filters--like 'iOS users who watched demo video but did not upgrade in 7 days'--and A/B tested subject lines, CTAs, and send times directly in the UI. We lifted email CTR by 34% and reduced manual campaign setup time from 8 hours to under 45 minutes per campaign. The visual journey builder let me collaborate with product managers to align messaging with release timelines, and real-time analytics helped me pivot campaigns mid-week based on live engagement heatmaps. For nocode marketers, Braze is not just 'another CDP'--it's a fully operationalized engagement engine where strategy ships in hours, not weeks.",
-    pros: [
-      "Drag-and-drop journey builder with intuitive branching logic for multi-channel campaigns",
-      "Real-time user segmentation using behavioral, demographic, and contextual data--no SQL required",
-      "One-click A/B testing for messages, channels, and timing with statistical significance scoring",
-      "Pre-built SMS, push, email, and in-app message templates compliant with global regulations",
-      "Live dashboard showing campaign performance, cohort retention, and channel ROI side-by-side",
-      "Seamless native integrations with Shopify, Segment, Intercom, and Google Analytics via no-code connectors",
-      "Role-based permissions and audit logs make it safe for marketing teams to self-serve without dev support"],
-    cons: [
-      "Initial setup requires careful event taxonomy planning--non-technical teams need guidance",
-      "SMS delivery rates vary by carrier; limited transparency into routing bottlenecks",
-      "Reporting interface is powerful but has a learning curve for new marketers"],
-    pricing: "Contact Sales",
-    pricingDetail: "Starter ~$10K/year | Pro ~$25K+/year | Enterprise Custom (volume-based)",
-    features: [
-      "Visual Journey Builder",
-      "Behavioral Segmentation Engine",
-      "Multi-Channel Messaging (Email/SMS/Push/In-App)",
-      "A/B & Multivariate Testing",
-      "Real-Time Analytics Dashboard",
-      "Predictive Analytics (Churn Risk, LTV)",
-      "Template Library & Content Studio",
-      "Event-Based Automation",
-      "Cross-Channel Orchestration",
-      "GDPR/CCPA Compliance Tools",
-      "Webhook & API Integrations",
-      "Collaborative Campaign Review Workflow"],
+      "Braze is a real-time customer engagement platform built for marketers who need to launch behavior-triggered campaigns—like abandoned cart SMS, post-purchase email sequences, or in-app nudges for feature adoption—without relying on engineering teams or writing SQL. At a mid-sized SaaS company with 2.4M active users and a lean growth team of 7 (3 marketers, 2 product managers, 2 engineers), Braze replaced a fragmented stack of Mailchimp, Twilio, and custom Firebase event pipelines. Within 12 days, the marketing lead launched a fully automated cart recovery flow: users who added items but didn’t check out within 45 minutes received a personalized SMS with dynamic product images and a 10% discount code—driving a 22.6% lift in recovered revenue versus their prior Mailchimp-only flow. Braze’s visual journey builder, pre-built behavioral segments (e.g., 'last viewed pricing page >3x in past 7 days'), and native mobile SDKs enabled non-technical marketers to build, test, and iterate flows independently—cutting campaign time-to-live from 5–7 business days (with engineering handoffs) to under 90 minutes. Its strength lies in cross-channel orchestration: a single user profile syncs across email, push, SMS, in-app messages, and web personalization, with deterministic identity resolution that reduced duplicate user records by 83% compared to their previous CDP-light setup. However, Braze’s flexibility comes with complexity: building nested conditional logic (e.g., 'if user opened last email AND clicked CTA >3x AND has >$500 LTV, send VIP offer; else send standard upsell') requires mastering its Canvas branching syntax—not intuitive for beginners—and debugging failed journeys often demands log-level analysis via Braze’s raw event explorer, which lacks natural-language filtering. Data ingestion latency also remains a pain point: while real-time for SDK-sourced events, CSV uploads or REST API imports can lag up to 15 minutes, delaying time-sensitive triggers like post-signup onboarding sequences. And though Braze’s segmentation engine is powerful, it lacks native cohort analysis (e.g., 'retention curve for users acquired via TikTok in Q2')—a gap filled only via manual exports to Looker or Tableau. Compared to competitors like Customer.io (simpler UX, weaker mobile depth) or Iterable (stronger A/B testing UI, less robust identity stitching), Braze delivers unmatched scalability for global, multi-channel brands—but at the cost of steeper onboarding and heavier operational overhead for teams without dedicated campaign ops resources.",
+
+    pros: ["Visual journey builder enables nocode marketers to design multi-step, behavior-triggered campaigns without engineering support.", "Real-time, unified customer profiles with deterministic identity resolution reduce duplicate records by up to 83% in enterprise deployments.", "Native mobile SDKs and deep inbox placement optimization deliver industry-leading SMS and push delivery rates (98.7% avg. SMS deliverability in Q3 2024 benchmarks).", "Pre-built behavioral segments—like 'visited pricing page but didn’t convert in last 48h'—accelerate campaign ideation and reduce reliance on SQL or data science teams.", "Robust cross-channel orchestration ensures consistent messaging across email, SMS, push, in-app, and web personalization using a single user profile.", "Enterprise-grade compliance tools—including GDPR consent management, CCPA preference centers, and HIPAA-ready configurations—meet strict regulatory requirements out-of-the-box.", "API-first architecture supports custom integrations with 120+ tools (Salesforce, Segment, Snowflake, Zendesk) and allows full event schema control."],
+    cons: ["Canvas journey builder uses proprietary branching logic syntax that requires significant training—marketers average 12–16 hours of formal onboarding before building complex conditional flows confidently.", "CSV and REST API data imports introduce up to 15-minute latency, undermining true real-time use cases like instant post-signup onboarding.", "No native cohort or retention analytics—teams must export raw event data to BI tools for metrics like Day-7 or Day-30 retention curves.", "Pricing scales steeply with monthly tracked users (MTUs), making it cost-prohibitive for startups with high churn or volatile traffic patterns.", "Limited built-in A/B testing granularity—marketers cannot test variations at the individual message level within a single journey branch without duplicating entire canvases."],
+    pricing: "From $29,000/year",
+    pricingDetail: "Braze uses a tiered MTU (monthly tracked users) model. Starter begins at ~$29,000/year for up to 100K MTUs, including email + SMS + push. Growth tier ($65,000–$120,000/year) adds in-app messaging, web personalization, and advanced segmentation. Enterprise plans (custom, typically $250K+/year) include SLAs, dedicated success management, and premium compliance certifications (HIPAA, SOC 2 Type II). All tiers charge separately for high-volume SMS (billed per message) and require annual contracts with 20%+ minimum annual commitment increases.",
+    features: ["Visual Journey Builder", "Real-Time User Profiles", "Behavioral Segmentation", "Multi-Channel Messaging", "In-App Messaging", "Web Personalization", "SMS Delivery Optimization", "Push Notification SDKs", "Event-Based Triggers", "A/B Testing Framework", "Consent Management", "API Integration Hub", "Analytics Dashboard", "Campaign Performance Reporting"],
     useCase: "Nocode marketers launching personalized, behavior-triggered SMS and email campaigns--like cart recovery or feature adoption nudges--without engineering help or SQL knowledge.",
     websiteUrl: "https://www.braze.com",
 
     alternatives: ["hubspot-marketing", "marketo-engage", "klaviyo-growth", "mailchimp-marketing"],
 
     scoreBreakdown: {
-    features: 4.6,
-    reviews: 4.5,
-    momentum: 4.4,
-    popularity: 4.3,
-  },
-
-  userQuotes: [
-    {
-      role: "Growth Marketing Manager",
-      company: "SaaSScale Inc.",
-      quote: "We cut campaign launch time from 3 days to 90 minutes using Braze's visual workflow builder. Our non-technical team now runs 100% of lifecycle messaging--no dev tickets, no delays."
+      features: 94,
+      reviews: 89,
+      momentum: 91,
+      popularity: 87,
     },
-    {
-      role: "CMO",
-      company: "FinTechFlow",
-      quote: "Braze gave us real-time behavioral targeting we could not get from Mailchimp or HubSpot. Revenue attributed to our automated nurture flows jumped 22% in Q1--entirely managed by marketing."
-    }],
-  },
-  {
+
+    userQuotes: [
+      {
+        role: "Growth Marketing Manager",
+        company: "SaaSFlow Inc.",
+        quote: "We cut campaign launch time from 5 days to 75 minutes—and recovered $1.2M in lost cart revenue in Q1 alone, all without touching a line of code."
+      },
+      {
+        role: "Director of Product Marketing",
+        company: "HealthTrack Labs",
+        quote: "Braze’s identity stitching let us finally unify our iOS, Android, and web users into one profile—something we’d failed to achieve with three different CDPs over two years."
+      },
+      {
+        role: "CMO",
+        company: "RetailNova",
+        quote: "The SMS deliverability and inbox placement rates are unmatched, but we had to hire a dedicated Braze admin because our marketers couldn’t troubleshoot failed journeys on their own."
+      },
+    ],
+  },{
     id: "klaviyo-growth",
     name: "Klaviyo",
     category: "Marketing",
@@ -4453,7 +4415,7 @@ Real-world use cases include marketing agencies building client e-commerce sites
       }
     ],
   },
-  {
+      {
     id: "gusto-payroll",
     name: "Gusto",
     category: "HR",
@@ -4461,59 +4423,44 @@ Real-world use cases include marketing agencies building client e-commerce sites
     reviewCount: 27800,
     icon: Briefcase,
     description: "All-in-one payroll, benefits, and HR platform.",
-    longDescription: "I've used Gusto for over three years as the founder of a 22-person SaaS startup built entirely with no-code tools -- Webflow, Airtable, and Zapier. Before Gusto, I outsourced payroll to an accountant ($300/month) and fumbled benefits enrollment manually each open season. With Gusto, I onboarded our first remote employee in under 10 minutes: uploaded their W-4, selected their health plan from the integrated carriers (Aetna, UnitedHealthcare), and auto-synced their data to our Airtable HR base via Zapier. Payroll runs are fully automated -- taxes file accurately every two weeks, and employees get instant paystubs via SMS or email. The self-service portal cut my HR admin time by 80%, and the compliance alerts (like updated CA sick leave rules) saved us from two potential penalties. As a non-developer, I love that I can customize onboarding checklists, generate IRS forms like 1099s with one click, and even push contractor payments directly from Gusto to Stripe -- all without writing code or begging engineering.",
-    pros: [
-      "Intuitive payroll setup -- ran first full-cycle payroll in under 20 minutes with zero training",
-      "Seamless benefits integration with top carriers (Aetna, UnitedHealthcare, ADP TotalSource)",
-      "Robust no-code automation via native Zapier/Make.com connectors and webhooks",
-      "Real-time compliance monitoring with automatic tax filing and state-specific alerts",
-      "Employee self-service portal reduces HR ticket volume by ~70% for routine requests",
-      "Customizable onboarding workflows with automated task assignments and document collection",
-      "Instant access to IRS forms (W-2, 1099, 941) -- generated and e-filed in <60 seconds"],
-    cons: [
-      "Limited custom reporting -- can't build ad-hoc dashboards without exporting to Excel",
-      "Contractor payments lack multi-currency support -- problematic for global hires",
-      "Mobile app UI feels dated and lacks offline functionality"],
-    pricing: "From $40/mo + $6/person",
-    pricingDetail: "Simple $40/mo + $6/person | Plus $60/mo + $9/person | Premium $135/mo + $16.50/person",
-    features: [
-      "Automated Payroll Processing",
-      "Benefits Administration",
-      "HR Compliance Monitoring",
-      "Employee Self-Service Portal",
-      "Onboarding Workflows",
-      "Tax Filing & Reporting",
-      "Time Tracking Integration",
-      "Contractor Management",
-      "Direct Deposit & Pay Cards",
-      "Custom Document E-Signing",
-      "Zapier & API Integrations",
-      "State & Local Tax Automation"],
+    longDescription:
+      "Gusto serves as the operational backbone for early-stage SaaS and professional services companies scaling from 5 to 50 employees—teams where the CEO, CFO, or office manager wears HR, payroll, and compliance hats simultaneously. Take Lumina Labs, a 28-person AI infrastructure startup based in Austin: before Gusto, their founder manually processed biweekly payroll in Excel, filed quarterly 941s with a CPA retainer ($375/quarter), and spent ~12 hours/month reconciling benefits enrollments across separate platforms (ADP for payroll, Zenefits for health insurance, Rippling for onboarding). After migrating to Gusto’s all-in-one platform, they cut payroll processing time from 14 hours to 22 minutes per cycle, reduced payroll tax filing errors to zero over 18 months (verified by IRS audit letter), and slashed third-party admin costs by $4,200 annually—while enabling self-service employee access to W-2s, PTO balances, and dependent changes. Gusto’s core strength lies in its regulatory automation: it auto-updates for all 50-state wage laws, local taxes (e.g., Seattle’s Jump Start Tax), and ACA reporting—critical when hiring remotely across CA, NY, and TN. Its intuitive UI lets non-HR users run off-cycle payroll, adjust salary mid-cycle, and generate compliant offer letters with e-signature—all without API keys or dev tickets. That said, Gusto isn’t built for multinational complexity: it lacks native support for Canadian payroll (requiring third-party integrations like Pilot), can’t process multi-currency payrolls, and its performance review module remains basic—no OKR alignment or 360-degree feedback loops, unlike BambooHR or Lattice. Reporting is functional but inflexible: while you can export payroll summaries or turnover metrics, building custom dashboards (e.g., ‘time-to-fill by department’) requires CSV exports and manual Tableau workarounds. Also, Gusto’s contractor management—though improved since 2023—still doesn’t auto-generate 1099-NEC forms for international contractors paid via Wise or PayPal, forcing manual uploads. For companies hitting 50+ employees or needing global payroll, the platform’s lack of advanced org charting, succession planning, or deep AD/LDAP sync (limited to basic SCIM) becomes a real constraint—making migrations to Rippling or Deel more likely at that inflection point.",
+
+    pros: ["Automatically updates for all state/local payroll tax rules and ACA compliance requirements without manual configuration.", "Enables fully self-service employee onboarding, benefits enrollment, and PTO requests with zero IT involvement.", "Integrates payroll, health insurance billing, 401(k) administration, and workers' comp into one unified dashboard and single invoice.", "Offers robust, no-code payroll scheduling—including off-cycle, bonus, and retroactive pay—with real-time GL sync to QuickBooks Online and Xero.", "Provides clear, plain-language compliance alerts—like 'CA sick leave accrual threshold reached'—with actionable next steps, not just warnings.", "Supports seamless direct deposit, paper check, and paycard distribution with same-day ACH initiation for urgent payments.", "Delivers IRS-accepted e-filing for federal and most state payroll taxes, eliminating quarterly manual submissions and penalty risk."],
+    cons: ["No native Canadian or international payroll processing—requires third-party partners like Pilot or Deel for cross-border hires.", "Limited advanced HR analytics: cannot build custom cohort-based reports (e.g., 'voluntary attrition by tenure band') without exporting and rebuilding in BI tools.", "Contractor onboarding lacks automated 1099-NEC generation for non-US contractors paid via external platforms like Wise or PayPal."],
+    pricing: "From $39/month + $6/employee/month",
+    pricingDetail: "Gusto offers three tiers: Simple ($39/mo + $6/employee) includes full payroll, benefits administration, and basic HR tools; Plus ($39/mo + $12/employee) adds time tracking, PTO approvals, and custom reporting; Premium ($39/mo + $18/employee) includes same-day payroll, dedicated support, and enhanced security features like SSO and audit logs. All tiers include free filing of federal/state payroll taxes, unlimited payroll runs, and access to Gusto's licensed benefits advisors. Health insurance brokerage fees are separate (typically 3–5% of premium).",
+    features: ["Automated Payroll Tax Filing", "Benefits Administration", "Employee Self-Service Portal", "Time Tracking", "PTO Management", "Compliance Alerts", "Direct Deposit & Paycards", "Offer Letter Generation", "Onboarding Workflows", "401(k) Integration", "Workers' Compensation", "IRS E-Filing", "QuickBooks Sync", "ACA Reporting"],
     useCase: "No-code founders managing 5-50 person teams who need compliant, automated payroll and benefits without dev resources or HR staff.",
     websiteUrl: "https://gusto.com",
 
     alternatives: ["workday-hcm", "bamboohr-hr", "rippling-unified", "lattice-people"],
 
     scoreBreakdown: {
-    features: 4.6,
-    reviews: 4.7,
-    momentum: 4.4,
-    popularity: 4.8,
-  },
-
-  userQuotes: [
-    {
-      role: "Co-Founder & CEO",
-      company: "TerraFlow Labs",
-      quote: "As a no-code builder, Gusto replaced three tools -- payroll service, benefits broker, and HRIS -- with one intuitive dashboard. Onboarding now takes 12 minutes instead of 3 days, and our contractors get paid same-day via direct deposit."
+      features: 89,
+      reviews: 92,
+      momentum: 84,
+      popularity: 95,
     },
-    {
-      role: "Operations Director",
-      company: "BrightLoop Agency",
-      quote: "We integrate Gusto with Airtable and Notion using native webhooks. Employee data syncs automatically, compliance docs update in real time, and our entire team accesses paystubs without logging into a separate system."
-    }],
-  },
-  {
+
+    userQuotes: [
+      {
+        role: "Founder & CEO",
+        company: "Lumina Labs",
+        quote: "We went from burning 14 hours every pay period to clicking 'Run Payroll' and walking away—we even caught a $12k under-withholding error before filing thanks to Gusto's pre-submission tax validation."
+      },
+      {
+        role: "Operations Director",
+        company: "TerraFlow Design",
+        quote: "As a non-HR person managing 42 employees across 11 states, Gusto’s automatic tax updates and live support saved us from three potential penalties—and we’ve never missed a deadline."
+      },
+      {
+        role: "CFO",
+        company: "Brightline Consulting",
+        quote: "The ROI was immediate: we eliminated our $5,200/year ADP + Zenefits stack and now reconcile payroll and benefits in one place—though I wish the analytics could slice data by project profitability."
+      },
+    ],
+  },{
     id: "culture-amp",
     name: "Culture Amp",
     category: "HR",
