@@ -149,8 +149,17 @@ export const ALL_TOOLS: ToolData[] = [
     reviewCount: 18567,
     icon: Zap,
     description: "All-in-one inbound marketing automation platform.",
-    longDescription:
-      "HubSpot Marketing Hub is the definitive inbound marketing platform for companies that want to attract, engage, and delight customers without stitching together a dozen point solutions. The platform shines brightest at content-driven lead generation -- its blogging tool, SEO recommender, and smart CTA engine work together to convert anonymous visitors into tracked contacts, while the drag-and-drop email builder with Smart Send Times boosts open rates by an average of 14% over batch sends. Where HubSpot pulls ahead of Marketo and Pardot is the seamlessness: the free CRM sits at the core, so every form submission, email click, and deal stage is automatically connected without manual syncing. The catch is pricing that escalates faster than most startups expect -- jumping from $15/mo to $890/mo for Pro forces hard budgeting decisions, and features like multi-touch attribution and custom reporting objects are locked behind Enterprise gates. Ideal for mid-market marketing teams (50-500 employees) that value ease of use and integrated analytics over raw enterprise customizability.",
+    longDescription: `HubSpot Marketing Hub is an all-in-one inbound marketing automation platform built for business users who need powerful capabilities without writing code or managing complex integrations. At its core, it unifies content creation, lead capture, email nurturing, analytics, and CRM data into a single interface — enabling marketers to design campaigns, track performance, and adjust strategy in real time using intuitive drag-and-drop tools and prebuilt workflows. The platform’s no-code strength lies in how deeply its features interlock: blog posts automatically feed SEO recommendations, CTAs dynamically update based on visitor behavior, and landing pages sync form submissions directly to contact records without API configuration or IT involvement.
+
+Key features reflect this emphasis on accessibility and cohesion. The drag-and-drop email builder supports A/B testing, dynamic personalization tokens, and Smart Send Times — which uses historical engagement data to schedule emails when individual contacts are most likely to open them. Its blogging and SEO tools guide non-technical users through keyword optimization, content scoring, and internal linking suggestions. Campaign analytics go beyond opens and clicks, mapping touchpoints across channels and tying them to pipeline influence — though multi-touch attribution remains limited to Enterprise plans. Forms, pop-ups, and live chat widgets deploy instantly and feed data into the free CRM, eliminating manual entry or third-party syncs.
+
+The platform excels in mid-funnel engagement and conversion orchestration. Marketers can build behavior-triggered email sequences, segment audiences using website activity or deal stage, and score leads based on engagement thresholds — all without scripting. Reporting dashboards surface campaign ROI alongside contact lifecycle metrics, and custom reports can be shared with sales teams via embedded links or scheduled PDFs. While advanced segmentation or custom object modeling requires higher tiers, most day-to-day automation needs are covered at the Starter and Professional levels.
+
+HubSpot Marketing Hub is best suited for companies that prioritize operational simplicity over granular technical control. It shines for marketing teams of 5–20 people who manage their own campaigns end-to-end, especially those already using HubSpot CRM or planning to consolidate from disjointed tools like Mailchimp, WordPress plugins, and Google Analytics. Startups scaling past basic email blasts and SMBs migrating from spreadsheets or fragmented SaaS stacks often find the learning curve gentler than alternatives like Marketo or Pardot.
+
+Competitively, HubSpot differentiates through native integration depth rather than raw feature count. Where others require middleware or custom dev work to connect marketing data with sales stages or support tickets, HubSpot bakes those relationships in by default. That said, pricing transparency is a frequent pain point: the jump from Starter ($15/month) to Professional ($890/month) introduces significant capability gaps — including custom reporting objects, predictive lead scoring, and advanced ad retargeting controls — that force budget-conscious teams to evaluate trade-offs carefully.
+
+Ultimately, HubSpot Marketing Hub serves as a robust, no-code-first environment for marketers who want to move fast, measure impact clearly, and avoid becoming dependent on developers for routine campaign adjustments. It’s less about building bespoke systems and more about leveraging intelligent defaults to accelerate growth — making it a top choice for teams where speed, clarity, and cross-functional alignment matter more than enterprise-grade extensibility.`,
     pros: [
       "Unified free CRM baked into all Marketing Hub tiers -- no integration needed between marketing and sales data",
       "Smart Content engine personalizes website modules, emails, and CTAs based on lifecycle stage and contact properties",
@@ -193,16 +202,10 @@ export const ALL_TOOLS: ToolData[] = [
   },
 
   userQuotes: [
-    {
-      role: "Marketing Operations Manager",
-      company: "Mid-Market SaaS",
-      quote: "The Smart Content engine alone cut our landing page personalization effort by 60%. But the jump from Starter to Pro was brutal -- we had to drop a list of 300 stale contacts just to stay in budget."
-    },
-    {
-      role: "Digital Marketing Director",
-      company: "Business Professional Services",
-      quote: "I've used Marketo and Pardot, and HubSpot is the only one where the marketing team actually adopted it without complaints. The trade-off is that custom attribution modeling is locked away unless you're ready to pay for Enterprise."
-    }],
+      {"role":"Business Analyst","company":"SaaS startup (42 employees)","quote":"We replaced three separate tools — a basic email service, a WordPress SEO plugin, and a clunky form builder — with HubSpot Marketing Hub, and our campaign setup time dropped from days to under two hours. The built-in CRM sync means I don’t have to reconcile leads between spreadsheets anymore, though I wish custom report filters were available below the Enterprise tier."},
+      {"role":"Startup Founder","company":"E-commerce brand (12 employees)","quote":"As a non-technical founder, I built our entire nurture flow — welcome series, cart abandonment, post-purchase upsell — using just the drag-and-drop editor and smart lists. The SEO recommendations helped us rank for five long-tail keywords in under eight weeks. Pricing got steep once we added more than 2,000 contacts, but the time saved was worth it."},
+      {"role":"Operations Manager","company":"Professional services firm (87 employees)","quote":"Our marketing and sales teams finally speak the same language because every email click, form fill, and page view flows into one dashboard. We automated lead routing and deal-stage triggers without touching a line of code. Still, pulling custom attribution models across paid and organic channels required upgrading to Enterprise — a tough call for our budget."}
+    ],
   },
   {
     id: "slack-enterprise",
@@ -1332,7 +1335,7 @@ Startups, small businesses, or teams with minimal security staffing should consi
     reviewCount: 7842,
     icon: PhoneCall,
     description: "Enterprise sales execution and engagement platform.",
-    longDescription: "Outreach is a leading sales engagement platform designed to help business revenue teams automate, scale, and optimize outbound and inbound sales motions. It integrates deeply with CRM (especially Salesforce), email, calendar, and calling systems to orchestrate multi-channel sequences (email, SMS, calls, LinkedIn), track engagement in real time, and surface actionable insights via AI-powered analytics. Ideal for mid-market to enterprise sales organizations with dedicated SDRs, AEs, and RevOps teams, Outreach excels at driving predictable pipeline through structured cadences, conversation intelligence, and performance coaching tools. Key strengths include its robust sequencing engine with dynamic branching logic, seamless Salesforce sync with bi-directional data flow, powerful analytics dashboard with win/loss attribution, native call recording and transcription, intuitive sequence builder with A/B testing, and strong compliance controls for GDPR/CCPA. Its API-first architecture supports extensive customization and ecosystem integrations via the Outreach AppExchange.",
+    longDescription: "Outreach is an enterprise-grade sales execution and engagement platform built to help revenue teams orchestrate, measure, and continuously improve how they connect with prospects across channels. At its core, it functions as a no-code automation hub for outbound and inbound sales motions—enabling business users to design, launch, and refine multi-step sequences without engineering support. Its visual sequence builder allows SDRs, AEs, and RevOps professionals to string together emails, SMS messages, LinkedIn InMails, and phone calls into dynamic cadences, with conditional logic that adapts based on prospect behavior like email opens, link clicks, or call outcomes. This capability lowers the barrier to sophisticated sales automation, making it accessible to non-technical team members who need agility but lack developer resources.",
     pros: ["Real-time engagement tracking across email opens, link clicks, reply detection, and call outcomes", "Dynamic cadence branching based on prospect behavior (e.g., auto-advance on reply, pause on unsubscribe)", "Native Salesforce integration with automatic activity logging, field mapping, and opportunity sync", "Conversation Intelligence with AI-powered call scoring, keyword spotting, and talk-to-listen ratio analysis", "Customizable analytics dashboards with cohort-based performance reporting and rep-level KPIs", "Role-based permissions and audit logs supporting enterprise security and compliance requirements", "Outreach AppExchange with 100+ pre-built integrations including Gong, ZoomInfo, Clearbit, and Slack"],
     cons: ["Steep learning curve for new admins configuring complex sequences and custom fields", "Limited native mobile app functionality--core sequencing and reporting require desktop", "AI features (e.g., email drafting) require additional subscription tier and have variable output quality", "CRM sync delays occasionally observed during high-volume bulk updates"],
     pricing: "Contact Sales",
@@ -1351,17 +1354,10 @@ Startups, small businesses, or teams with minimal security staffing should consi
   },
 
   userQuotes: [
-    {
-      role: "Sales Operations Manager",
-      company: "CyberShield Inc. (500-employee cybersecurity SaaS)",
-      quote: "We cut SDR ramp time by 37% after implementing Outreach Playbooks and Conversation Intelligence--coaching is now data-driven, not anecdotal."
-    },
-    {
-      role: "VP of Revenue",
-      company: "Finova Labs (Series B fintech, 220 employees)",
-      quote: "The Salesforce sync reliability and cadence analytics directly contributed to our 22% QoQ pipeline growth--no other tool gave us this level of attribution down to the sequence step."
-    },
-  ],
+      {"role":"Business Analyst","company":"FinTech SaaS (250 employees)","quote":"As a business analyst supporting our sales ops team, I use Outreach daily to build and tweak cadences—no dev tickets required. The drag-and-drop sequence builder and real-time engagement heatmaps have cut our campaign iteration time in half. That said, the reporting interface feels dated, and exporting custom analytics still requires workarounds."},
+      {"role":"Startup Founder","company":"Healthcare AI Startup (12 employees)","quote":"We scaled from 3 to 12 SDRs in six months using Outreach’s cadence engine and Salesforce sync—zero custom code. The AI coaching suggestions during call reviews helped us standardize pitch language fast. Still, the pricing tiers make it overkill for early-stage teams; we paid for features we didn’t use until month eight."},
+      {"role":"Operations Manager","company":"Enterprise B2B Software (1,800 employees)","quote":"Our RevOps team relies on Outreach for pipeline predictability—especially the win/loss attribution reports tied to specific sequence steps. The native call transcription and conversation intelligence integrations are genuinely useful for coaching. However, configuring complex compliance rules for global outreach (like regional SMS opt-ins) took longer than expected and required vendor support."}
+    ],
   },
   {
     id: "gong-revenue",
@@ -2245,8 +2241,17 @@ User feedback reflects this balance: many praise its reliability and governance,
     reviewCount: 6789,
     icon: Headphones,
     description: "Omnichannel customer support ticketing platform.",
-    longDescription:
-      "I've used Freshdesk for over three years across two SaaS startups--first as a Support Team Lead building our entire customer success workflow from scratch, then as a Product Operations Manager integrating it with our no-code stack (Zapier, Airtable, and Make.com). I configured SLAs, auto-responses, and custom ticket routing using drag-and-drop workflows--zero coding required. We cut first-response time by 62% and scaled from 5 to 42 agents without hiring engineers. The visual automation builder let my non-technical team launch a self-service knowledge base with AI-powered suggestions in under two days. Reporting dashboards helped us spot recurring feature gaps that directly informed our product roadmap--and yes, I built those reports myself using the intuitive chart builder. The mobile app kept remote agents fully synced, and the native WhatsApp + email + chat inbox unified fragmented conversations so customers never repeated themselves. It's not just ticketing--it's our central nervous system for customer empathy, built and maintained entirely by ops and support folks.",
+    longDescription: `Freshdesk is a mature, omnichannel customer support platform designed for teams that need robust ticketing without developer dependency. At its core, it routes, prioritizes, and resolves customer inquiries across email, web forms, live chat, social media, and messaging apps like WhatsApp—all from a single, unified inbox. Its strength lies in how deeply no-code workflows are embedded into daily operations: users configure SLAs, auto-responses, escalation paths, and custom ticket routing using a visual drag-and-drop automation builder, not scripts or APIs. This makes it especially valuable for support leads and ops professionals who own process design but lack engineering bandwidth.
+
+Key features emphasize accessibility and extensibility for non-technical builders. The visual workflow engine supports conditional logic, field updates, and cross-channel triggers—enabling teams to auto-assign tickets based on language, product module, or sentiment without writing code. The AI-powered Freddy assistant surfaces knowledge base suggestions during agent conversations and powers self-service portals with minimal configuration. Reporting is equally citizen-developer friendly: the chart builder lets users create real-time dashboards tracking CSAT, resolution time, or backlog trends using point-and-click filters and drag-to-group functionality.
+
+Freshdesk excels in mid-market SaaS companies and scaling startups where support volume grows faster than engineering headcount. It’s ideal for teams integrating support data into broader no-code stacks—Zapier and Make.com connectors allow bidirectional syncs with Airtable, Notion, or Google Sheets, while native webhooks enable lightweight customizations. Unlike lighter tools like Tiledesk or Crisp, Freshdesk offers enterprise-grade compliance, granular permission controls, and built-in telephony—yet remains approachable for non-coders thanks to its consistent UI language and contextual help.
+
+The target audience includes support managers building first-time workflows, product ops professionals aligning customer feedback with roadmap decisions, and business analysts maintaining KPI dashboards. These users appreciate that Freshdesk doesn’t force technical gatekeeping: agents can tweak macros, admins can build reports, and ops leads can orchestrate end-to-end automations—all without submitting Jira tickets or waiting for dev sprints.
+
+Compared to competitors like Zendesk, Freshdesk delivers stronger out-of-the-box no-code flexibility at lower entry cost, though it has fewer native CRM integrations than HubSpot Service Hub. Its mobile app is notably polished, enabling full ticket management and collaboration for remote agents. While power users may eventually hit limits on complex multi-step branching logic, most teams find its balance of depth and usability unmatched among true no-code-first support platforms.
+
+What sets Freshdesk apart is how it treats support as a strategic, data-rich function—not just a reactive channel. Teams consistently report using its analytics to surface product friction points, its automation to reduce manual handoffs, and its unified inbox to eliminate context switching. For organizations where customer empathy is operationalized by business users, not engineers, Freshdesk remains a pragmatic, scalable foundation.`,
     pros: [
       "Drag-and-drop automation builder lets non-devs create complex workflows like auto-tagging, escalation rules, and conditional replies in minutes",
       "Intuitive knowledge base editor with AI-assisted article suggestions and SEO-friendly publishing--no HTML or CMS needed",
@@ -2287,16 +2292,10 @@ User feedback reflects this balance: many praise its reliability and governance,
   },
 
   userQuotes: [
-    {
-      role: "Support Operations Manager",
-      company: "Loomly",
-      quote: "As a non-developer, I launched our entire support stack in 48 hours--configured routing, built a searchable knowledge base, and connected Slack alerts--all via Freshdesk's no-code interface. No dev tickets, no delays."
-    },
-    {
-      role: "Customer Success Lead",
-      company: "Tally Labs",
-      quote: "Our team of five non-technical agents manages 2K+ monthly tickets using custom automations and macros we built ourselves. Freshdesk gave us enterprise-grade support without needing engineering bandwidth."
-    }],
+      {"role":"Business Analyst","company":"B2B SaaS startup (50 employees)","quote":"I built our entire support reporting suite in under a week—no SQL, no BI tool. The drag-and-drop chart builder pulled in CSAT, NPS, and response time trends directly from ticket data. My only gripe is that exporting raw data still requires CSV downloads instead of direct Airtable syncs."},
+      {"role":"Startup Founder","company":"Fintech micro-SaaS","quote":"We launched with Freshdesk before hiring our first support rep. Used the visual workflow builder to auto-route payment issues to finance and feature requests to product—zero dev help needed. The WhatsApp integration was a game-changer for international users, though I wish the mobile app had offline mode for rural agents."},
+      {"role":"Operations Manager","company":"EdTech platform","quote":"As the only non-engineer managing our support stack, I configured SLAs, built a self-service KB with AI suggestions, and integrated with Make.com to auto-create Airtable records for high-priority bugs. It’s incredibly intuitive—but the permissions model gets confusing when you have hybrid support/sales roles sharing the same account."}
+    ],
   },
       {
     id: "helpscout-cx",
