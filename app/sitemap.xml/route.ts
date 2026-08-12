@@ -57,6 +57,8 @@ const BLOG_SLUGS = [
   "no-code-ai-customer-support-automation-copilot-guide-2026",
   "webflow-vs-bubble-vs-retool-2026-comparison",
   "no-code-micro-saas-solo-founder-bootstrapping-2026",
+  "nocode-democratizing-software-development-2026",
+  "nocode-revenue-stack-sales-intent-payments-2026",
 ];
 
 const TOOL_SLUGS = [
