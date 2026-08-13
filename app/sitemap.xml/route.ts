@@ -59,6 +59,7 @@ const BLOG_SLUGS = [
   "no-code-micro-saas-solo-founder-bootstrapping-2026",
   "nocode-democratizing-software-development-2026",
   "nocode-revenue-stack-sales-intent-payments-2026",
+  "ai-powered-no-code-marketing-pipeline-2026",
 ];
 
 const TOOL_SLUGS = [
