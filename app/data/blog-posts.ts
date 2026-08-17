@@ -6083,12 +6083,12 @@ By thoughtfully combining a robust data layer, a flexible logic engine, and an i
 {
     slug: "no-code-data-pipeline-ops-guide-2026",
     title: "Building a No-Code Data Pipeline: A Practical Guide for Ops Teams Without Engineers",
-    excerpt: "A practical guide from JuniperNode, a Porto-based low-code studio, on building a no-code data pipeline without dedicated engineers. We walk through the pipeline archetypes we weighed, the four stages of the stack we settled on, the sharp edges nobody warns you about, and who this approach is - and is not - for.",
+    excerpt: "A practical guide from the No-Code Tools team on building a no-code data pipeline without dedicated engineers. We walk through the pipeline archetypes we weighed, the four stages of the stack we settled on, the sharp edges nobody warns you about, and who this approach is - and is not - for.",
     content: `# Building a No-Code Data Pipeline: A Practical Guide for Ops Teams Without Engineers
 
 Every operations team eventually hits the same wall. You are shipping reports to stakeholders, and someone asks "how fresh is this, actually?" Then a second person asks, and the answer stops being comfortable: the dashboard you sent at 9 a.m. is built on data that stopped syncing on Tuesday. The fix is never more spreadsheets. It is a real data pipeline -- and the reason most non-technical teams do not build one is the mistaken belief that pipelines require engineering capacity.
 
-We run a no-code-heavy operations function at JuniperNode, a low-code platform studio in Porto. We are not a traditional data team, and we have exactly zero dedicated data engineers. Over the last year we built a production pipeline that moves a few hundred thousand rows a day between our product database, a warehouse, and the dashboards our account managers actually live in. Everything runs on glue tools. Everything is maintainable by people who can read SQL but not much else. This is how we did it, what it cost us, and where we would be cautious before you copy us.
+We run a no-code-heavy operations function on a small product team. We are not a traditional data team, and we have exactly zero dedicated data engineers. Over the last year we built a production pipeline that moves a few hundred thousand rows a day between our product database, a warehouse, and the dashboards our account managers actually live in. Everything runs on glue tools. Everything is maintainable by people who can read SQL but not much else. This is how we did it, what it cost us, and where we would be cautious before you copy us.
 
 ## Why Your Team Should Probably Have a Pipeline
 
@@ -6145,7 +6145,7 @@ Everyone writes the "it was simple and changed everything" version. Let me give 
 
 Start small and disciplined: automate the extraction of your single most painful recurring report, land it in raw form, write one view that produces the number people actually argue about, and wire it to a dashboard. Do not try to build the enterprise pipeline on day one. The tools for the extract and load layers are interchangeable and cheap; the durable asset is the SQL and the naming discipline you leave behind. Every team we have seen succeed at this started by automating the one report that made people angry twice a month.
 
-*This post reflects our direct experience at JuniperNode, a low-code platform studio in Porto. Tool categories and pricing reflect public vendor documentation available in 2026. Setup costs and timelines are from our own single-team rollout, not a benchmark.*
+*This post reflects our direct experience building no-code data pipelines. Tool categories and pricing reflect public vendor documentation available in 2026. Setup costs and timelines are from our own single-team rollout, not a benchmark.*
 `,
     author: "Sarah Liu",
     authorRole: "No-Code Ops Lead",
